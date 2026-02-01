@@ -71,7 +71,7 @@ export function HeroSection() {
             className="text-base md:text-lg text-slate-600 max-w-2xl mx-auto mt-6 leading-relaxed"
             variants={lineVariants}
           >
-            Hey! I'm Thong. I got into AI because I was fascinated by how Netflix knows exactly 
+            Hey! I'm Luu. I got into AI because I was fascinated by how Netflix knows exactly 
             what I want to watch. Now I build intelligent systems that solve real problems. 
             Currently studying AI at UTS in Sydney.
           </motion.p>
@@ -108,7 +108,7 @@ export function HeroSection() {
             variants={lineVariants}
           >
             <a 
-              href="https://github.com" 
+              href="https://github.com/LuuMTran" 
               target="_blank" 
               rel="noopener noreferrer"
               className="p-3 rounded-full border border-slate-200 hover:bg-slate-100 transition-colors"
@@ -117,7 +117,7 @@ export function HeroSection() {
               <Github className="w-5 h-5 text-slate-600" />
             </a>
             <a 
-              href="https://linkedin.com" 
+              href="https://www.linkedin.com/in/luu-minh-thong-tran-31971b238/" 
               target="_blank" 
               rel="noopener noreferrer"
               className="p-3 rounded-full border border-slate-200 hover:bg-blue-50 hover:border-blue-300 transition-colors"

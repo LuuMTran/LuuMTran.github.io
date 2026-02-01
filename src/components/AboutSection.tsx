@@ -1,26 +1,21 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { MapPin, Coffee, BookOpen, Gamepad2 } from "lucide-react";
+import { MapPin, Mail, Github, Linkedin, Twitter } from "lucide-react";
+import Image from "next/image";
 
 const timelineItems = [
   {
     title: "Master of Artificial Intelligence",
     organization: "University of Technology Sydney",
     period: "2024 - 2026",
-    description: "Focusing on deep learning and computer vision. Currently working on a thesis about neural network interpretability.",
-  },
-  {
-    title: "AI/ML Intern",
-    organization: "Tech Startup in Sydney",
-    period: "2024",
-    description: "Built recommendation systems and learned how messy real-world data actually is. Spent 80% of time cleaning data, 20% building models.",
+    description: "Currently pursuing Master's degree with focus on deep learning, computer vision, and neural network interpretability.",
   },
   {
     title: "Bachelor of Computer Science",
-    organization: "FPT University",
+    organization: "University of Technology Sydney",
     period: "2020 - 2024",
-    description: "Graduated with honors. My thesis on image classification won best project in the department (still proud of that).",
+    description: "Completed Bachelor's degree with strong foundation in software engineering, algorithms, and data structures.",
   },
 ];
 
@@ -28,7 +23,7 @@ export function AboutSection() {
   return (
     <section id="about" className="min-h-screen py-24 px-4 md:px-8 lg:px-16 flex items-center">
       <div className="max-w-7xl mx-auto w-full">
-        {/* Header - NO SPARKLES */}
+        {/* Header */}
         <motion.div
           className="mb-12 text-center"
           initial={{ opacity: 0, y: 30 }}
@@ -36,73 +31,96 @@ export function AboutSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-slate-900">About Me</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-slate-900 dark:text-slate-100">About Me</h2>
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
-          {/* Left Column - Bio */}
+          {/* Left Column - Profile & Bio */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
+            className="space-y-6"
           >
-            <p className="text-blue-600 font-medium mb-2">Hello!</p>
-            <h3 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900">I'm Thong</h3>
-            
-            <div className="space-y-4 text-slate-600 leading-relaxed">
-              <p>
-                I got into AI because of a Netflix recommendation that was surprisingly accurate. 
-                That sparked my curiosity about how machines learn patterns. Now I'm pursuing a 
-                Master's in AI at UTS in Sydney.
-              </p>
-              <p>
-                What I love about ML is that it's the perfect mix of math, coding, and problem-solving. 
-                There's something satisfying about training a model and watching it actually work.
-              </p>
-              <p>
-                I'm currently looking for internship opportunities where I can work on real-world 
-                AI problems and learn from experienced engineers. If you're hiring, let's chat!
-              </p>
+            {/* Profile Picture - LinkedIn Style */}
+            <div className="flex flex-col items-center lg:items-start">
+              <div className="relative w-48 h-48 rounded-full overflow-hidden border-4 border-white dark:border-slate-700 shadow-xl">
+                {/* Placeholder until actual image is provided */}
+                <div className="w-full h-full bg-gradient-to-br from-blue-500 to-emerald-500 flex items-center justify-center text-white text-6xl font-bold">
+                  L
+                </div>
+                {/* When image is available, use this:
+                <Image
+                  src="/images/profile.jpg"
+                  alt="Luu Minh Thong Tran"
+                  fill
+                  className="object-cover"
+                />
+                */}
+              </div>
             </div>
 
-            {/* Location */}
-            <div className="flex items-center gap-2 mt-6 text-slate-500">
-              <MapPin className="w-4 h-4" />
-              <span>Sydney, Australia</span>
-            </div>
+            {/* Bio */}
+            <div>
+              <p className="text-blue-600 dark:text-blue-400 font-medium mb-2">Hello!</p>
+              <h3 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900 dark:text-slate-100">I'm Luu</h3>
+              
+              <div className="space-y-4 text-slate-600 dark:text-slate-300 leading-relaxed">
+                <p>
+                  I'm Luu Minh Thong Tran, an AI/ML Engineer based in Sydney, Australia. 
+                  My journey into artificial intelligence started with a simple curiosity: 
+                  how does Netflix know exactly what I want to watch next? That question 
+                  led me down the rabbit hole of machine learning, and I've been hooked ever since.
+                </p>
+                <p>
+                  Currently, I'm pursuing my Master's in Artificial Intelligence at the 
+                  University of Technology Sydney, where I'm diving deep into deep learning, 
+                  computer vision, and neural network architectures.
+                </p>
+                <p>
+                  I'm passionate about building AI systems that solve real-world problems 
+                  and make a positive impact. Whether it's developing predictive models or 
+                  creating intelligent automation systems, I love turning complex data into 
+                  actionable insights.
+                </p>
+              </div>
 
-            {/* Beyond the Code Section */}
-            <motion.div 
-              className="mt-8 p-6 rounded-2xl bg-slate-50 border border-slate-200"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: 0.2 }}
-            >
-              <h4 className="font-bold mb-4 text-slate-900 flex items-center gap-2">
-                <span className="text-lg">🎯</span>
-                Beyond the Code
-              </h4>
-              <ul className="space-y-3 text-sm text-slate-600">
-                <li className="flex items-start gap-2">
-                  <Coffee className="w-4 h-4 mt-0.5 text-amber-600" />
-                  <span>Coffee enthusiast - Currently on a quest to find Sydney's best flat white</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <BookOpen className="w-4 h-4 mt-0.5 text-blue-600" />
-                  <span>Reading "Hands-On Machine Learning" for the 3rd time (it keeps getting better)</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <Gamepad2 className="w-4 h-4 mt-0.5 text-purple-600" />
-                  <span>Weekend competitive programmer - still trying to solve that one LeetCode hard</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-lg">🏃</span>
-                  <span>Training for my first half-marathon (wish me luck)</span>
-                </li>
-              </ul>
-            </motion.div>
+              {/* Location */}
+              <div className="flex items-center gap-2 mt-6 text-slate-500 dark:text-slate-400">
+                <MapPin className="w-4 h-4" />
+                <span>Sydney, Australia</span>
+              </div>
+
+              {/* Social Links */}
+              <div className="flex gap-3 mt-6">
+                <a
+                  href="https://www.linkedin.com/in/luu-minh-thong-tran-31971b238/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 rounded-full border border-slate-200 dark:border-slate-700 hover:bg-blue-50 dark:hover:bg-blue-900/30 hover:border-blue-300 transition-all"
+                  aria-label="LinkedIn"
+                >
+                  <Linkedin className="w-5 h-5 text-slate-600 dark:text-slate-400" />
+                </a>
+                <a
+                  href="https://github.com/LuuMTran"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 rounded-full border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all"
+                  aria-label="GitHub"
+                >
+                  <Github className="w-5 h-5 text-slate-600 dark:text-slate-400" />
+                </a>
+                <a
+                  href="mailto:luuminhthongtran@gmail.com"
+                  className="p-3 rounded-full border border-slate-200 dark:border-slate-700 hover:bg-blue-50 dark:hover:bg-blue-900/30 transition-all"
+                  aria-label="Email"
+                >
+                  <Mail className="w-5 h-5 text-slate-600 dark:text-slate-400" />
+                </a>
+              </div>
+            </div>
           </motion.div>
 
           {/* Right Column - Timeline */}
@@ -112,27 +130,43 @@ export function AboutSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h3 className="text-2xl font-bold mb-8 text-slate-900">My Journey So Far</h3>
+            <h3 className="text-2xl font-bold mb-8 text-slate-900 dark:text-slate-100">My Journey So Far</h3>
             <div className="space-y-6">
               {timelineItems.map((item, index) => (
                 <motion.div
                   key={item.title}
-                  className="relative pl-8 pb-6 border-l-2 border-slate-200 last:pb-0"
+                  className="relative pl-8 pb-6 border-l-2 border-slate-200 dark:border-slate-700 last:pb-0"
                   initial={{ opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: index * 0.1 }}
                 >
                   {/* Timeline dot */}
-                  <div className="absolute left-0 top-0 -translate-x-1/2 w-4 h-4 rounded-full bg-blue-500 border-2 border-white shadow" />
+                  <div className="absolute left-0 top-0 -translate-x-1/2 w-4 h-4 rounded-full bg-blue-500 border-2 border-white dark:border-slate-800 shadow" />
                   
-                  <span className="text-sm text-slate-500 font-medium">{item.period}</span>
-                  <h4 className="font-bold text-slate-900 mt-1">{item.title}</h4>
-                  <p className="text-sm text-slate-500">{item.organization}</p>
-                  <p className="text-sm text-slate-600 mt-2">{item.description}</p>
+                  <span className="text-sm text-slate-500 dark:text-slate-400 font-medium">{item.period}</span>
+                  <h4 className="font-bold text-slate-900 dark:text-slate-100 mt-1">{item.title}</h4>
+                  <p className="text-sm text-slate-500 dark:text-slate-400">{item.organization}</p>
+                  <p className="text-sm text-slate-600 dark:text-slate-300 mt-2">{item.description}</p>
                 </motion.div>
               ))}
             </div>
+
+            {/* Currently Looking For */}
+            <motion.div 
+              className="mt-8 p-6 rounded-2xl bg-blue-50 dark:bg-blue-900/20 border border-blue-100 dark:border-blue-800"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: 0.3 }}
+            >
+              <h4 className="font-bold mb-2 text-blue-900 dark:text-blue-300">Currently Looking For</h4>
+              <p className="text-sm text-blue-800 dark:text-blue-200">
+                I'm actively seeking internship opportunities in AI/ML engineering where I can 
+                apply my skills, learn from experienced professionals, and contribute to impactful projects. 
+                If you're hiring, I'd love to connect!
+              </p>
+            </motion.div>
           </motion.div>
         </div>
       </div>

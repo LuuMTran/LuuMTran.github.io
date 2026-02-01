@@ -1,5 +1,5 @@
 1:"$Sreact.fragment"
-2:I[54381,["/_next/static/chunks/adf3234c86b72dd4.js","/_next/static/chunks/9e4c325896390388.js"],"BlogPostContent"]
+2:I[54381,["/_next/static/chunks/8e9c3819299c21fa.js","/_next/static/chunks/9e4c325896390388.js"],"BlogPostContent"]
 4:I[99760,["/_next/static/chunks/d5f7520d963047ce.js","/_next/static/chunks/41f4bd048becbe7c.js"],"OutletBoundary"]
 5:"$Sreact.suspense"
 3:T4ef,
@@ -43,5 +43,5 @@ def initialize_parameters(layer_dims):
 The forward pass computes the output of the network...
 
 [Continue with full implementation details]
-    0:{"buildId":"0MiwC0RnazdcUmcQSodAT","rsc":["$","$1","c",{"children":[["$","$L2",null,{"post":{"slug":"neural-network-from-scratch","title":"Building a Neural Network from Scratch","excerpt":"Learn how to implement backpropagation and gradient descent to build a fully functional neural network using only NumPy.","content":"$3","date":"2024-01-15","readTime":"8 min read","category":"Deep Learning","tags":["Neural Networks","Python","NumPy","Tutorial"],"featured":true}}],[["$","script","script-0",{"src":"/_next/static/chunks/adf3234c86b72dd4.js","async":true}],["$","script","script-1",{"src":"/_next/static/chunks/9e4c325896390388.js","async":true}]],["$","$L4",null,{"children":["$","$5",null,{"name":"Next.MetadataOutlet","children":"$@6"}]}]]}],"loading":null,"isPartial":false}
+    0:{"buildId":"UXTE7V2poj9wuwLKuuiwN","rsc":["$","$1","c",{"children":[["$","$L2",null,{"post":{"slug":"neural-network-from-scratch","title":"Building a Neural Network from Scratch","excerpt":"Learn how to implement backpropagation and gradient descent to build a fully functional neural network using only NumPy.","content":"$3","date":"2024-01-15","readTime":"8 min read","category":"Deep Learning","tags":["Neural Networks","Python","NumPy","Tutorial"],"featured":true}}],[["$","script","script-0",{"src":"/_next/static/chunks/8e9c3819299c21fa.js","async":true}],["$","script","script-1",{"src":"/_next/static/chunks/9e4c325896390388.js","async":true}]],["$","$L4",null,{"children":["$","$5",null,{"name":"Next.MetadataOutlet","children":"$@6"}]}]]}],"loading":null,"isPartial":false}
 6:null

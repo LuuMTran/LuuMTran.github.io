@@ -89,7 +89,7 @@ const skills = [
 
 export function SkillsSection() {
   return (
-    <section id="skills" className="min-h-screen py-24 px-4 md:px-8 lg:px-16 flex items-center bg-slate-50/50">
+    <section id="skills" className="min-h-screen py-24 px-4 md:px-8 lg:px-16 flex items-center bg-slate-50/50 dark:bg-slate-900">
       <div className="max-w-7xl mx-auto w-full">
         {/* Header - NO SPARKLES */}
         <motion.div
@@ -99,8 +99,8 @@ export function SkillsSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-slate-900">Skills & Tools</h2>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-slate-900 dark:text-slate-100">Skills & Tools</h2>
+          <p className="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
             These are the technologies I work with day-to-day. I'm always learning something new.
           </p>
         </motion.div>
@@ -110,7 +110,7 @@ export function SkillsSection() {
           {skills.map((skill, index) => (
             <motion.div
               key={skill.name}
-              className="group relative flex flex-col items-center justify-center p-6 rounded-2xl border border-slate-200 bg-white hover:border-blue-300 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+              className="group relative flex flex-col items-center justify-center p-6 rounded-2xl border border-slate-200 bg-white dark:bg-slate-800 dark:border-slate-700 hover:border-blue-300 dark:hover:border-blue-600 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -120,8 +120,8 @@ export function SkillsSection() {
               <div className="mb-3">
                 {skill.icon}
               </div>
-              <h3 className="font-semibold text-sm text-center text-slate-800">{skill.name}</h3>
-              <span className="text-xs text-slate-500 mt-1">{skill.category}</span>
+              <h3 className="font-semibold text-sm text-center text-slate-800 dark:text-slate-100">{skill.name}</h3>
+              <span className="text-xs text-slate-500 dark:text-slate-400 mt-1">{skill.category}</span>
             </motion.div>
           ))}
         </div>
@@ -134,21 +134,21 @@ export function SkillsSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
         >
-          <div className="p-6 rounded-2xl border border-slate-200 bg-white">
-            <h4 className="font-bold mb-2 text-slate-900">Machine Learning</h4>
-            <p className="text-sm text-slate-600">
+          <div className="p-6 rounded-2xl border border-slate-200 bg-white dark:bg-slate-800 dark:border-slate-700">
+            <h4 className="font-bold mb-2 text-slate-900 dark:text-slate-100">Machine Learning</h4>
+            <p className="text-sm text-slate-600 dark:text-slate-300">
               Classification, Regression, NLP, Computer Vision, Time Series
             </p>
           </div>
-          <div className="p-6 rounded-2xl border border-slate-200 bg-white">
-            <h4 className="font-bold mb-2 text-slate-900">Deep Learning</h4>
-            <p className="text-sm text-slate-600">
+          <div className="p-6 rounded-2xl border border-slate-200 bg-white dark:bg-slate-800 dark:border-slate-700">
+            <h4 className="font-bold mb-2 text-slate-900 dark:text-slate-100">Deep Learning</h4>
+            <p className="text-sm text-slate-600 dark:text-slate-300">
               CNNs, RNNs, Transformers, Transfer Learning
             </p>
           </div>
-          <div className="p-6 rounded-2xl border border-slate-200 bg-white">
-            <h4 className="font-bold mb-2 text-slate-900">MLOps</h4>
-            <p className="text-sm text-slate-600">
+          <div className="p-6 rounded-2xl border border-slate-200 bg-white dark:bg-slate-800 dark:border-slate-700">
+            <h4 className="font-bold mb-2 text-slate-900 dark:text-slate-100">MLOps</h4>
+            <p className="text-sm text-slate-600 dark:text-slate-300">
               Model Deployment, APIs, Docker, CI/CD
             </p>
           </div>

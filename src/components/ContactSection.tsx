@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Send, Mail, MapPin, Github, Linkedin, Twitter } from "lucide-react";
+import { Send, Mail, MapPin, Github, Linkedin } from "lucide-react";
 
 export function ContactSection() {
   const [formData, setFormData] = useState({
@@ -35,7 +35,7 @@ export function ContactSection() {
   };
 
   return (
-    <section id="contact" className="min-h-screen py-24 px-4 md:px-8 lg:px-16 flex items-center bg-slate-50/50">
+    <section id="contact" className="min-h-screen py-24 px-4 md:px-8 lg:px-16 flex items-center bg-slate-50/50 dark:bg-slate-900">
       <div className="max-w-7xl mx-auto w-full">
         {/* Header - NO SPARKLES */}
         <motion.div
@@ -45,8 +45,8 @@ export function ContactSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-slate-900">Let's Chat</h2>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-slate-900 dark:text-slate-100">Let's Chat</h2>
+          <p className="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
             Have a project idea? Want to talk about AI? Or just want to grab coffee? 
             I'm always open to meeting new people.
           </p>
@@ -62,7 +62,7 @@ export function ContactSection() {
           >
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium mb-2 text-slate-700">
+                <label htmlFor="name" className="block text-sm font-medium mb-2 text-slate-700 dark:text-slate-300">
                   Your Name
                 </label>
                 <input
@@ -72,13 +72,13 @@ export function ContactSection() {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 transition-all"
+                  className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white dark:bg-slate-800 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 transition-all"
                   placeholder="John Doe"
                 />
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium mb-2 text-slate-700">
+                <label htmlFor="email" className="block text-sm font-medium mb-2 text-slate-700 dark:text-slate-300">
                   Your Email
                 </label>
                 <input
@@ -88,13 +88,13 @@ export function ContactSection() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 transition-all"
+                  className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white dark:bg-slate-800 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 transition-all"
                   placeholder="john@example.com"
                 />
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium mb-2 text-slate-700">
+                <label htmlFor="message" className="block text-sm font-medium mb-2 text-slate-700 dark:text-slate-300">
                   Message
                 </label>
                 <textarea
@@ -104,7 +104,7 @@ export function ContactSection() {
                   onChange={handleChange}
                   required
                   rows={5}
-                  className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 transition-all resize-none"
+                  className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white dark:bg-slate-800 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 transition-all resize-none"
                   placeholder="Tell me about your project, or just say hi!"
                 />
               </div>
@@ -145,21 +145,21 @@ export function ContactSection() {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             {/* Direct Contact */}
-            <div className="p-6 rounded-2xl bg-white border border-slate-200">
-              <h3 className="font-bold mb-4 text-slate-900">Prefer to reach out directly?</h3>
+            <div className="p-6 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+              <h3 className="font-bold mb-4 text-slate-900 dark:text-slate-100">Prefer to reach out directly?</h3>
               <div className="space-y-3">
                 <a
                   href="mailto:thong@example.com"
-                  className="flex items-center gap-3 text-slate-600 hover:text-blue-600 transition-colors"
+                  className="flex items-center gap-3 text-slate-600 dark:text-slate-300 hover:text-blue-600 transition-colors"
                 >
-                  <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center">
-                    <Mail className="w-5 h-5 text-blue-600" />
+                  <div className="w-10 h-10 rounded-full bg-blue-100 dark:bg-slate-700 flex items-center justify-center">
+                    <Mail className="w-5 h-5 text-blue-600 dark:text-blue-400" />
                   </div>
                   <span>thong@example.com</span>
                 </a>
-                <div className="flex items-center gap-3 text-slate-600">
-                  <div className="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center">
-                    <MapPin className="w-5 h-5 text-emerald-600" />
+                <div className="flex items-center gap-3 text-slate-600 dark:text-slate-300">
+                  <div className="w-10 h-10 rounded-full bg-emerald-100 dark:bg-slate-700 flex items-center justify-center">
+                    <MapPin className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
                   </div>
                   <span>Sydney, Australia</span>
                 </div>
@@ -167,43 +167,34 @@ export function ContactSection() {
             </div>
 
             {/* Social Links */}
-            <div className="p-6 rounded-2xl bg-white border border-slate-200">
-              <h3 className="font-bold mb-4 text-slate-900">Find me online</h3>
+            <div className="p-6 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+              <h3 className="font-bold mb-4 text-slate-900 dark:text-slate-100">Find me online</h3>
               <div className="flex gap-3">
                 <a
-                  href="https://github.com"
+                  href="https://github.com/LuuMTran"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 rounded-full border border-slate-200 hover:bg-slate-900 hover:text-white hover:border-slate-900 transition-all"
+                  className="p-3 rounded-full border border-slate-200 dark:border-slate-700 hover:bg-slate-900 hover:text-white hover:border-slate-900 transition-all"
                   aria-label="GitHub"
                 >
                   <Github className="w-5 h-5" />
                 </a>
                 <a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/in/luu-minh-thong-tran-31971b238/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 rounded-full border border-slate-200 hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-all"
+                  className="p-3 rounded-full border border-slate-200 dark:border-slate-700 hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-all"
                   aria-label="LinkedIn"
                 >
                   <Linkedin className="w-5 h-5" />
-                </a>
-                <a
-                  href="https://twitter.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-3 rounded-full border border-slate-200 hover:bg-sky-500 hover:text-white hover:border-sky-500 transition-all"
-                  aria-label="Twitter"
-                >
-                  <Twitter className="w-5 h-5" />
                 </a>
               </div>
             </div>
 
             {/* Fun note */}
-            <div className="p-4 rounded-xl bg-blue-50 border border-blue-100">
-              <p className="text-sm text-slate-600">
-                <strong className="text-blue-700">Pro tip:</strong> I usually respond within 24 hours. 
+            <div className="p-4 rounded-xl bg-blue-50 dark:bg-blue-900/20 border border-blue-100 dark:border-blue-800">
+              <p className="text-sm text-slate-600 dark:text-slate-300">
+                <strong className="text-blue-700 dark:text-blue-400">Pro tip:</strong> I usually respond within 24 hours. 
                 If you don't hear back, check your spam folder or try LinkedIn!
               </p>
             </div>
