@@ -11,3 +11,4 @@ export { AboutSection } from './AboutSection';
 export { ContactSection } from './ContactSection';
 export { BlogCard } from './BlogCard';
 export { BlogPostContent } from './BlogPostContent';
+export { BlogSection } from './BlogSection';

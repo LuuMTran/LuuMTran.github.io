@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowDown, Mail, FolderOpen } from "lucide-react";
+import { Mail, FolderOpen, Github, Linkedin } from "lucide-react";
 
 export function HeroSection() {
   const name = "LUU MINH THONG TRAN";
@@ -21,28 +21,13 @@ export function HeroSection() {
   const lineVariants = {
     hidden: { 
       opacity: 0, 
-      y: 50,
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.8,
-        ease: [0.215, 0.61, 0.355, 1] as const,
-      },
-    },
-  };
-
-  const charVariants = {
-    hidden: { 
-      opacity: 0, 
       y: 30,
     },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.5,
+        duration: 0.6,
         ease: [0.215, 0.61, 0.355, 1] as const,
       },
     },
@@ -56,7 +41,7 @@ export function HeroSection() {
   };
 
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center relative px-4">
+    <section id="hero" className="min-h-screen flex items-center justify-center relative px-4 py-20">
       <div className="text-center max-w-5xl mx-auto">
         {/* Main Content Container */}
         <motion.div
@@ -65,68 +50,42 @@ export function HeroSection() {
           initial="hidden"
           animate="visible"
         >
-          {/* Line 1: Name - Bigger, Bolder */}
+          {/* Line 1: Name - Responsive sizing */}
           <motion.div variants={lineVariants}>
-            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tight leading-none">
-              {name.split("").map((char, index) => (
-                <motion.span
-                  key={index}
-                  className="inline-block gradient-text"
-                  variants={charVariants}
-                  style={{
-                    textShadow: "0 0 40px rgba(37, 99, 235, 0.3)",
-                  }}
-                >
-                  {char === " " ? "\u00A0" : char}
-                </motion.span>
-              ))}
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight leading-tight break-words">
+              <span className="bg-gradient-to-r from-blue-600 to-emerald-600 bg-clip-text text-transparent">
+                {name}
+              </span>
             </h1>
-          </motion.div>
-
-          {/* Decorative Line */}
-          <motion.div 
-            className="flex items-center justify-center gap-4"
-            variants={lineVariants}
-          >
-            <div className="h-1 w-20 rounded-full bg-gradient-to-r from-transparent via-blue-500 to-blue-500" />
-            <div className="h-1 w-3 rounded-full bg-emerald-500" />
-            <div className="h-1 w-20 rounded-full bg-gradient-to-l from-transparent via-emerald-500 to-emerald-500" />
           </motion.div>
 
           {/* Line 2: Title */}
           <motion.div variants={lineVariants}>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-slate-600 tracking-wide">
-              {title.split("").map((char, index) => (
-                <motion.span
-                  key={index}
-                  className="inline-block"
-                  variants={charVariants}
-                >
-                  {char === " " ? "\u00A0" : char}
-                </motion.span>
-              ))}
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-medium text-slate-600">
+              {title}
             </h2>
           </motion.div>
 
-          {/* Subtitle */}
+          {/* Subtitle - HUMANIZED */}
           <motion.p 
-            className="text-lg md:text-xl text-slate-500 max-w-2xl mx-auto mt-6"
+            className="text-base md:text-lg text-slate-600 max-w-2xl mx-auto mt-6 leading-relaxed"
             variants={lineVariants}
           >
-            Transforming data into intelligent solutions through machine learning, 
-            deep learning, and data science
+            Hey! I'm Thong. I got into AI because I was fascinated by how Netflix knows exactly 
+            what I want to watch. Now I build intelligent systems that solve real problems. 
+            Currently studying AI at UTS in Sydney.
           </motion.p>
 
           {/* CTA Buttons */}
           <motion.div 
-            className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10"
+            className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8"
             variants={lineVariants}
           >
             <motion.button
               onClick={() => scrollToSection("#contact")}
-              className="btn-primary px-8 py-4 rounded-full font-semibold flex items-center gap-2 text-white"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              className="px-8 py-4 rounded-full font-semibold flex items-center gap-2 bg-blue-600 text-white hover:bg-blue-700 transition-colors"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
             >
               <Mail className="w-5 h-5" />
               Get in Touch
@@ -134,31 +93,56 @@ export function HeroSection() {
             
             <motion.button
               onClick={() => scrollToSection("#projects")}
-              className="px-8 py-4 rounded-full font-semibold flex items-center gap-2 border-2 border-slate-300 text-slate-700 hover:border-blue-500 hover:text-blue-600 transition-all bg-white/50 backdrop-blur-sm"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+              className="px-8 py-4 rounded-full font-semibold flex items-center gap-2 border-2 border-slate-300 text-slate-700 hover:border-blue-500 hover:text-blue-600 transition-all bg-white"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
             >
               <FolderOpen className="w-5 h-5" />
-              View Projects
+              See My Work
             </motion.button>
+          </motion.div>
+
+          {/* Social Links */}
+          <motion.div 
+            className="flex items-center justify-center gap-4 mt-6"
+            variants={lineVariants}
+          >
+            <a 
+              href="https://github.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="p-3 rounded-full border border-slate-200 hover:bg-slate-100 transition-colors"
+              aria-label="GitHub"
+            >
+              <Github className="w-5 h-5 text-slate-600" />
+            </a>
+            <a 
+              href="https://linkedin.com" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="p-3 rounded-full border border-slate-200 hover:bg-blue-50 hover:border-blue-300 transition-colors"
+              aria-label="LinkedIn"
+            >
+              <Linkedin className="w-5 h-5 text-slate-600" />
+            </a>
           </motion.div>
 
           {/* Stats Row */}
           <motion.div 
-            className="flex flex-wrap items-center justify-center gap-8 md:gap-16 mt-16 pt-8 border-t border-slate-200"
+            className="flex flex-wrap items-center justify-center gap-8 md:gap-12 mt-12 pt-8 border-t border-slate-200"
             variants={lineVariants}
           >
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold gradient-text">5+</div>
-              <div className="text-sm text-slate-500 mt-1">ML Models</div>
+              <div className="text-2xl md:text-3xl font-bold text-blue-600">5+</div>
+              <div className="text-sm text-slate-500">ML Models Built</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold gradient-text">10+</div>
-              <div className="text-sm text-slate-500 mt-1">Projects</div>
+              <div className="text-2xl md:text-3xl font-bold text-blue-600">10+</div>
+              <div className="text-sm text-slate-500">Projects</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold gradient-text">3+</div>
-              <div className="text-sm text-slate-500 mt-1">Years Exp.</div>
+              <div className="text-2xl md:text-3xl font-bold text-blue-600">3+</div>
+              <div className="text-sm text-slate-500">Years Learning</div>
             </div>
           </motion.div>
         </motion.div>
@@ -168,24 +152,18 @@ export function HeroSection() {
           className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 2 }}
+          transition={{ duration: 0.6, delay: 1.5 }}
         >
-          <span className="text-sm text-slate-400">Scroll to explore</span>
+          <span className="text-sm text-slate-400">Scroll down</span>
           <motion.div
             className="w-6 h-10 rounded-full border-2 border-slate-300 flex items-start justify-center p-2 cursor-pointer hover:border-blue-500 transition-colors"
             animate={{ y: [0, 5, 0] }}
             transition={{ duration: 1.5, repeat: Infinity }}
-            onClick={() => scrollToSection("#skills")}
+            onClick={() => scrollToSection("#about")}
           >
-            <motion.div 
-              className="w-1.5 h-1.5 rounded-full bg-gradient-to-b from-blue-500 to-emerald-500"
-            />
+            <div className="w-1.5 h-1.5 rounded-full bg-blue-500" />
           </motion.div>
         </motion.div>
-
-        {/* Background Decorations */}
-        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-400/10 rounded-full blur-3xl pointer-events-none" />
-        <div className="absolute bottom-20 right-10 w-72 h-72 bg-emerald-400/10 rounded-full blur-3xl pointer-events-none" />
       </div>
     </section>
   );
