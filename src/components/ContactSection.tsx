@@ -46,7 +46,7 @@ export function ContactSection() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-slate-900 dark:text-slate-100">Let's Chat</h2>
-          <p className="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
+          <p className="text-lg text-slate-700 dark:text-slate-300 max-w-2xl mx-auto">
             Have a project idea? Want to talk about AI? Or just want to grab coffee? 
             I'm always open to meeting new people.
           </p>
@@ -150,14 +150,14 @@ export function ContactSection() {
               <div className="space-y-3">
                 <a
                   href="mailto:thong@example.com"
-                  className="flex items-center gap-3 text-slate-600 dark:text-slate-300 hover:text-blue-600 transition-colors"
+                  className="flex items-center gap-3 text-slate-700 dark:text-slate-300 hover:text-blue-600 transition-colors"
                 >
                   <div className="w-10 h-10 rounded-full bg-blue-100 dark:bg-slate-700 flex items-center justify-center">
                     <Mail className="w-5 h-5 text-blue-600 dark:text-blue-400" />
                   </div>
                   <span>thong@example.com</span>
                 </a>
-                <div className="flex items-center gap-3 text-slate-600 dark:text-slate-300">
+                <div className="flex items-center gap-3 text-slate-700 dark:text-slate-300">
                   <div className="w-10 h-10 rounded-full bg-emerald-100 dark:bg-slate-700 flex items-center justify-center">
                     <MapPin className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
                   </div>
@@ -193,7 +193,7 @@ export function ContactSection() {
 
             {/* Fun note */}
             <div className="p-4 rounded-xl bg-blue-50 dark:bg-blue-900/20 border border-blue-100 dark:border-blue-800">
-              <p className="text-sm text-slate-600 dark:text-slate-300">
+              <p className="text-sm text-slate-700 dark:text-slate-300">
                 <strong className="text-blue-700 dark:text-blue-400">Pro tip:</strong> I usually respond within 24 hours. 
                 If you don't hear back, check your spam folder or try LinkedIn!
               </p>

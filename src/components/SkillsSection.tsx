@@ -100,7 +100,7 @@ export function SkillsSection() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-slate-900 dark:text-slate-100">Skills & Tools</h2>
-          <p className="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
+          <p className="text-lg text-slate-700 dark:text-slate-300 max-w-2xl mx-auto">
             These are the technologies I work with day-to-day. I'm always learning something new.
           </p>
         </motion.div>
@@ -121,7 +121,7 @@ export function SkillsSection() {
                 {skill.icon}
               </div>
               <h3 className="font-semibold text-sm text-center text-slate-800 dark:text-slate-100">{skill.name}</h3>
-              <span className="text-xs text-slate-500 dark:text-slate-400 mt-1">{skill.category}</span>
+              <span className="text-xs text-slate-600 dark:text-slate-400 mt-1">{skill.category}</span>
             </motion.div>
           ))}
         </div>
@@ -136,19 +136,19 @@ export function SkillsSection() {
         >
           <div className="p-6 rounded-2xl border border-slate-200 bg-white dark:bg-slate-800 dark:border-slate-700">
             <h4 className="font-bold mb-2 text-slate-900 dark:text-slate-100">Machine Learning</h4>
-            <p className="text-sm text-slate-600 dark:text-slate-300">
+            <p className="text-sm text-slate-700 dark:text-slate-300">
               Classification, Regression, NLP, Computer Vision, Time Series
             </p>
           </div>
           <div className="p-6 rounded-2xl border border-slate-200 bg-white dark:bg-slate-800 dark:border-slate-700">
             <h4 className="font-bold mb-2 text-slate-900 dark:text-slate-100">Deep Learning</h4>
-            <p className="text-sm text-slate-600 dark:text-slate-300">
+            <p className="text-sm text-slate-700 dark:text-slate-300">
               CNNs, RNNs, Transformers, Transfer Learning
             </p>
           </div>
           <div className="p-6 rounded-2xl border border-slate-200 bg-white dark:bg-slate-800 dark:border-slate-700">
             <h4 className="font-bold mb-2 text-slate-900 dark:text-slate-100">MLOps</h4>
-            <p className="text-sm text-slate-600 dark:text-slate-300">
+            <p className="text-sm text-slate-700 dark:text-slate-300">
               Model Deployment, APIs, Docker, CI/CD
             </p>
           </div>

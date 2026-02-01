@@ -47,7 +47,7 @@ export function ProjectsSection() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-slate-900 dark:text-slate-100">Things I've Built</h2>
-          <p className="text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
+          <p className="text-lg text-slate-700 dark:text-slate-300 max-w-2xl mx-auto">
             These projects taught me more than any tutorial ever could. Each one has a story.
           </p>
         </motion.div>
@@ -73,7 +73,7 @@ export function ProjectsSection() {
                 <h3 className="text-xl font-bold mb-3 text-slate-900 dark:text-slate-100 group-hover:text-blue-600 transition-colors pr-12">
                   {project.title}
                 </h3>
-                <p className="text-slate-600 dark:text-slate-300 text-sm mb-4 leading-relaxed">
+                <p className="text-slate-700 dark:text-slate-300 text-sm mb-4 leading-relaxed">
                   {project.description}
                 </p>
 

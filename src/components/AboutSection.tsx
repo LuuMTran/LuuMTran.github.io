@@ -6,28 +6,28 @@ import Image from "next/image";
 
 const timelineItems = [
   {
-    title: "AI/ML Engineer Intern",
-    organization: "Tech Company / Research Lab",
-    period: "2024 - Present",
-    description: "Working on machine learning models for production systems. Gaining hands-on experience with real-world AI applications and MLOps practices.",
+    title: "Peer Helper",
+    organization: "UTS College",
+    period: "Mar 2025 - Present",
+    description: "Communicates effectively to help current students understand coursework materials.",
   },
   {
-    title: "Data Science Intern",
-    organization: "Analytics Firm / Startup",
-    period: "2023 - 2024",
-    description: "Built predictive models and data pipelines. Learned how to handle messy real-world data and deploy models to production environments.",
+    title: "AI/Data Internship",
+    organization: "Katalyst",
+    period: "Dec 2025 - Feb 2026",
+    description: "Internship focused on AI/Data tasks in Ho Chi Minh City, Vietnam.",
   },
   {
-    title: "Master of Artificial Intelligence",
+    title: "Bachelor of Computing Science (Honours), Artificial Intelligence and Data Analytics",
     organization: "University of Technology Sydney",
-    period: "2024 - 2026",
-    description: "Currently pursuing Master's degree with focus on deep learning, computer vision, and neural network interpretability.",
+    period: "Feb 2025 - Nov 2027",
+    description: "Grade: 7/7.",
   },
   {
-    title: "Bachelor of Computer Science",
-    organization: "University of Technology Sydney",
-    period: "2020 - 2024",
-    description: "Completed Bachelor's degree with strong foundation in software engineering, algorithms, and data structures.",
+    title: "Diploma of Information Technology",
+    organization: "UTS College",
+    period: "Feb 2024 - Dec 2024",
+    description: "Grade: 6.6/7.",
   },
 ];
 
@@ -73,28 +73,21 @@ export function AboutSection() {
               <p className="text-blue-600 dark:text-blue-400 font-medium mb-2">Hello!</p>
               <h3 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900 dark:text-slate-100">I'm Luu</h3>
               
-              <div className="space-y-4 text-slate-600 dark:text-slate-300 leading-relaxed">
+              <div className="space-y-4 text-slate-700 dark:text-slate-300 leading-relaxed">
                 <p>
-                  I'm Luu Minh Thong Tran, an AI/ML Engineer based in Sydney, Australia. 
-                  My journey into artificial intelligence started with a simple curiosity: 
-                  how does Netflix know exactly what I want to watch next? That question 
-                  led me down the rabbit hole of machine learning, and I've been hooked ever since.
+                  Hey everyone! I'm Luu, a student studying Artificial Intelligence at UTS. 
+                  Currently, I'm focusing on developing Python programming skills, Machine Learning, 
+                  Deep Learning, and Data Science.
                 </p>
                 <p>
-                  Currently, I'm pursuing my Master's in Artificial Intelligence at the 
-                  University of Technology Sydney, where I'm diving deep into deep learning, 
-                  computer vision, and neural network architectures.
-                </p>
-                <p>
-                  I'm passionate about building AI systems that solve real-world problems 
-                  and make a positive impact. Whether it's developing predictive models or 
-                  creating intelligent automation systems, I love turning complex data into 
-                  actionable insights.
+                  I hope to have the opportunity to learn, develop myself, and contribute to real 
+                  projects in the AI/ML field. If you have any internship opportunities, projects, 
+                  or simply want to connect and share, don't hesitate to contact me! ^^
                 </p>
               </div>
 
               {/* Location */}
-              <div className="flex items-center gap-2 mt-6 text-slate-500 dark:text-slate-400">
+              <div className="flex items-center gap-2 mt-6 text-slate-600 dark:text-slate-400">
                 <MapPin className="w-4 h-4" />
                 <span>Sydney, Australia</span>
               </div>
@@ -151,10 +144,10 @@ export function AboutSection() {
                   {/* Timeline dot */}
                   <div className="absolute left-0 top-0 -translate-x-1/2 w-4 h-4 rounded-full bg-blue-500 border-2 border-white dark:border-slate-800 shadow" />
                   
-                  <span className="text-sm text-slate-500 dark:text-slate-400 font-medium">{item.period}</span>
+                  <span className="text-sm text-slate-600 dark:text-slate-400 font-medium">{item.period}</span>
                   <h4 className="font-bold text-slate-900 dark:text-slate-100 mt-1">{item.title}</h4>
-                  <p className="text-sm text-slate-500 dark:text-slate-400">{item.organization}</p>
-                  <p className="text-sm text-slate-600 dark:text-slate-300 mt-2">{item.description}</p>
+                  <p className="text-sm text-slate-600 dark:text-slate-400">{item.organization}</p>
+                  <p className="text-sm text-slate-700 dark:text-slate-300 mt-2">{item.description}</p>
                 </motion.div>
               ))}
             </div>

@@ -61,14 +61,14 @@ export function HeroSection() {
 
           {/* Line 2: Title */}
           <motion.div variants={lineVariants}>
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-medium text-slate-600">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-medium text-slate-700">
               {title}
             </h2>
           </motion.div>
 
           {/* Subtitle - HUMANIZED */}
           <motion.p 
-            className="text-base md:text-lg text-slate-600 max-w-2xl mx-auto mt-6 leading-relaxed"
+            className="text-base md:text-lg text-slate-700 max-w-2xl mx-auto mt-6 leading-relaxed"
             variants={lineVariants}
           >
             Hey! I'm Luu. I got into AI because I was fascinated by how Netflix knows exactly 
