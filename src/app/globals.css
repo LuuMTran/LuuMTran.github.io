@@ -1,7 +1,10 @@
 @import "tailwindcss";
 
+/* Configure Tailwind v4 for class-based dark mode */
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
-  /* Blue-Green Light Theme */
+  /* Light Theme - Blue-Green */
   --background: #f8fafc;
   --foreground: #0f172a;
   --border: #e2e8f0;
@@ -19,7 +22,7 @@
   --secondary-light: #d1fae5;
   --secondary-dark: #059669;
   
-  /* Accent - Blue-Green Gradient */
+  /* Accent */
   --accent: #f1f5f9;
   --accent-foreground: #0f172a;
   --muted: #f1f5f9;
@@ -28,6 +31,32 @@
   /* Card backgrounds */
   --card: #ffffff;
   --card-foreground: #0f172a;
+}
+
+/* Dark Theme - Applied via .dark class */
+.dark {
+  --background: #0f172a;
+  --foreground: #f8fafc;
+  --border: #334155;
+  --border-dark: #475569;
+  
+  --primary: #60a5fa;
+  --primary-foreground: #0f172a;
+  --primary-light: #1e3a8a;
+  --primary-dark: #3b82f6;
+  
+  --secondary: #34d399;
+  --secondary-foreground: #0f172a;
+  --secondary-light: #064e3b;
+  --secondary-dark: #10b981;
+  
+  --accent: #1e293b;
+  --accent-foreground: #f8fafc;
+  --muted: #334155;
+  --muted-foreground: #94a3b8;
+  
+  --card: #1e293b;
+  --card-foreground: #f8fafc;
 }
 
 @theme inline {
@@ -48,57 +77,6 @@
   --font-mono: var(--font-geist-mono);
 }
 
-/* Improved Dark Mode */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #f8fafc;
-    --border: #27272a;
-    --primary: #60a5fa;
-    --primary-foreground: #0a0a0a;
-    --secondary: #34d399;
-    --secondary-foreground: #0a0a0a;
-    --accent: #18181b;
-    --accent-foreground: #f8fafc;
-    --muted: #27272a;
-    --muted-foreground: #a1a1aa;
-    --card: #18181b;
-    --card-foreground: #f8fafc;
-  }
-}
-
-[data-theme="dark"] {
-  --background: #0a0a0a;
-  --foreground: #f8fafc;
-  --border: #27272a;
-  --primary: #60a5fa;
-  --primary-foreground: #0a0a0a;
-  --secondary: #34d399;
-  --secondary-foreground: #0a0a0a;
-  --accent: #18181b;
-  --accent-foreground: #f8fafc;
-  --muted: #27272a;
-  --muted-foreground: #a1a1aa;
-  --card: #18181b;
-  --card-foreground: #f8fafc;
-}
-
-[data-theme="light"] {
-  --background: #f8fafc;
-  --foreground: #0f172a;
-  --border: #e2e8f0;
-  --primary: #2563eb;
-  --primary-foreground: #ffffff;
-  --secondary: #10b981;
-  --secondary-foreground: #ffffff;
-  --accent: #f1f5f9;
-  --accent-foreground: #0f172a;
-  --muted: #f1f5f9;
-  --muted-foreground: #64748b;
-  --card: #ffffff;
-  --card-foreground: #0f172a;
-}
-
 /* Smooth Scrolling */
 html {
   scroll-behavior: smooth;
@@ -113,7 +91,7 @@ body {
   overflow-x: hidden;
 }
 
-/* Grid background animation - lighter for light theme */
+/* Grid background animation */
 @keyframes moveGrid {
   0% {
     background-position: 0 0;
@@ -129,22 +107,11 @@ body {
     linear-gradient(to bottom, var(--border) 1px, transparent 1px);
   background-size: 40px 40px;
   animation: moveGrid 20s linear infinite;
-  opacity: 0.6;
+  opacity: 0.4;
 }
 
-/* Center char animation */
-.center-char {
-  display: inline-block;
-  animation: bounceChar 2s ease-in-out infinite;
-}
-
-@keyframes bounceChar {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-8px);
-  }
+.dark .animated-grid {
+  opacity: 0.2;
 }
 
 /* Social button hover effect */
@@ -179,28 +146,6 @@ body {
   background-clip: text;
 }
 
-/* Gradient border utility */
-.gradient-border {
-  position: relative;
-  background: var(--card);
-  border-radius: 1rem;
-}
-
-.gradient-border::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: 1rem;
-  padding: 2px;
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
-  -webkit-mask: 
-    linear-gradient(#fff 0 0) content-box, 
-    linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  pointer-events: none;
-}
-
 /* Card hover effects */
 .card-hover {
   transition: all 0.3s ease;
@@ -210,6 +155,10 @@ body {
   transform: translateY(-4px);
   box-shadow: 0 20px 40px -15px rgba(37, 99, 235, 0.15);
   border-color: var(--primary);
+}
+
+.dark .card-hover:hover {
+  box-shadow: 0 20px 40px -15px rgba(96, 165, 250, 0.15);
 }
 
 /* Primary button */
@@ -245,4 +194,22 @@ body {
 .section-divider {
   height: 1px;
   background: linear-gradient(90deg, transparent, var(--border), transparent);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted-foreground);
 }

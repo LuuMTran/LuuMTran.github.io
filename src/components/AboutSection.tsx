@@ -43,7 +43,7 @@ export function AboutSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-slate-900 dark:text-slate-100">About Me</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">About Me</h2>
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
@@ -57,7 +57,7 @@ export function AboutSection() {
           >
             {/* Profile Picture - LinkedIn Style */}
             <div className="flex flex-col items-center lg:items-start">
-              <div className="relative w-48 h-48 rounded-full overflow-hidden border-4 border-white dark:border-slate-700 shadow-xl bg-gradient-to-br from-blue-500 to-emerald-500">
+              <div className="relative w-48 h-48 rounded-full overflow-hidden border-4 border-card shadow-xl bg-gradient-to-br from-blue-500 to-emerald-500">
                 <Image
                   src="/images/profile.jpg"
                   alt="Luu Minh Thong Tran"
@@ -70,10 +70,10 @@ export function AboutSection() {
 
             {/* Bio */}
             <div>
-              <p className="text-blue-600 dark:text-blue-400 font-medium mb-2">Hello!</p>
-              <h3 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900 dark:text-slate-100">I'm Luu</h3>
+              <p className="text-primary font-medium mb-2">Hello!</p>
+              <h3 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">I'm Luu</h3>
               
-              <div className="space-y-4 text-slate-700 dark:text-slate-300 leading-relaxed">
+              <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
                   Hey everyone! I'm Luu, a student studying Artificial Intelligence at UTS. 
                   Currently, I'm focusing on developing Python programming skills, Machine Learning, 
@@ -87,7 +87,7 @@ export function AboutSection() {
               </div>
 
               {/* Location */}
-              <div className="flex items-center gap-2 mt-6 text-slate-600 dark:text-slate-400">
+              <div className="flex items-center gap-2 mt-6 text-muted-foreground">
                 <MapPin className="w-4 h-4" />
                 <span>Sydney, Australia</span>
               </div>
@@ -98,26 +98,26 @@ export function AboutSection() {
                   href="https://www.linkedin.com/in/luu-minh-thong-tran-31971b238/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 rounded-full border border-slate-200 dark:border-slate-700 hover:bg-blue-50 dark:hover:bg-blue-900/30 hover:border-blue-300 transition-all"
+                  className="p-3 rounded-full border border-border hover:bg-primary-light hover:border-primary transition-all"
                   aria-label="LinkedIn"
                 >
-                  <Linkedin className="w-5 h-5 text-slate-600 dark:text-slate-400" />
+                  <Linkedin className="w-5 h-5 text-muted-foreground" />
                 </a>
                 <a
                   href="https://github.com/LuuMTran"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 rounded-full border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all"
+                  className="p-3 rounded-full border border-border hover:bg-muted transition-all"
                   aria-label="GitHub"
                 >
-                  <Github className="w-5 h-5 text-slate-600 dark:text-slate-400" />
+                  <Github className="w-5 h-5 text-muted-foreground" />
                 </a>
                 <a
                   href="mailto:luuminhthongtran@gmail.com"
-                  className="p-3 rounded-full border border-slate-200 dark:border-slate-700 hover:bg-blue-50 dark:hover:bg-blue-900/30 transition-all"
+                  className="p-3 rounded-full border border-border hover:bg-primary-light transition-all"
                   aria-label="Email"
                 >
-                  <Mail className="w-5 h-5 text-slate-600 dark:text-slate-400" />
+                  <Mail className="w-5 h-5 text-muted-foreground" />
                 </a>
               </div>
             </div>
@@ -130,38 +130,38 @@ export function AboutSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h3 className="text-2xl font-bold mb-8 text-slate-900 dark:text-slate-100">My Journey So Far</h3>
+            <h3 className="text-2xl font-bold mb-8 text-foreground">My Journey So Far</h3>
             <div className="space-y-6">
               {timelineItems.map((item, index) => (
                 <motion.div
                   key={item.title}
-                  className="relative pl-8 pb-6 border-l-2 border-slate-200 dark:border-slate-700 last:pb-0"
+                  className="relative pl-8 pb-6 border-l-2 border-border last:pb-0"
                   initial={{ opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: index * 0.1 }}
                 >
                   {/* Timeline dot */}
-                  <div className="absolute left-0 top-0 -translate-x-1/2 w-4 h-4 rounded-full bg-blue-500 border-2 border-white dark:border-slate-800 shadow" />
+                  <div className="absolute left-0 top-0 -translate-x-1/2 w-4 h-4 rounded-full bg-primary border-2 border-card shadow" />
                   
-                  <span className="text-sm text-slate-600 dark:text-slate-400 font-medium">{item.period}</span>
-                  <h4 className="font-bold text-slate-900 dark:text-slate-100 mt-1">{item.title}</h4>
-                  <p className="text-sm text-slate-600 dark:text-slate-400">{item.organization}</p>
-                  <p className="text-sm text-slate-700 dark:text-slate-300 mt-2">{item.description}</p>
+                  <span className="text-sm text-muted-foreground font-medium">{item.period}</span>
+                  <h4 className="font-bold text-foreground mt-1">{item.title}</h4>
+                  <p className="text-sm text-muted-foreground">{item.organization}</p>
+                  <p className="text-sm text-muted-foreground mt-2">{item.description}</p>
                 </motion.div>
               ))}
             </div>
 
             {/* Currently Looking For */}
             <motion.div 
-              className="mt-8 p-6 rounded-2xl bg-blue-50 dark:bg-blue-900/20 border border-blue-100 dark:border-blue-800"
+              className="mt-8 p-6 rounded-2xl bg-primary-light border border-border"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: 0.3 }}
             >
-              <h4 className="font-bold mb-2 text-blue-900 dark:text-blue-300">Currently Looking For</h4>
-              <p className="text-sm text-blue-800 dark:text-blue-200">
+              <h4 className="font-bold mb-2 text-primary-dark">Currently Looking For</h4>
+              <p className="text-sm text-primary">
                 I'm actively seeking internship opportunities in AI/ML engineering where I can 
                 apply my skills, learn from experienced professionals, and contribute to impactful projects. 
                 If you're hiring, I'd love to connect!

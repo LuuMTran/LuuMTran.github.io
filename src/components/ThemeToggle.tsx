@@ -5,18 +5,21 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Sun, Moon } from "lucide-react";
 
 export function ThemeToggle() {
-  // Default to light mode for the blue-green theme
   const [theme, setTheme] = useState<"light" | "dark">("light");
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     setMounted(true);
-    // Check for saved theme preference - default to light
     const savedTheme = localStorage.getItem("theme") as "light" | "dark" | null;
-    
-    // If no saved theme, default to light (blue-green theme)
-    const initialTheme = savedTheme || "light";
+    const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const initialTheme = savedTheme || (systemPrefersDark ? "dark" : "light");
     setTheme(initialTheme);
+    
+    if (initialTheme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
     document.documentElement.setAttribute("data-theme", initialTheme);
   }, []);
 
@@ -24,12 +27,18 @@ export function ThemeToggle() {
     const newTheme = theme === "light" ? "dark" : "light";
     setTheme(newTheme);
     localStorage.setItem("theme", newTheme);
+    
+    if (newTheme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
     document.documentElement.setAttribute("data-theme", newTheme);
   };
 
   if (!mounted) {
     return (
-      <button className="fixed top-6 right-6 z-50 w-10 h-10 rounded-full border border-border bg-white shadow-sm flex items-center justify-center">
+      <button className="fixed top-6 right-6 z-50 w-10 h-10 rounded-full border border-border bg-card shadow-sm flex items-center justify-center">
         <div className="w-5 h-5" />
       </button>
     );
@@ -38,7 +47,7 @@ export function ThemeToggle() {
   return (
     <motion.button
       onClick={toggleTheme}
-      className="theme-toggle fixed top-6 right-6 z-50 w-10 h-10 rounded-full border border-border bg-white shadow-sm hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200 flex items-center justify-center cursor-pointer"
+      className="theme-toggle fixed top-6 right-6 z-50 w-10 h-10 rounded-full border border-border bg-card shadow-sm hover:bg-accent hover:text-primary hover:border-primary/50 flex items-center justify-center cursor-pointer text-foreground"
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
       aria-label="Toggle theme"

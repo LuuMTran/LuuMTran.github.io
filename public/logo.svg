@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="LT logo with coordinate corner and curve">
+  <!-- Corner axes mark (Red) -->
+  <g fill="none" stroke="#E53935" stroke-width="14" stroke-linecap="round">
+    <path d="M92 420H210"/>
+    <path d="M92 420V302"/>
+    <!-- ticks -->
+    <path d="M130 420V402"/>
+    <path d="M168 420V402"/>
+    <path d="M206 420V402"/>
+    <path d="M92 382H110"/>
+    <path d="M92 344H110"/>
+    <path d="M92 306H110"/>
+  </g>
+
+  <!-- Function curve (Red, subtle) -->
+  <path
+    d="M110 360C170 315 210 330 250 280C295 225 340 210 402 180"
+    fill="none"
+    stroke="#E53935"
+    stroke-width="10"
+    opacity="0.35"
+    stroke-linecap="round"
+  />
+
+  <!-- L (Blue) -->
+  <g fill="none" stroke="#1E5BFF" stroke-width="30" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M160 150V362H250"/>
+  </g>
+
+  <!-- T (Green) -->
+  <g fill="none" stroke="#18A558" stroke-width="30" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M276 150H386"/>
+    <path d="M331 150V362"/>
+  </g>
+</svg>

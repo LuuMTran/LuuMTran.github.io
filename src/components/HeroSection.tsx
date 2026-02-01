@@ -53,7 +53,7 @@ export function HeroSection() {
           {/* Line 1: Name - Responsive sizing */}
           <motion.div variants={lineVariants}>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight leading-tight break-words">
-              <span className="bg-gradient-to-r from-blue-600 to-emerald-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-primary to-emerald-600 bg-clip-text text-transparent">
                 {name}
               </span>
             </h1>
@@ -61,19 +61,17 @@ export function HeroSection() {
 
           {/* Line 2: Title */}
           <motion.div variants={lineVariants}>
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-medium text-slate-700">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-medium text-muted-foreground">
               {title}
             </h2>
           </motion.div>
 
           {/* Subtitle - HUMANIZED */}
-          <motion.p 
-            className="text-base md:text-lg text-slate-700 max-w-2xl mx-auto mt-6 leading-relaxed"
+          <motion.p
+            className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto mt-6 leading-relaxed"
             variants={lineVariants}
           >
-            Hey! I'm Luu. I got into AI because I was fascinated by how Netflix knows exactly 
-            what I want to watch. Now I build intelligent systems that solve real problems. 
-            Currently studying AI at UTS in Sydney.
+            Hey! I'm Luu. When I was in grade 10, I watched Andrew Ng's Machine Learning course and was fascinated by how the real world can turn into mathematical representation to help computers replicate human intelligence: the ability to predict. With curiosity, I made this far and building real-world AI applications. Currently studying AI at UTS in Sydney.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -83,7 +81,7 @@ export function HeroSection() {
           >
             <motion.button
               onClick={() => scrollToSection("#contact")}
-              className="px-8 py-4 rounded-full font-semibold flex items-center gap-2 bg-blue-600 text-white hover:bg-blue-700 transition-colors"
+              className="px-8 py-4 rounded-full font-semibold flex items-center gap-2 bg-primary text-white hover:bg-primary-dark transition-colors"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
@@ -93,7 +91,7 @@ export function HeroSection() {
             
             <motion.button
               onClick={() => scrollToSection("#projects")}
-              className="px-8 py-4 rounded-full font-semibold flex items-center gap-2 border-2 border-slate-300 text-slate-700 hover:border-blue-500 hover:text-blue-600 transition-all bg-white"
+              className="px-8 py-4 rounded-full font-semibold flex items-center gap-2 border-2 border-border text-muted-foreground hover:border-primary hover:text-primary transition-all bg-card"
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
@@ -111,38 +109,38 @@ export function HeroSection() {
               href="https://github.com/LuuMTran" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="p-3 rounded-full border border-slate-200 hover:bg-slate-100 transition-colors"
+              className="p-3 rounded-full border border-border hover:bg-muted transition-colors"
               aria-label="GitHub"
             >
-              <Github className="w-5 h-5 text-slate-600" />
+              <Github className="w-5 h-5 text-muted-foreground" />
             </a>
             <a 
               href="https://www.linkedin.com/in/luu-minh-thong-tran-31971b238/" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="p-3 rounded-full border border-slate-200 hover:bg-blue-50 hover:border-blue-300 transition-colors"
+              className="p-3 rounded-full border border-border hover:bg-primary-light hover:border-primary transition-colors"
               aria-label="LinkedIn"
             >
-              <Linkedin className="w-5 h-5 text-slate-600" />
+              <Linkedin className="w-5 h-5 text-muted-foreground" />
             </a>
           </motion.div>
 
           {/* Stats Row */}
           <motion.div 
-            className="flex flex-wrap items-center justify-center gap-8 md:gap-12 mt-12 pt-8 border-t border-slate-200"
+            className="flex flex-wrap items-center justify-center gap-8 md:gap-12 mt-12 pt-8 border-t border-border"
             variants={lineVariants}
           >
             <div className="text-center">
-              <div className="text-2xl md:text-3xl font-bold text-blue-600">5+</div>
-              <div className="text-sm text-slate-500">ML Models Built</div>
+              <div className="text-2xl md:text-3xl font-bold text-primary">5+</div>
+              <div className="text-sm text-muted-foreground">ML Models Built</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl md:text-3xl font-bold text-blue-600">10+</div>
-              <div className="text-sm text-slate-500">Projects</div>
+              <div className="text-2xl md:text-3xl font-bold text-primary">10+</div>
+              <div className="text-sm text-muted-foreground">Projects</div>
             </div>
             <div className="text-center">
-              <div className="text-2xl md:text-3xl font-bold text-blue-600">3+</div>
-              <div className="text-sm text-slate-500">Years Learning</div>
+              <div className="text-2xl md:text-3xl font-bold text-primary">3+</div>
+              <div className="text-sm text-muted-foreground">Years Learning</div>
             </div>
           </motion.div>
         </motion.div>
@@ -154,14 +152,14 @@ export function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1.5 }}
         >
-          <span className="text-sm text-slate-400">Scroll down</span>
+          <span className="text-sm text-muted-foreground">Scroll down</span>
           <motion.div
-            className="w-6 h-10 rounded-full border-2 border-slate-300 flex items-start justify-center p-2 cursor-pointer hover:border-blue-500 transition-colors"
+            className="w-6 h-10 rounded-full border-2 border-border flex items-start justify-center p-2 cursor-pointer hover:border-primary transition-colors"
             animate={{ y: [0, 5, 0] }}
             transition={{ duration: 1.5, repeat: Infinity }}
             onClick={() => scrollToSection("#about")}
           >
-            <div className="w-1.5 h-1.5 rounded-full bg-blue-500" />
+            <div className="w-1.5 h-1.5 rounded-full bg-primary" />
           </motion.div>
         </motion.div>
       </div>

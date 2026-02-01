@@ -10,7 +10,7 @@ export function BlogSection() {
   const latestPosts = blogPosts.slice(0, 3);
 
   return (
-    <section id="blog" className="min-h-screen py-24 px-4 md:px-8 lg:px-16 flex items-center bg-white dark:bg-slate-900">
+    <section id="blog" className="min-h-screen py-24 px-4 md:px-8 lg:px-16 flex items-center bg-background">
       <div className="max-w-7xl mx-auto w-full">
         {/* Header */}
         <motion.div
@@ -20,8 +20,8 @@ export function BlogSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-slate-900 dark:text-slate-100">Latest from the Blog</h2>
-          <p className="text-lg text-slate-700 dark:text-slate-300 max-w-2xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">Latest from the Blog</h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             I write about AI/ML concepts, tutorials, and things I'm learning along the way.
           </p>
         </motion.div>
@@ -31,7 +31,7 @@ export function BlogSection() {
           {latestPosts.map((post, index) => (
             <motion.article
               key={post.slug}
-              className="group relative overflow-hidden rounded-xl border border-slate-200 bg-white dark:bg-slate-800 dark:border-slate-700 hover:border-blue-300 dark:hover:border-blue-600 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+              className="group relative overflow-hidden rounded-xl border border-border bg-background hover:border-primary/50 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -39,22 +39,22 @@ export function BlogSection() {
             >
               <div className="p-6">
                 {/* Category */}
-                <div className="inline-block px-2.5 py-0.5 rounded-full bg-blue-50 dark:bg-blue-900/30 border border-blue-100 dark:border-blue-800 mb-3">
-                  <span className="text-xs font-medium text-blue-600 dark:text-blue-400">{post.category}</span>
+                <div className="inline-block px-2.5 py-0.5 rounded-full bg-primary-light border border-border mb-3">
+                  <span className="text-xs font-medium text-primary">{post.category}</span>
                 </div>
 
                 {/* Title */}
-                <h3 className="text-lg font-bold text-slate-900 dark:text-slate-100 mb-2 group-hover:text-blue-600 transition-colors line-clamp-2">
+                <h3 className="text-lg font-bold text-foreground mb-2 group-hover:text-primary transition-colors line-clamp-2">
                   {post.title}
                 </h3>
 
                 {/* Excerpt */}
-                <p className="text-slate-700 dark:text-slate-300 text-sm mb-4 line-clamp-2">
+                <p className="text-muted-foreground text-sm mb-4 line-clamp-2">
                   {post.excerpt}
                 </p>
 
                 {/* Meta */}
-                <div className="flex items-center gap-3 text-xs text-slate-500 dark:text-slate-400 mb-4">
+                <div className="flex items-center gap-3 text-xs text-muted-foreground mb-4">
                   <div className="flex items-center gap-1">
                     <Calendar className="w-3 h-3" />
                     {post.date}
@@ -68,7 +68,7 @@ export function BlogSection() {
                 {/* Read More */}
                 <Link
                   href={`/blog/${post.slug}`}
-                  className="inline-flex items-center gap-1 text-sm font-medium text-blue-600 hover:gap-2 transition-all"
+                  className="inline-flex items-center gap-1 text-sm font-medium text-primary hover:gap-2 transition-all"
                 >
                   Read Article
                   <ArrowRight className="w-4 h-4" />
@@ -88,7 +88,7 @@ export function BlogSection() {
         >
           <Link
             href="/blog"
-            className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-blue-600 text-white font-semibold hover:bg-blue-700 transition-colors"
+            className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-primary text-primary-foreground font-semibold hover:bg-primary-dark transition-colors"
           >
             View All Articles
             <ArrowRight className="w-5 h-5" />
