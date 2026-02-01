@@ -3,3 +3,8 @@ export { CenterTitle } from './CenterTitle';
 export { SocialLinks } from './SocialLinks';
 export { ThemeToggle } from './ThemeToggle';
 export { GridBackground } from './GridBackground';
+export { Navigation } from './Navigation';
+export { SkillsSection } from './SkillsSection';
+export { ProjectsSection } from './ProjectsSection';
+export { AboutSection } from './AboutSection';
+export { ContactSection } from './ContactSection';
