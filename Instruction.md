@@ -23,3 +23,9 @@ Part 2
 3. My github is https://github.com/LuuMTran Only add redirection do not read and modify the project part
 4. My first name is Luu, so I'm Luu not I'm Thong
 5. ![alt text](image-6.png) ![alt text](image-7.png) ![alt text](image-8.png) ![alt text](image-9.png) ![alt text](image-10.png) the darkmode is still bad except for about me section, fix the darkmode on other section also, Make sure the words are more visible and bright in darkmode!
+
+Part 2.5 
+
+1. ![alt text](image-11.png) you made the dark mode words brighter but you also made the words in bright mode brights, I cann see anything lighter. I wants the words colors from previous version! ![alt text](image-12.png) also from skills and tools downward, in bright mode showing dark? I want the one from previous version that is consistent.
+2. You missed my experieneces, add it into my journey![alt text](image-4.png)
+3. Add some hover effects on lastest blogs blocks and things I built blocks, make it more repsonsive like skills and tools parts

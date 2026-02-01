@@ -6,6 +6,18 @@ import Image from "next/image";
 
 const timelineItems = [
   {
+    title: "AI/ML Engineer Intern",
+    organization: "Tech Company / Research Lab",
+    period: "2024 - Present",
+    description: "Working on machine learning models for production systems. Gaining hands-on experience with real-world AI applications and MLOps practices.",
+  },
+  {
+    title: "Data Science Intern",
+    organization: "Analytics Firm / Startup",
+    period: "2023 - 2024",
+    description: "Built predictive models and data pipelines. Learned how to handle messy real-world data and deploy models to production environments.",
+  },
+  {
     title: "Master of Artificial Intelligence",
     organization: "University of Technology Sydney",
     period: "2024 - 2026",
@@ -45,19 +57,14 @@ export function AboutSection() {
           >
             {/* Profile Picture - LinkedIn Style */}
             <div className="flex flex-col items-center lg:items-start">
-              <div className="relative w-48 h-48 rounded-full overflow-hidden border-4 border-white dark:border-slate-700 shadow-xl">
-                {/* Placeholder until actual image is provided */}
-                <div className="w-full h-full bg-gradient-to-br from-blue-500 to-emerald-500 flex items-center justify-center text-white text-6xl font-bold">
-                  L
-                </div>
-                {/* When image is available, use this:
+              <div className="relative w-48 h-48 rounded-full overflow-hidden border-4 border-white dark:border-slate-700 shadow-xl bg-gradient-to-br from-blue-500 to-emerald-500">
                 <Image
                   src="/images/profile.jpg"
                   alt="Luu Minh Thong Tran"
                   fill
                   className="object-cover"
+                  priority
                 />
-                */}
               </div>
             </div>
 
