@@ -9,7 +9,6 @@ import {
   ProjectsSection,
   BlogSection,
   ContactSection,
-  ThemeToggle,
 } from "@/components";
 
 export default function Home() {
@@ -17,9 +16,6 @@ export default function Home() {
     <main className="relative bg-background overflow-x-hidden">
       {/* Grid Background */}
       <GridBackground />
-
-      {/* Theme Toggle */}
-      <ThemeToggle />
 
       {/* Navigation */}
       <Navigation />
@@ -46,7 +42,7 @@ export default function Home() {
       <footer className="py-8 px-4 border-t border-border bg-background">
         <div className="max-w-7xl mx-auto text-center">
           <p className="text-sm text-muted-foreground">
-            © 2024 Luu Minh Thong Tran. Built with Next.js, Tailwind CSS, and lots of ☕
+            © 2024 Luu Minh Thong Tran
           </p>
         </div>
       </footer>

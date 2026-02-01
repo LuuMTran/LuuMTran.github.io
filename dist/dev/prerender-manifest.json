@@ -1,1 +1,11 @@
-{"version":4,"routes":{"/blog/neural-network-from-scratch":{},"/blog/transformers-explained":{},"/blog/hyperparameter-tuning-guide":{},"/blog/computer-vision-cnn":{},"/blog/deploying-ml-models":{},"/blog/gradient-boosting-explained":{}},"dynamicRoutes":{"/blog/[slug]":{"dataRoute":null,"dataRouteRegex":null,"fallback":null,"fallbackRevalidate":false,"fallbackSourceRoute":"/blog/[slug]","routeRegex":"^\\/blog\\/([^/]+?)(?:\\/)?$","allowHeader":[]}},"notFoundRoutes":[],"preview":{"previewModeId":"28f7a162525da23a40de0dab4ad18d69","previewModeSigningKey":"cba44bdb0863454b4b19d70085a04752c828e844b7b5f8764f1b4bff26d3efa6","previewModeEncryptionKey":"b2989e6100c400d8a8895885b7cae76ad97eb9f9216d6d8164c54253b6414469"}}
+{
+  "version": 4,
+  "routes": {},
+  "dynamicRoutes": {},
+  "notFoundRoutes": [],
+  "preview": {
+    "previewModeId": "7d3af3dd6b837af0d78269214c1e9989",
+    "previewModeSigningKey": "1fd9ad29cd9a8dde895dacba53df20ceedc79a91c67f1dd2179a98ec21e79bc3",
+    "previewModeEncryptionKey": "66b5f69e3fcc850cf3ba5cde937de402270ba442c7312f3b2561200ea9999e47"
+  }
+}
