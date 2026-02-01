@@ -1,0 +1,59 @@
+1:"$Sreact.fragment"
+2:I[45614,["/_next/static/chunks/d5f7520d963047ce.js","/_next/static/chunks/41f4bd048becbe7c.js"],"default"]
+3:I[66827,["/_next/static/chunks/d5f7520d963047ce.js","/_next/static/chunks/41f4bd048becbe7c.js"],"default"]
+5:I[99760,["/_next/static/chunks/d5f7520d963047ce.js","/_next/static/chunks/41f4bd048becbe7c.js"],"OutletBoundary"]
+6:"$Sreact.suspense"
+8:I[99760,["/_next/static/chunks/d5f7520d963047ce.js","/_next/static/chunks/41f4bd048becbe7c.js"],"ViewportBoundary"]
+a:I[99760,["/_next/static/chunks/d5f7520d963047ce.js","/_next/static/chunks/41f4bd048becbe7c.js"],"MetadataBoundary"]
+c:I[77369,[],"default"]
+:HL["/_next/static/chunks/c4ad419d29c74123.css","style"]
+:HL["/_next/static/media/797e433ab948586e-s.p.dbea232f.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/caa3a2e1cccd8315-s.p.853070df.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+0:{"P":null,"b":"rNs4m6KpIuLyE8IlG_qCb","c":["","blog","neural-network-from-scratch"],"q":"","i":false,"f":[[["",{"children":["blog",{"children":[["slug","neural-network-from-scratch","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/c4ad419d29c74123.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","suppressHydrationWarning":true,"children":["$","body",null,{"className":"geist_a71539c9-module__T19VSG__variable geist_mono_8d43a2aa-module__8Li5zG__variable antialiased","children":["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":["$L4",[["$","script","script-0",{"src":"/_next/static/chunks/8e9c3819299c21fa.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/_next/static/chunks/9e4c325896390388.js","async":true,"nonce":"$undefined"}]],["$","$L5",null,{"children":["$","$6",null,{"name":"Next.MetadataOutlet","children":"$@7"}]}]]}],{},null,false,false]},null,false,false]},null,false,false]},null,false,false],["$","$1","h",{"children":[null,["$","$L8",null,{"children":"$L9"}],["$","div",null,{"hidden":true,"children":["$","$La",null,{"children":["$","$6",null,{"name":"Next.Metadata","children":"$Lb"}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],false]],"m":"$undefined","G":["$c",[]],"S":true}
+d:I[54381,["/_next/static/chunks/8e9c3819299c21fa.js","/_next/static/chunks/9e4c325896390388.js"],"BlogPostContent"]
+e:T4ef,
+# Building a Neural Network from Scratch
+
+In this comprehensive guide, we'll build a neural network from scratch using only NumPy. This exercise will give you deep insights into how neural networks actually work under the hood.
+
+## Why Build From Scratch?
+
+Understanding the fundamentals is crucial for any ML engineer. While frameworks like TensorFlow and PyTorch abstract away the details, knowing what's happening internally helps you:
+- Debug issues more effectively
+- Optimize architectures better
+- Understand the mathematics behind deep learning
+
+## The Architecture
+
+We'll build a simple feedforward neural network with:
+- Input layer
+- Two hidden layers with ReLU activation
+- Output layer with softmax
+- Cross-entropy loss function
+
+## Implementation
+
+### Step 1: Initialize Parameters
+```python
+import numpy as np
+
+def initialize_parameters(layer_dims):
+    parameters = {}
+    L = len(layer_dims)
+    
+    for l in range(1, L):
+        parameters['W' + str(l)] = np.random.randn(layer_dims[l], layer_dims[l-1]) * 0.01
+        parameters['b' + str(l)] = np.zeros((layer_dims[l], 1))
+    
+    return parameters
+```
+
+### Step 2: Forward Propagation
+The forward pass computes the output of the network...
+
+[Continue with full implementation details]
+    4:["$","$Ld",null,{"post":{"slug":"neural-network-from-scratch","title":"Building a Neural Network from Scratch","excerpt":"Learn how to implement backpropagation and gradient descent to build a fully functional neural network using only NumPy.","content":"$e","date":"2024-01-15","readTime":"8 min read","category":"Deep Learning","tags":["Neural Networks","Python","NumPy","Tutorial"],"featured":true}}]
+9:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+f:I[99055,["/_next/static/chunks/d5f7520d963047ce.js","/_next/static/chunks/41f4bd048becbe7c.js"],"IconMark"]
+7:null
+b:[["$","title","0",{"children":"Luu Minh Thong Tran"}],["$","meta","1",{"name":"description","content":"Portfolio of Luu Minh Thong Tran - AI/ML Engineer"}],["$","link","2",{"rel":"icon","href":"/favicon.ico?favicon.0b3bf435.ico","sizes":"256x256","type":"image/x-icon"}],["$","$Lf","3",{}]]

@@ -1,16 +1,33 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --border: #e5e7eb;
-  --border-dark: #374151;
-  --primary: #3b82f6;
+  /* Blue-Green Light Theme */
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  --border: #e2e8f0;
+  --border-dark: #cbd5e1;
+  
+  /* Primary Blue */
+  --primary: #2563eb;
   --primary-foreground: #ffffff;
-  --accent: #f3f4f6;
-  --accent-foreground: #171717;
-  --muted: #f3f4f6;
-  --muted-foreground: #6b7280;
+  --primary-light: #dbeafe;
+  --primary-dark: #1d4ed8;
+  
+  /* Secondary Green */
+  --secondary: #10b981;
+  --secondary-foreground: #ffffff;
+  --secondary-light: #d1fae5;
+  --secondary-dark: #059669;
+  
+  /* Accent - Blue-Green Gradient */
+  --accent: #f1f5f9;
+  --accent-foreground: #0f172a;
+  --muted: #f1f5f9;
+  --muted-foreground: #64748b;
+  
+  /* Card backgrounds */
+  --card: #ffffff;
+  --card-foreground: #0f172a;
 }
 
 @theme inline {
@@ -19,50 +36,67 @@
   --color-border: var(--border);
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
+/* Dark mode (optional fallback) */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-    --border: #374151;
-    --primary: #60a5fa;
-    --primary-foreground: #0a0a0a;
-    --accent: #1f2937;
-    --accent-foreground: #ededed;
-    --muted: #1f2937;
-    --muted-foreground: #9ca3af;
+    --background: #0f172a;
+    --foreground: #f8fafc;
+    --border: #334155;
+    --primary: #3b82f6;
+    --primary-foreground: #ffffff;
+    --secondary: #10b981;
+    --secondary-foreground: #ffffff;
+    --accent: #1e293b;
+    --accent-foreground: #f8fafc;
+    --muted: #334155;
+    --muted-foreground: #94a3b8;
+    --card: #1e293b;
+    --card-foreground: #f8fafc;
   }
 }
 
 [data-theme="dark"] {
-  --background: #0a0a0a;
-  --foreground: #ededed;
-  --border: #374151;
-  --primary: #60a5fa;
-  --primary-foreground: #0a0a0a;
-  --accent: #1f2937;
-  --accent-foreground: #ededed;
-  --muted: #1f2937;
-  --muted-foreground: #9ca3af;
+  --background: #0f172a;
+  --foreground: #f8fafc;
+  --border: #334155;
+  --primary: #3b82f6;
+  --primary-foreground: #ffffff;
+  --secondary: #10b981;
+  --secondary-foreground: #ffffff;
+  --accent: #1e293b;
+  --accent-foreground: #f8fafc;
+  --muted: #334155;
+  --muted-foreground: #94a3b8;
+  --card: #1e293b;
+  --card-foreground: #f8fafc;
 }
 
 [data-theme="light"] {
-  --background: #ffffff;
-  --foreground: #171717;
-  --border: #e5e7eb;
-  --primary: #3b82f6;
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  --border: #e2e8f0;
+  --primary: #2563eb;
   --primary-foreground: #ffffff;
-  --accent: #f3f4f6;
-  --accent-foreground: #171717;
-  --muted: #f3f4f6;
-  --muted-foreground: #6b7280;
+  --secondary: #10b981;
+  --secondary-foreground: #ffffff;
+  --accent: #f1f5f9;
+  --accent-foreground: #0f172a;
+  --muted: #f1f5f9;
+  --muted-foreground: #64748b;
+  --card: #ffffff;
+  --card-foreground: #0f172a;
 }
 
 /* Smooth Scrolling */
@@ -70,33 +104,16 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Hide scrollbar but keep functionality */
-body {
-  overflow-x: hidden;
-}
-
+/* Body styles */
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
   transition: background-color 0.3s, color 0.3s;
+  overflow-x: hidden;
 }
 
-/* Circle text animation */
-.circle-char {
-  animation: rotateCircle 20s linear infinite;
-}
-
-@keyframes rotateCircle {
-  from {
-    transform: rotate(0deg) translateY(-160px);
-  }
-  to {
-    transform: rotate(360deg) translateY(-160px);
-  }
-}
-
-/* Grid background animation */
+/* Grid background animation - lighter for light theme */
 @keyframes moveGrid {
   0% {
     background-position: 0 0;
@@ -112,6 +129,7 @@ body {
     linear-gradient(to bottom, var(--border) 1px, transparent 1px);
   background-size: 40px 40px;
   animation: moveGrid 20s linear infinite;
+  opacity: 0.6;
 }
 
 /* Center char animation */
@@ -136,6 +154,9 @@ body {
 
 .social-btn:hover {
   transform: scale(1.1);
+  background: var(--primary-light);
+  color: var(--primary);
+  border-color: var(--primary);
 }
 
 /* Theme toggle button */
@@ -145,4 +166,83 @@ body {
 
 .theme-toggle:hover {
   transform: rotate(180deg);
+  background: var(--primary-light);
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+/* Gradient text utility */
+.gradient-text {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Gradient border utility */
+.gradient-border {
+  position: relative;
+  background: var(--card);
+  border-radius: 1rem;
+}
+
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 1rem;
+  padding: 2px;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Card hover effects */
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -15px rgba(37, 99, 235, 0.15);
+  border-color: var(--primary);
+}
+
+/* Primary button */
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  color: var(--primary-foreground);
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px -10px rgba(37, 99, 235, 0.4);
+}
+
+/* Secondary button */
+.btn-secondary {
+  background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-dark) 100%);
+  color: var(--secondary-foreground);
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px -10px rgba(16, 185, 129, 0.4);
+}
+
+/* Timeline styles */
+.timeline-dot {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+}
+
+/* Section dividers */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--border), transparent);
 }

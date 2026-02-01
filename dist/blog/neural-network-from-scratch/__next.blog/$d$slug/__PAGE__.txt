@@ -1,0 +1,47 @@
+1:"$Sreact.fragment"
+2:I[54381,["/_next/static/chunks/8e9c3819299c21fa.js","/_next/static/chunks/9e4c325896390388.js"],"BlogPostContent"]
+4:I[99760,["/_next/static/chunks/d5f7520d963047ce.js","/_next/static/chunks/41f4bd048becbe7c.js"],"OutletBoundary"]
+5:"$Sreact.suspense"
+3:T4ef,
+# Building a Neural Network from Scratch
+
+In this comprehensive guide, we'll build a neural network from scratch using only NumPy. This exercise will give you deep insights into how neural networks actually work under the hood.
+
+## Why Build From Scratch?
+
+Understanding the fundamentals is crucial for any ML engineer. While frameworks like TensorFlow and PyTorch abstract away the details, knowing what's happening internally helps you:
+- Debug issues more effectively
+- Optimize architectures better
+- Understand the mathematics behind deep learning
+
+## The Architecture
+
+We'll build a simple feedforward neural network with:
+- Input layer
+- Two hidden layers with ReLU activation
+- Output layer with softmax
+- Cross-entropy loss function
+
+## Implementation
+
+### Step 1: Initialize Parameters
+```python
+import numpy as np
+
+def initialize_parameters(layer_dims):
+    parameters = {}
+    L = len(layer_dims)
+    
+    for l in range(1, L):
+        parameters['W' + str(l)] = np.random.randn(layer_dims[l], layer_dims[l-1]) * 0.01
+        parameters['b' + str(l)] = np.zeros((layer_dims[l], 1))
+    
+    return parameters
+```
+
+### Step 2: Forward Propagation
+The forward pass computes the output of the network...
+
+[Continue with full implementation details]
+    0:{"buildId":"rNs4m6KpIuLyE8IlG_qCb","rsc":["$","$1","c",{"children":[["$","$L2",null,{"post":{"slug":"neural-network-from-scratch","title":"Building a Neural Network from Scratch","excerpt":"Learn how to implement backpropagation and gradient descent to build a fully functional neural network using only NumPy.","content":"$3","date":"2024-01-15","readTime":"8 min read","category":"Deep Learning","tags":["Neural Networks","Python","NumPy","Tutorial"],"featured":true}}],[["$","script","script-0",{"src":"/_next/static/chunks/8e9c3819299c21fa.js","async":true}],["$","script","script-1",{"src":"/_next/static/chunks/9e4c325896390388.js","async":true}]],["$","$L4",null,{"children":["$","$5",null,{"name":"Next.MetadataOutlet","children":"$@6"}]}]]}],"loading":null,"isPartial":false}
+6:null

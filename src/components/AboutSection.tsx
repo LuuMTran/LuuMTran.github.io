@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { BookOpen, Building2, GraduationCap, Code2, Terminal, Database, Container } from "lucide-react";
+import { BookOpen, Building2, GraduationCap, Code2, Terminal, Database, Container, Sparkles } from "lucide-react";
 
 const timelineItems = [
   {
@@ -55,10 +55,24 @@ const coreStack = [
 
 export function AboutSection() {
   return (
-    <section id="about" className="min-h-screen py-24 px-4 md:px-8 lg:px-16 flex items-center">
+    <section id="about" className="min-h-screen py-24 px-4 md:px-8 lg:px-16 flex items-center bg-white/50">
       <div className="max-w-7xl mx-auto w-full">
+        {/* Section Header */}
+        <motion.div
+          className="mb-16 text-center"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 border border-blue-100 mb-6">
+            <Sparkles className="w-4 h-4 text-blue-600" />
+            <span className="text-sm font-medium text-blue-600">About Me</span>
+          </div>
+        </motion.div>
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
-          {/* Left Column - Profile Image Placeholder */}
+          {/* Left Column - Profile */}
           <motion.div
             className="flex items-center justify-center"
             initial={{ opacity: 0, x: -30 }}
@@ -67,18 +81,35 @@ export function AboutSection() {
             transition={{ duration: 0.6 }}
           >
             <div className="relative w-80 h-80 md:w-96 md:h-96">
-              {/* Animated border */}
-              <div className="absolute inset-0 rounded-3xl border-2 border-dashed border-primary/30 animate-spin-slow" style={{ animationDuration: '20s' }} />
+              {/* Animated gradient border */}
+              <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-blue-500 to-emerald-500 opacity-20 blur-xl animate-pulse" />
               
               {/* Profile placeholder */}
-              <div className="absolute inset-4 rounded-2xl bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center border border-border">
+              <div className="absolute inset-2 rounded-2xl bg-white flex items-center justify-center border border-slate-200 shadow-xl">
                 <div className="text-center">
-                  <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-primary/20 flex items-center justify-center">
-                    <span className="text-4xl font-bold text-primary">T</span>
+                  <div className="w-28 h-28 mx-auto mb-4 rounded-full bg-gradient-to-br from-blue-500 to-emerald-500 flex items-center justify-center text-white text-5xl font-bold shadow-lg">
+                    T
                   </div>
-                  <p className="text-sm text-muted-foreground">Profile Image</p>
+                  <p className="text-slate-500 font-medium">Profile Image</p>
+                  <p className="text-sm text-slate-400 mt-1">Luu Minh Thong Tran</p>
                 </div>
               </div>
+
+              {/* Floating badges */}
+              <motion.div 
+                className="absolute -top-4 -right-4 px-3 py-1.5 rounded-full bg-blue-500 text-white text-xs font-semibold shadow-lg"
+                animate={{ y: [0, -5, 0] }}
+                transition={{ duration: 2, repeat: Infinity }}
+              >
+                AI/ML Engineer
+              </motion.div>
+              <motion.div 
+                className="absolute -bottom-4 -left-4 px-3 py-1.5 rounded-full bg-emerald-500 text-white text-xs font-semibold shadow-lg"
+                animate={{ y: [0, 5, 0] }}
+                transition={{ duration: 2.5, repeat: Infinity }}
+              >
+                Data Scientist
+              </motion.div>
             </div>
           </motion.div>
 
@@ -89,11 +120,11 @@ export function AboutSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <p className="text-primary font-medium mb-2">Hello, I am</p>
-            <h2 className="text-4xl md:text-5xl font-bold mb-2">Luu Minh Thong Tran</h2>
-            <p className="text-xl text-muted-foreground mb-6">AI/ML Engineer</p>
+            <p className="text-blue-600 font-semibold mb-2">Hello, I am</p>
+            <h2 className="text-4xl md:text-5xl font-bold mb-2 text-slate-900">Luu Minh Thong Tran</h2>
+            <p className="text-xl text-slate-500 mb-6">AI/ML Engineer & Data Scientist</p>
             
-            <p className="text-muted-foreground leading-relaxed mb-8">
+            <p className="text-slate-600 leading-relaxed mb-8">
               Passionate about building intelligent systems that solve real-world problems. 
               With expertise in machine learning, deep learning, and data science, I specialize 
               in transforming complex data into actionable insights and production-ready AI solutions.
@@ -101,17 +132,17 @@ export function AboutSection() {
 
             {/* Core Stack */}
             <div className="mb-8">
-              <h4 className="font-semibold mb-3 flex items-center gap-2">
-                <Code2 className="w-4 h-4" />
+              <h4 className="font-semibold mb-3 text-slate-900 flex items-center gap-2">
+                <Code2 className="w-4 h-4 text-blue-600" />
                 Core Stack
               </h4>
               <div className="flex flex-wrap gap-2">
                 {coreStack.map((item) => (
                   <span
                     key={item.name}
-                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-accent/50 border border-border text-sm font-medium"
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-blue-50 border border-blue-100 text-sm font-medium text-slate-700"
                   >
-                    {item.icon}
+                    <span className="text-blue-600">{item.icon}</span>
                     {item.name}
                   </span>
                 ))}
@@ -120,29 +151,29 @@ export function AboutSection() {
 
             {/* Experience Timeline */}
             <div>
-              <h3 className="text-2xl font-bold mb-6">Experience & Education</h3>
+              <h3 className="text-2xl font-bold mb-6 text-slate-900">Experience & Education</h3>
               <div className="space-y-4">
                 {timelineItems.map((item, index) => (
                   <motion.div
                     key={item.title}
-                    className="group relative pl-8 pb-4 border-l-2 border-border last:pb-0 hover:border-primary/50 transition-colors"
+                    className="group relative pl-8 pb-4 border-l-2 border-slate-200 last:pb-0 hover:border-blue-400 transition-colors"
                     initial={{ opacity: 0, x: 20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.4, delay: index * 0.1 }}
                   >
                     {/* Timeline dot */}
-                    <div className="absolute left-0 top-0 -translate-x-1/2 w-4 h-4 rounded-full border-2 border-background bg-primary/20 group-hover:bg-primary/50 transition-colors" />
+                    <div className="absolute left-0 top-0 -translate-x-1/2 w-4 h-4 rounded-full border-2 border-white bg-gradient-to-br from-blue-500 to-emerald-500 shadow-md" />
                     
                     <div className="flex items-center gap-2 mb-1">
-                      <span className="text-primary">{item.icon}</span>
-                      <span className="text-sm text-muted-foreground">{item.period}</span>
+                      <span className="text-blue-600">{item.icon}</span>
+                      <span className="text-sm text-slate-500 font-medium">{item.period}</span>
                     </div>
-                    <h4 className="font-bold group-hover:text-primary transition-colors">
+                    <h4 className="font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
                       {item.title}
                     </h4>
-                    <p className="text-sm text-muted-foreground mb-1">{item.organization}</p>
-                    <p className="text-sm text-muted-foreground/80">{item.description}</p>
+                    <p className="text-sm text-slate-500 mb-1">{item.organization}</p>
+                    <p className="text-sm text-slate-600">{item.description}</p>
                   </motion.div>
                 ))}
               </div>

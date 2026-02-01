@@ -5,16 +5,17 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Sun, Moon } from "lucide-react";
 
 export function ThemeToggle() {
+  // Default to light mode for the blue-green theme
   const [theme, setTheme] = useState<"light" | "dark">("light");
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     setMounted(true);
-    // Check for saved theme preference or system preference
+    // Check for saved theme preference - default to light
     const savedTheme = localStorage.getItem("theme") as "light" | "dark" | null;
-    const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
     
-    const initialTheme = savedTheme || (systemPrefersDark ? "dark" : "light");
+    // If no saved theme, default to light (blue-green theme)
+    const initialTheme = savedTheme || "light";
     setTheme(initialTheme);
     document.documentElement.setAttribute("data-theme", initialTheme);
   }, []);
@@ -28,7 +29,7 @@ export function ThemeToggle() {
 
   if (!mounted) {
     return (
-      <button className="fixed top-6 right-6 z-50 w-10 h-10 rounded-full border border-border bg-background shadow-sm flex items-center justify-center">
+      <button className="fixed top-6 right-6 z-50 w-10 h-10 rounded-full border border-border bg-white shadow-sm flex items-center justify-center">
         <div className="w-5 h-5" />
       </button>
     );
@@ -37,7 +38,7 @@ export function ThemeToggle() {
   return (
     <motion.button
       onClick={toggleTheme}
-      className="theme-toggle fixed top-6 right-6 z-50 w-10 h-10 rounded-full border border-border bg-background shadow-sm hover:bg-accent hover:text-accent-foreground dark:bg-background/30 dark:border-border dark:hover:bg-background/50 flex items-center justify-center cursor-pointer"
+      className="theme-toggle fixed top-6 right-6 z-50 w-10 h-10 rounded-full border border-border bg-white shadow-sm hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200 flex items-center justify-center cursor-pointer"
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
       aria-label="Toggle theme"

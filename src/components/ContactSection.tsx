@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Send, Mail, Phone, MapPin, Github, Linkedin, MessageCircle } from "lucide-react";
+import { Send, Mail, Phone, MapPin, Github, Linkedin, MessageCircle, Sparkles } from "lucide-react";
 
 export function ContactSection() {
   const [formData, setFormData] = useState({
@@ -36,7 +36,7 @@ export function ContactSection() {
   };
 
   return (
-    <section id="contact" className="min-h-screen py-24 px-4 md:px-8 lg:px-16 flex items-center">
+    <section id="contact" className="min-h-screen py-24 px-4 md:px-8 lg:px-16 flex items-center bg-white/50">
       <div className="max-w-7xl mx-auto w-full">
         {/* Header */}
         <motion.div
@@ -46,8 +46,12 @@ export function ContactSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">Let&apos;s Work Together</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-50 border border-emerald-100 mb-6">
+            <Sparkles className="w-4 h-4 text-emerald-600" />
+            <span className="text-sm font-medium text-emerald-600">Get in Touch</span>
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-slate-900">Let&apos;s Work Together</h2>
+          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
             Have a project in mind or want to discuss AI/ML opportunities? 
             I&apos;d love to hear from you. Reach out and let&apos;s create something amazing.
           </p>
@@ -63,7 +67,7 @@ export function ContactSection() {
           >
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium mb-2">
+                <label htmlFor="name" className="block text-sm font-medium mb-2 text-slate-700">
                   Name
                 </label>
                 <input
@@ -73,13 +77,13 @@ export function ContactSection() {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-xl border border-border bg-background/50 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all"
+                  className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 transition-all"
                   placeholder="Your name"
                 />
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-sm font-medium mb-2">
+                <label htmlFor="email" className="block text-sm font-medium mb-2 text-slate-700">
                   Email
                 </label>
                 <input
@@ -89,13 +93,13 @@ export function ContactSection() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-xl border border-border bg-background/50 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all"
+                  className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 transition-all"
                   placeholder="your@email.com"
                 />
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium mb-2">
+                <label htmlFor="message" className="block text-sm font-medium mb-2 text-slate-700">
                   Message
                 </label>
                 <textarea
@@ -105,7 +109,7 @@ export function ContactSection() {
                   onChange={handleChange}
                   required
                   rows={5}
-                  className="w-full px-4 py-3 rounded-xl border border-border bg-background/50 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all resize-none"
+                  className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 transition-all resize-none"
                   placeholder="Tell me about your project..."
                 />
               </div>
@@ -113,7 +117,7 @@ export function ContactSection() {
               <motion.button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full py-4 px-6 rounded-xl bg-primary text-primary-foreground font-semibold flex items-center justify-center gap-2 hover:bg-primary/90 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+                className="w-full py-4 px-6 rounded-xl bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold flex items-center justify-center gap-2 hover:from-blue-700 hover:to-blue-800 disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-lg shadow-blue-500/25"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
@@ -149,47 +153,47 @@ export function ContactSection() {
             <div className="space-y-4">
               <a
                 href="mailto:thong@example.com"
-                className="flex items-center gap-4 p-4 rounded-xl border border-border bg-background/50 hover:border-primary/50 hover:bg-accent/50 transition-all group"
+                className="flex items-center gap-4 p-4 rounded-xl border border-slate-200 bg-white hover:border-blue-300 hover:shadow-lg transition-all group"
               >
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary/20 transition-colors">
+                <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors">
                   <Mail className="w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="font-semibold">Email</h4>
-                  <p className="text-sm text-muted-foreground">thong@example.com</p>
+                  <h4 className="font-semibold text-slate-900">Email</h4>
+                  <p className="text-sm text-slate-600">thong@example.com</p>
                 </div>
               </a>
 
-              <div className="flex items-center gap-4 p-4 rounded-xl border border-border bg-background/50">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+              <div className="flex items-center gap-4 p-4 rounded-xl border border-slate-200 bg-white">
+                <div className="w-12 h-12 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600">
                   <Phone className="w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="font-semibold">Phone</h4>
-                  <p className="text-sm text-muted-foreground">+1 (234) 567-8900</p>
+                  <h4 className="font-semibold text-slate-900">Phone</h4>
+                  <p className="text-sm text-slate-600">+1 (234) 567-8900</p>
                 </div>
               </div>
 
-              <div className="flex items-center gap-4 p-4 rounded-xl border border-border bg-background/50">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+              <div className="flex items-center gap-4 p-4 rounded-xl border border-slate-200 bg-white">
+                <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
                   <MapPin className="w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="font-semibold">Location</h4>
-                  <p className="text-sm text-muted-foreground">Sydney, Australia</p>
+                  <h4 className="font-semibold text-slate-900">Location</h4>
+                  <p className="text-sm text-slate-600">Sydney, Australia</p>
                 </div>
               </div>
             </div>
 
             {/* Social Links */}
             <div>
-              <h4 className="font-semibold mb-4">Connect With Me</h4>
+              <h4 className="font-semibold mb-4 text-slate-900">Connect With Me</h4>
               <div className="flex gap-3">
                 <a
                   href="https://github.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 rounded-full border border-border bg-background/50 flex items-center justify-center hover:bg-accent hover:border-primary/50 transition-all"
+                  className="w-12 h-12 rounded-full border border-slate-200 bg-white flex items-center justify-center hover:bg-slate-900 hover:text-white hover:border-slate-900 transition-all"
                   aria-label="GitHub"
                 >
                   <Github className="w-5 h-5" />
@@ -198,7 +202,7 @@ export function ContactSection() {
                   href="https://linkedin.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-12 h-12 rounded-full border border-border bg-background/50 flex items-center justify-center hover:bg-accent hover:border-primary/50 transition-all"
+                  className="w-12 h-12 rounded-full border border-slate-200 bg-white flex items-center justify-center hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-all"
                   aria-label="LinkedIn"
                 >
                   <Linkedin className="w-5 h-5" />
@@ -207,9 +211,9 @@ export function ContactSection() {
             </div>
 
             {/* Note */}
-            <div className="p-4 rounded-xl bg-accent/30 border border-border">
-              <p className="text-sm text-muted-foreground">
-                <strong>Note:</strong> Currently available for freelance projects and full-time opportunities. 
+            <div className="p-4 rounded-xl bg-blue-50 border border-blue-100">
+              <p className="text-sm text-slate-600">
+                <strong className="text-blue-700">Note:</strong> Currently available for freelance projects and full-time opportunities. 
                 I typically respond within 24 hours.
               </p>
             </div>
