@@ -13,202 +13,146 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
-    slug: "neural-network-from-scratch",
-    title: "Building a Neural Network from Scratch",
-    excerpt: "Learn how to implement backpropagation and gradient descent to build a fully functional neural network using only NumPy.",
+    slug: "in-depth-svm-visualizations",
+    title: "In-depth SVM with Visualizations",
+    excerpt: "A comprehensive deep dive into Support Vector Machines, from loss functions and primal/dual forms to kernel tricks and SMO optimization, complete with visual explanations.",
     content: `
-# Building a Neural Network from Scratch
+# In-depth SVM with visualisations 
 
-In this comprehensive guide, we'll build a neural network from scratch using only NumPy. This exercise will give you deep insights into how neural networks actually work under the hood.
+## Background
 
-## Why Build From Scratch?
+I have been studying traditional classification machines and learning algorithms. It grinded through different kinds of models from linear-family models to complicated methods such as ensemble methods. I understanded quite well until I met Support Vector Machines.
 
-Understanding the fundamentals is crucial for any ML engineer. While frameworks like TensorFlow and PyTorch abstract away the details, knowing what's happening internally helps you:
-- Debug issues more effectively
-- Optimize architectures better
-- Understand the mathematics behind deep learning
+On the surface, I can understand quite well what struck me is its optimization algorithms. Unlike other models, optimization is based on gradients or entropy for trees. However, the way SVM optimizes its weight works quite differently, which I will explain later on.
 
-## The Architecture
 
-We'll build a simple feedforward neural network with:
-- Input layer
-- Two hidden layers with ReLU activation
-- Output layer with softmax
-- Cross-entropy loss function
+## Introduction
 
-## Implementation
+Ok let look at what is Support Vector Machine and what is does. Imagine there are 2 groups of people wants to divde the land equally by drawing a straight line, SVM will help them equally between them. Now, bring it to the context of machine learning, a SVM will find a hyperplane that seperate 2 classes with maximal margin (equal land). 
 
-### Step 1: Initialize Parameters
-\`\`\`python
-import numpy as np
+Have a lookt at this decision boundary (although it is not linear but we get to that part). it perfectly give the decision boundary right in the midde!!
 
-def initialize_parameters(layer_dims):
-    parameters = {}
-    L = len(layer_dims)
-    
-    for l in range(1, L):
-        parameters['W' + str(l)] = np.random.randn(layer_dims[l], layer_dims[l-1]) * 0.01
-        parameters['b' + str(l)] = np.zeros((layer_dims[l], 1))
-    
-    return parameters
-\`\`\`
 
-### Step 2: Forward Propagation
-The forward pass computes the output of the network...
+![alt text](/images/svm-blog/image.png)
 
-[Continue with full implementation details]
+
+
+Hmmm... seems easy right? 
+
+Well then how it do it? Let's look at the loss function:
+
+### Loss Function
+
+$$
+\\begin{aligned}\\min_{w, b} \\; \\frac{1}{2} \\lVert w \\rVert^2 + C \\sum_{i=1}^{n} \\max \\left( 0, \\; 1 - y_i \\left( w^T x_i + b \\right) \\right)\\end{aligned}
+$$
+
+
+The term $\\max \\left( 0, \\; 1 - y_i \\left( w^T x_i + b \\right) \\right)$ seems familar right? Thats right!! It's the perceptron loss! It try to minimse the perceptron loss meaning it try to  correctly classify the samples! What about the first term? Well its the regularization term which means it try to divide the land equally! Finally, the C controls how you would want the classfier to focus on correctly classify or divide the land equally.
+
+### Primal-form 
+
+WARNING: Math-heavy, you can skip this and belive that the loss function has the primal form as the equation below (same thing but different notation)
+
+
+By transforming the objective function to produce a set constraint, it can be later manipulated into the dual form. The un-constrained objective function can be re-written as:
+
+$$
+\\min_{w, b, \\xi} \\; \\frac{1}{2} \\lVert w \\rVert^2 + C \\sum_{i=1}^{n} \\xi_i\\quad \\text{s.t.} \\quad y_i (w^T x_i + b) \\geq 1 - \\xi_i, \\quad \\xi_i \\geq 0
+$$
+
+Where $\\xi_i$ and the constraint 
+$y_i (w^T x_i + b) \\geq 1 - \\xi_i, \\; \\xi_i \\geq 0$ 
+is equivalent to 
+$\\max \\left( 0, 1 - y_i (w^T x_i + b) \\right)$. 
+By introducing these constraints, the problem can be transformed into its dual form to utilize the kernel trick.
+
+### Dual Form
+
+WARNING: Math-heavy, you can skip this and belive that primal form has the dual form as the equation below (same thing but now the new objective is to optimize alpha, not w!)
+
+Before transforming from primal to dual form, it is crucial to view the weights as the contributions of all the input samples. Suppose the input sample X has the dimension of [n x m] where n is number of samples and m is number of features. The weight ($w$) on the other hand has the dimension of [m x 1] which m is number of features. This means that by letting $w  = X^T\\alpha$, $\\alpha$ need to have the dimension of [n x 1]. This implies that $\\alpha$ is a set of weights each sample give to contribute to w. The view of the weight is a contribution of the samples also seen from other model such as linear regression as it has the close-form solution of $w=(X^TX)^{-1}X^Ty$ for the weight. Back to SVM, the weight became a weighted sum of all data sample which instead of optimizing the weight, the new goal is to optimize $\\alpha_i \\forall i$ Interestingly,there is a characteristic that every correctly classified sample and outside margin will have a weight of 0 which means that during inference, only support vector matters.
+
+By substituting $w = \\sum_{i=1}^m \\alpha_i y_i x_i$ into the Lagrangian of the constrained soft-margin primal problem and taking derivatives with respect to $w$, $b$, and $\\xi$, we obtain the dual formulation: 
+
+$$
+\\max_{\\alpha} \\; \\sum_{i=1}^{m} \\alpha_i - \\frac{1}{2} \\sum_{i=1}^{m} \\sum_{j=1}^{m} \\alpha_i \\alpha_j y_i y_j \\, x_i^T x_j\\quad \\text{s.t.} \\quad     0 \\leq \\alpha_i \\leq C, \\; \\sum_{i=1}^{m} \\alpha_i y_i = 0
+$$
+
+### Kernel trick
+
+If you made this far, it is fasinating because the rest is packed with visualisations!!!
+
+Now here comes the cool part, now lets make it learn non-linear relationships. Imagine folding your in quarter and cut a line in the middle making a square in the middle, SVM also the same way, it non-linearly maps to anothe dimensional space where you hope for the best the data is linearly seperable and when it maps back to the original space, it will be a non-linear boundary like a curve or a zic-zac pattern. Starting by shooting your sample to the space called phi
+$$
+x_i \\mapsto \\phi(x_i)
+$$
+
+Then the dual form becomes:
+
+$$
+\\begin{aligned}\\max_{\\alpha} \\quad
+& \\sum_{i=1}^{m} \\alpha_i
+- \\frac{1}{2}
+\\sum_{i=1}^{m} \\sum_{j=1}^{m}
+\\alpha_i \\alpha_j y_i y_j \\, 
+\\phi(x_i)^{T} \\phi(x_j) \\\\[6pt]
+\\text{s.t.} \\quad
+& 0 \\le \\alpha_i \\le C, \\quad \\forall i = 1, \\ldots, m, \\\\[4pt]
+& \\sum_{i=1}^{m} \\alpha_i y_i = 0
+\\end{aligned}
+$$
+
+But remember, we are optimizing $\\alpha$ ! So the term $\\phi(x_i)^{T} \\phi(x_j)$ does not change the whole time! but recomputing each iteration is very expensive so we precomputed it first then access later! Even better, we dont need to define phi, we create a matrix where:
+
+$$
+K_{ij} = K(x_i, x_j) = \\phi(x_i)^{\\top} \\phi(x_j)
+$$
+What a genius idea!
+
+Here is the visualisation of the polynomial kernel (first few slides):
+
+<iframe src="https://14522561-svm-presentation.netlify.app/" width="100%" height="600px" style="border: none; border-radius: 8px;" allowfullscreen></iframe>
+
+
+### Optimization - SMO  
+
+OK now comes the parts that they might not teach you in-class. How do SVM optimize? It will use an algorithm called Sequential Minimal Optimization and below is an visual approach to this algorithm.
+
+If you carefully inspect the dual formulation enough long you will see that it has the constraint meaning that if you optimize 1 $\\alpha$ you need to update another. That leads to this visualization
+
+![alt text](/images/svm-blog/image-1.png)
+
+
+Think of them like a pulley system, you lift one up, you lower one down but you dont want to go to high
+
+You want to optimize the alplas so that if you pick 2 alphas and optimize them, you will need to optimize another (The sum constraint). Also, you dont want to optimize them too far
+
+Now with multiples alpha the pulley system would look like this
+
+![alt text](/images/svm-blog/image-2.png)
+
+The red block are locked in place. Each iteration, you will pick 1 alpha sequentially and another randomly to optimize them.
+
+Now what fascinating is that each iteration you need only 1 step to optimize because they follow a quadratic form.
+
+![alt text](/images/svm-blog/image-3.png)
+
+Because you dont want to respect the 0 to C contraint for both alphas, you will set the lower and higher bound so that yo can stick to the bound if the optimal point is fall out of range!
+
+Repeat the process and TADAAA!!! You made it!
+
+## Final thought
+
+Just remember, SVM is orgimi, you fold the paper and hope for the best :)
+
+Thanks so much for reading and stay in touch with me on linkedin!
     `,
-    date: "2024-01-15",
-    readTime: "8 min read",
-    category: "Deep Learning",
-    tags: ["Neural Networks", "Python", "NumPy", "Tutorial"],
-    featured: true,
-  },
-  {
-    slug: "transformers-explained",
-    title: "Transformers Explained: A Visual Guide",
-    excerpt: "A comprehensive visual explanation of the Transformer architecture that powers GPT, BERT, and modern NLP systems.",
-    content: `
-# Transformers Explained: A Visual Guide
-
-Transformers have revolutionized natural language processing since their introduction in the "Attention Is All You Need" paper. Let's break down how they work.
-
-## The Problem with RNNs
-
-Recurrent Neural Networks process sequences one element at a time, which makes them:
-- Slow to train (sequential processing)
-- Prone to vanishing gradients
-- Unable to capture long-range dependencies effectively
-
-## The Transformer Solution
-
-Transformers solve these issues through:
-1. **Self-Attention**: Every token can attend to every other token
-2. **Parallel Processing**: No sequential dependencies
-3. **Positional Encoding**: Injecting sequence order information
-
-## Architecture Overview
-
-### Encoder Stack
-The encoder processes input tokens and creates rich representations...
-
-[Full content continues]
-    `,
-    date: "2024-01-10",
-    readTime: "12 min read",
-    category: "NLP",
-    tags: ["Transformers", "BERT", "GPT", "Attention Mechanism"],
-    featured: true,
-  },
-  {
-    slug: "hyperparameter-tuning-guide",
-    title: "The Complete Guide to Hyperparameter Tuning",
-    excerpt: "Master hyperparameter optimization techniques including Grid Search, Random Search, Bayesian Optimization, and Hyperband.",
-    content: `
-# The Complete Guide to Hyperparameter Tuning
-
-Hyperparameter tuning is both an art and a science. This guide covers all major techniques from basic to advanced.
-
-## What Are Hyperparameters?
-
-Unlike model parameters (weights), hyperparameters are:
-- Learning rate
-- Batch size
-- Number of layers
-- Number of units per layer
-- Regularization strength
-
-## Manual Tuning
-
-Start with understanding each hyperparameter's effect...
-
-[Full content continues]
-    `,
-    date: "2024-01-05",
-    readTime: "10 min read",
-    category: "MLOps",
-    tags: ["Hyperparameter Tuning", "Bayesian Optimization", "Optuna"],
-  },
-  {
-    slug: "computer-vision-cnn",
-    title: "Computer Vision with CNNs: From Theory to Practice",
-    excerpt: "Learn how Convolutional Neural Networks process images and build your own image classifier from scratch.",
-    content: `
-# Computer Vision with CNNs
-
-Convolutional Neural Networks are the backbone of modern computer vision. Let's understand how they work and build one ourselves.
-
-## Why CNNs for Images?
-
-Images have special properties:
-- Spatial structure matters
-- Nearby pixels are correlated
-- Features are translation invariant
-
-## The Convolution Operation
-
-At the heart of CNNs is the convolution operation...
-
-[Full content continues]
-    `,
-    date: "2023-12-28",
+    date: "2025-02-02",
     readTime: "15 min read",
-    category: "Computer Vision",
-    tags: ["CNN", "Computer Vision", "Image Classification", "OpenCV"],
-  },
-  {
-    slug: "deploying-ml-models",
-    title: "Deploying ML Models to Production: A Practical Guide",
-    excerpt: "Learn how to deploy machine learning models using FastAPI, Docker, and cloud platforms with CI/CD pipelines.",
-    content: `
-# Deploying ML Models to Production
-
-Building a model is only half the battle. Deploying it to production requires careful consideration of many factors.
-
-## Deployment Options
-
-### 1. REST API with FastAPI
-FastAPI is perfect for ML model serving because:
-- High performance (async)
-- Automatic API documentation
-- Easy to use
-
-### 2. Batch Processing
-For scenarios where real-time isn't needed...
-
-[Full content continues]
-    `,
-    date: "2023-12-20",
-    readTime: "11 min read",
-    category: "MLOps",
-    tags: ["Deployment", "FastAPI", "Docker", "CI/CD"],
-  },
-  {
-    slug: "gradient-boosting-explained",
-    title: "Gradient Boosting Explained: XGBoost, LightGBM, CatBoost",
-    excerpt: "Deep dive into gradient boosting algorithms and when to use each variant for maximum performance.",
-    content: `
-# Gradient Boosting Explained
-
-Gradient boosting machines have dominated tabular data competitions for years. Let's understand why.
-
-## Ensemble Methods
-
-Three main types:
-1. Bagging (Random Forest)
-2. Boosting (AdaBoost, Gradient Boosting)
-3. Stacking
-
-## How Gradient Boosting Works
-
-The key idea: train models sequentially, each correcting errors of previous ones...
-
-[Full content continues]
-    `,
-    date: "2023-12-15",
-    readTime: "9 min read",
     category: "Machine Learning",
-    tags: ["XGBoost", "LightGBM", "Gradient Boosting", "Ensemble"],
+    tags: ["SVM", "Support Vector Machines", "Optimization", "Kernel Methods", "Visualizations"],
+    featured: true,
   },
 ];
 

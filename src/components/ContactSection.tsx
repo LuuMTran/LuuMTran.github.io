@@ -20,15 +20,15 @@ export function ContactSection() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Construct mailto URL with pre-filled content
     const subject = encodeURIComponent(`Portfolio Contact - ${formData.name}`);
     const body = encodeURIComponent(
       `Hi Thong,\n\n${formData.message}\n\nBest regards,\n${formData.name}\n${formData.email}`
     );
-    
+
     const mailtoUrl = `mailto:minhthong7375@gmail.com?subject=${subject}&body=${body}`;
-    
+
     // Open default email client
     window.location.href = mailtoUrl;
   };
@@ -46,7 +46,7 @@ export function ContactSection() {
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">Let's Chat</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Have a project idea? Want to talk about AI? Or just want to grab coffee? 
+            Have a project idea? Want to talk about AI? Or just want to grab coffee?
             I'm always open to meeting new people.
           </p>
         </motion.div>
@@ -71,8 +71,8 @@ export function ContactSection() {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-xl border border-border bg-card focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all"
-                  placeholder="John Doe"
+                  className="w-full px-4 py-3 rounded-xl border border-border bg-card focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all placeholder:text-muted-foreground/60"
+                  placeholder="Luu Tran"
                 />
               </div>
 
@@ -87,8 +87,8 @@ export function ContactSection() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-xl border border-border bg-card focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all"
-                  placeholder="john@example.com"
+                  className="w-full px-4 py-3 rounded-xl border border-border bg-card focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all placeholder:text-muted-foreground/60"
+                  placeholder="LuuTran@gmail.com"
                 />
               </div>
 
@@ -103,7 +103,7 @@ export function ContactSection() {
                   onChange={handleChange}
                   required
                   rows={5}
-                  className="w-full px-4 py-3 rounded-xl border border-border bg-card focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all resize-none"
+                  className="w-full px-4 py-3 rounded-xl border border-border bg-card focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all resize-none placeholder:text-muted-foreground/60"
                   placeholder="Tell me about your project, or just say hi!"
                 />
               </div>
@@ -178,7 +178,7 @@ export function ContactSection() {
             {/* Fun note */}
             <div className="p-4 rounded-xl bg-primary-light border border-border">
               <p className="text-sm text-muted-foreground">
-                <strong className="text-primary">Pro tip:</strong> I usually respond within 24 hours. 
+                <strong className="text-primary">Pro tip:</strong> I usually respond within 24 hours.
                 If you don't hear back, check your spam folder or try LinkedIn!
               </p>
             </div>
