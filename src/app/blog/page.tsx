@@ -1,8 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Sparkles, BookOpen, ArrowLeft } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { blogPosts, getFeaturedPosts } from "@/data/blog";
 import { BlogCard } from "@/components/BlogCard";
 import { GridBackground } from "@/components/GridBackground";
@@ -12,25 +13,30 @@ export default function BlogPage() {
   const allPosts = blogPosts;
 
   return (
-    <main className="relative min-h-screen bg-slate-50">
+    <main className="relative min-h-screen bg-background">
       {/* Grid Background */}
       <GridBackground />
 
       {/* Header */}
-      <header className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
+      <header className="sticky top-0 z-50 bg-card/80 backdrop-blur-md border-b border-border">
         <div className="max-w-7xl mx-auto px-4 md:px-8 py-4 flex items-center justify-between">
           <Link 
             href="/" 
-            className="flex items-center gap-2 text-slate-600 hover:text-blue-600 transition-colors"
+            className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
           >
             <ArrowLeft className="w-4 h-4" />
             <span className="font-medium">Back to Portfolio</span>
           </Link>
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-emerald-500 flex items-center justify-center text-white">
-              <BookOpen className="w-4 h-4" />
+            <div className="w-8 h-8 relative">
+              <Image
+                src="/logo.svg"
+                alt="Luu Tran Logo"
+                fill
+                className="object-contain"
+              />
             </div>
-            <span className="font-bold text-slate-800">Blog</span>
+            <span className="font-bold text-foreground">Blog</span>
           </div>
         </div>
       </header>
@@ -43,14 +49,10 @@ export default function BlogPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 border border-blue-100 mb-6">
-              <Sparkles className="w-4 h-4 text-blue-600" />
-              <span className="text-sm font-medium text-blue-600">AI/ML Insights</span>
-            </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-slate-900">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
               Blog & Articles
             </h1>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Sharing my journey in AI/ML engineering. Deep dives into machine learning concepts, 
               tutorials, and practical implementation guides.
             </p>
@@ -63,7 +65,7 @@ export default function BlogPage() {
         <section className="py-12 px-4 md:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.h2 
-              className="text-2xl font-bold mb-8 text-slate-900"
+              className="text-2xl font-bold mb-8 text-foreground"
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.4, delay: 0.2 }}
@@ -83,7 +85,7 @@ export default function BlogPage() {
       <section className="py-12 px-4 md:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.h2 
-            className="text-2xl font-bold mb-8 text-slate-900"
+            className="text-2xl font-bold mb-8 text-foreground"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.4, delay: 0.3 }}
@@ -99,10 +101,10 @@ export default function BlogPage() {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 px-4 border-t border-slate-200 bg-white">
+      <footer className="py-8 px-4 border-t border-border bg-background">
         <div className="max-w-7xl mx-auto text-center">
-          <p className="text-sm text-slate-500">
-            © 2024 Luu Minh Thong Tran. All rights reserved.
+          <p className="text-sm text-muted-foreground">
+            © 2024 Luu Minh Thong Tran
           </p>
         </div>
       </footer>

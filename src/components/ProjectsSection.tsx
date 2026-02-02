@@ -74,9 +74,14 @@ export function ProjectsSection() {
 
               {/* Project Content */}
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-3 text-foreground group-hover:text-primary transition-colors pr-12">
+                <a 
+                  href={project.type === "pdf" ? project.githubUrl : project.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-xl font-bold mb-3 text-foreground group-hover:text-primary transition-colors pr-12 cursor-pointer"
+                >
                   {project.title}
-                </h3>
+                </a>
                 <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
                   {project.description}
                 </p>
