@@ -113,7 +113,7 @@ export function AboutSection() {
                   <Github className="w-5 h-5 text-muted-foreground" />
                 </a>
                 <a
-                  href="mailto:luuminhthongtran@gmail.com"
+                  href="mailto:minhthong7375@gmail.com"
                   className="p-3 rounded-full border border-border hover:bg-primary-light transition-all"
                   aria-label="Email"
                 >
@@ -130,7 +130,7 @@ export function AboutSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h3 className="text-2xl font-bold mb-8 text-foreground">My Journey So Far</h3>
+            <h3 className="text-2xl font-bold mb-8 text-foreground">My Journey</h3>
             <div className="space-y-6">
               {timelineItems.map((item, index) => (
                 <motion.div

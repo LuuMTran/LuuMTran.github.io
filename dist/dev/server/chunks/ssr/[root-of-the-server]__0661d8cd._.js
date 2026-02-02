@@ -954,6 +954,22 @@ function HeroSection() {
                                 fileName: "[project]/OneDrive - UTS/Personal_code/thong-portfolio/src/components/HeroSection.tsx",
                                 lineNumber: 117,
                                 columnNumber: 13
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive__$2d$__UTS$2f$Personal_code$2f$thong$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                href: "mailto:minhthong7375@gmail.com",
+                                className: "p-3 rounded-full border border-border hover:bg-primary-light hover:border-primary transition-colors",
+                                "aria-label": "Email",
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive__$2d$__UTS$2f$Personal_code$2f$thong$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$OneDrive__$2d$__UTS$2f$Personal_code$2f$thong$2d$portfolio$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$mail$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Mail$3e$__["Mail"], {
+                                    className: "w-5 h-5 text-muted-foreground"
+                                }, void 0, false, {
+                                    fileName: "[project]/OneDrive - UTS/Personal_code/thong-portfolio/src/components/HeroSection.tsx",
+                                    lineNumber: 131,
+                                    columnNumber: 15
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "[project]/OneDrive - UTS/Personal_code/thong-portfolio/src/components/HeroSection.tsx",
+                                lineNumber: 126,
+                                columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
@@ -973,7 +989,7 @@ function HeroSection() {
                                         children: "5+"
                                     }, void 0, false, {
                                         fileName: "[project]/OneDrive - UTS/Personal_code/thong-portfolio/src/components/HeroSection.tsx",
-                                        lineNumber: 134,
+                                        lineNumber: 141,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive__$2d$__UTS$2f$Personal_code$2f$thong$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -981,13 +997,13 @@ function HeroSection() {
                                         children: "ML Models Built"
                                     }, void 0, false, {
                                         fileName: "[project]/OneDrive - UTS/Personal_code/thong-portfolio/src/components/HeroSection.tsx",
-                                        lineNumber: 135,
+                                        lineNumber: 142,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/OneDrive - UTS/Personal_code/thong-portfolio/src/components/HeroSection.tsx",
-                                lineNumber: 133,
+                                lineNumber: 140,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive__$2d$__UTS$2f$Personal_code$2f$thong$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -998,7 +1014,7 @@ function HeroSection() {
                                         children: "10+"
                                     }, void 0, false, {
                                         fileName: "[project]/OneDrive - UTS/Personal_code/thong-portfolio/src/components/HeroSection.tsx",
-                                        lineNumber: 138,
+                                        lineNumber: 145,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive__$2d$__UTS$2f$Personal_code$2f$thong$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1006,13 +1022,13 @@ function HeroSection() {
                                         children: "Projects"
                                     }, void 0, false, {
                                         fileName: "[project]/OneDrive - UTS/Personal_code/thong-portfolio/src/components/HeroSection.tsx",
-                                        lineNumber: 139,
+                                        lineNumber: 146,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/OneDrive - UTS/Personal_code/thong-portfolio/src/components/HeroSection.tsx",
-                                lineNumber: 137,
+                                lineNumber: 144,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive__$2d$__UTS$2f$Personal_code$2f$thong$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1023,7 +1039,7 @@ function HeroSection() {
                                         children: "3+"
                                     }, void 0, false, {
                                         fileName: "[project]/OneDrive - UTS/Personal_code/thong-portfolio/src/components/HeroSection.tsx",
-                                        lineNumber: 142,
+                                        lineNumber: 149,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive__$2d$__UTS$2f$Personal_code$2f$thong$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1031,19 +1047,19 @@ function HeroSection() {
                                         children: "Years Learning"
                                     }, void 0, false, {
                                         fileName: "[project]/OneDrive - UTS/Personal_code/thong-portfolio/src/components/HeroSection.tsx",
-                                        lineNumber: 143,
+                                        lineNumber: 150,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/OneDrive - UTS/Personal_code/thong-portfolio/src/components/HeroSection.tsx",
-                                lineNumber: 141,
+                                lineNumber: 148,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/OneDrive - UTS/Personal_code/thong-portfolio/src/components/HeroSection.tsx",
-                        lineNumber: 129,
+                        lineNumber: 136,
                         columnNumber: 11
                     }, this)
                 ]
@@ -1926,7 +1942,7 @@ function AboutSection() {
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive__$2d$__UTS$2f$Personal_code$2f$thong$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                                                    href: "mailto:luuminhthongtran@gmail.com",
+                                                    href: "mailto:minhthong7375@gmail.com",
                                                     className: "p-3 rounded-full border border-border hover:bg-primary-light transition-all",
                                                     "aria-label": "Email",
                                                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive__$2d$__UTS$2f$Personal_code$2f$thong$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$OneDrive__$2d$__UTS$2f$Personal_code$2f$thong$2d$portfolio$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$mail$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__$3c$export__default__as__Mail$3e$__["Mail"], {
@@ -1977,7 +1993,7 @@ function AboutSection() {
                             children: [
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive__$2d$__UTS$2f$Personal_code$2f$thong$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
                                     className: "text-2xl font-bold mb-8 text-foreground",
-                                    children: "My Journey So Far"
+                                    children: "My Journey"
                                 }, void 0, false, {
                                     fileName: "[project]/OneDrive - UTS/Personal_code/thong-portfolio/src/components/AboutSection.tsx",
                                     lineNumber: 133,

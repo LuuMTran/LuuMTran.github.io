@@ -123,6 +123,13 @@ export function HeroSection() {
             >
               <Linkedin className="w-5 h-5 text-muted-foreground" />
             </a>
+            <a 
+              href="mailto:minhthong7375@gmail.com"
+              className="p-3 rounded-full border border-border hover:bg-primary-light hover:border-primary transition-colors"
+              aria-label="Email"
+            >
+              <Mail className="w-5 h-5 text-muted-foreground" />
+            </a>
           </motion.div>
 
           {/* Stats Row */}
