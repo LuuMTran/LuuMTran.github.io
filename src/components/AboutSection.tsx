@@ -1,6 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import { MapPin, Mail, Github, Linkedin, Twitter } from "lucide-react";
 import Image from "next/image";
 
@@ -32,8 +33,27 @@ const timelineItems = [
 ];
 
 export function AboutSection() {
+  const sectionRef = useRef<HTMLElement | null>(null);
+  const isInView = useInView(sectionRef, { amount: 0.2, once: false });
+
+  const sectionVariants = {
+    hidden: { opacity: 0, y: 40 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.9, delay: 0.15, ease: [0.215, 0.61, 0.355, 1] as const },
+    },
+  };
+
   return (
-    <section id="about" className="min-h-screen py-24 px-4 md:px-8 lg:px-16 flex items-center">
+    <motion.section
+      ref={sectionRef}
+      id="about"
+      className="min-h-screen py-24 px-4 md:px-8 lg:px-16 flex items-center"
+      variants={sectionVariants}
+      initial="hidden"
+      animate={isInView ? "visible" : "hidden"}
+    >
       <div className="max-w-7xl mx-auto w-full">
         {/* Header */}
         <motion.div
@@ -170,6 +190,6 @@ export function AboutSection() {
           </motion.div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

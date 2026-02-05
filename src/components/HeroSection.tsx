@@ -1,11 +1,24 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import { Mail, FolderOpen, Github, Linkedin } from "lucide-react";
 
 export function HeroSection() {
+  const sectionRef = useRef<HTMLElement | null>(null);
+  const isInView = useInView(sectionRef, { amount: 0.2, once: false });
+
   const name = "LUU MINH THONG TRAN";
   const title = "AI/ML Engineer";
+
+  const sectionVariants = {
+    hidden: { opacity: 0, y: 40 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.9, delay: 0.15, ease: [0.215, 0.61, 0.355, 1] as const },
+    },
+  };
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -41,7 +54,14 @@ export function HeroSection() {
   };
 
   return (
-    <section id="hero" className="min-h-screen flex items-center justify-center relative px-4 py-20">
+    <motion.section
+      ref={sectionRef}
+      id="hero"
+      className="min-h-screen flex items-center justify-center relative px-4 py-20"
+      variants={sectionVariants}
+      initial="hidden"
+      animate={isInView ? "visible" : "hidden"}
+    >
       <div className="text-center max-w-5xl mx-auto">
         {/* Main Content Container */}
         <motion.div
@@ -153,6 +173,6 @@ export function HeroSection() {
         </motion.div>
 
       </div>
-    </section>
+    </motion.section>
   );
 }

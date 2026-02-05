@@ -1,6 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import { Github, ExternalLink, FileText } from "lucide-react";
 
 const projects = [
@@ -39,8 +40,27 @@ const projects = [
 ];
 
 export function ProjectsSection() {
+  const sectionRef = useRef<HTMLElement | null>(null);
+  const isInView = useInView(sectionRef, { amount: 0.2, once: false });
+
+  const sectionVariants = {
+    hidden: { opacity: 0, y: 40 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.9, delay: 0.15, ease: [0.215, 0.61, 0.355, 1] as const },
+    },
+  };
+
   return (
-    <section id="projects" className="min-h-screen py-24 px-4 md:px-8 lg:px-16 flex items-center bg-background">
+    <motion.section
+      ref={sectionRef}
+      id="projects"
+      className="min-h-screen py-24 px-4 md:px-8 lg:px-16 flex items-center bg-background"
+      variants={sectionVariants}
+      initial="hidden"
+      animate={isInView ? "visible" : "hidden"}
+    >
       <div className="max-w-7xl mx-auto w-full">
         {/* Header - NO SPARKLES */}
         <motion.div
@@ -157,6 +177,6 @@ export function ProjectsSection() {
           </a>
         </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 }
