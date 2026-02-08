@@ -1,152 +1,119 @@
-[00:00:02.694] Server  LOG     ✓ Ready in 2s
-[00:00:11.109] Server  LOG     ○ Compiling / ...
-[00:00:13.281] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:22.641] Server  LOG     ✓ Compiled in 1094ms
-[00:00:27.084] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:34.693] Server  LOG     ✓ Compiled in 352ms
-[00:02:00.957] Server  LOG     ✓ Compiled in 994ms
-[00:02:46.947] Server  LOG     ✓ Compiled in 816ms
-[00:04:18.035] Server  LOG     ✓ Compiled in 806ms
-[00:04:31.562] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:04:47.551] Server  LOG     ✓ Compiled in 257ms
-[00:04:51.775] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:05:01.464] Server  LOG     ✓ Compiled in 384ms
-[00:05:08.030] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:05:50.678] Server  LOG     ✓ Compiled in 719ms
-[00:06:02.502] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:06:09.334] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:06:51.891] Server  LOG     ✓ Compiled in 737ms
-[00:07:13.479] Server  LOG     ✓ Compiled in 658ms
-[00:07:36.456] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:07:43.849] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:08:36.421] Server  LOG     ✓ Compiled in 553ms
-[00:10:27.510] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:12:13.434] Server  LOG     ✓ Compiled in 812ms
-[00:12:21.397] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:12:44.490] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:13:25.299] Server  LOG     ✓ Compiled in 1080ms
-[00:13:27.048] Server  LOG     ✓ Compiled in 184ms
-[00:13:30.615] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:13:33.264] Server  LOG     ✓ Compiled in 730ms
-[00:14:03.048] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:14:20.230] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
-[00:15:13.428] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:15:17.736] Server  LOG     ✓ Compiled in 741ms
-[00:16:49.151] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
-[00:23:50.162] Server  LOG     ✓ Compiled in 459ms
-[00:23:56.889] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:23:59.891] Server  LOG     ✓ Compiled in 432ms
-[00:24:05.550] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:24:14.325] Server  LOG     ✓ Compiled in 1482ms
-[00:25:25.881] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:25:32.698] Server  LOG     ✓ Compiled in 1150ms
-[00:25:34.096] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:26:42.318] Server  LOG     ✓ Compiled in 568ms
-[00:26:58.616] Server  LOG     ✓ Compiled in 703ms
-[00:27:04.105] Server  ERROR   ⨯ ReferenceError: window is not defined
-[00:27:04.447] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:27:47.100] Server  LOG     ✓ Compiled in 957ms
-[00:27:53.441] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:28:27.277] Server  LOG     ✓ Compiled in 784ms
-[00:28:41.810] Server  LOG     ✓ Compiled in 711ms
-[00:28:50.145] Server  LOG     ✓ Compiled in 672ms
-[00:29:38.711] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:29:58.686] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:32:14.270] Server  LOG     ✓ Compiled in 789ms
-[00:32:42.968] Server  LOG     ✓ Compiled in 4s
-[00:33:11.862] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:33:56.601] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:34:07.235] Server  LOG     ✓ Compiled in 8.5s
-[00:34:22.514] Server  LOG     ✓ Compiled in 787ms
-[00:34:22.604] Browser ERROR   %s a style property during rerender (%s) when a conflicting property is set (%s) can lead to styling bugs. To avoid this, don't mix shorthand and non-shorthand properties for the same value; instead, replace the shorthand with separate values. Removing animation animationDelay
-[00:35:10.994] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:36:48.948] Server  LOG     ✓ Compiled in 8.3s
-[00:37:01.358] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:37:03.137] Server  LOG     ✓ Compiled in 591ms
-[00:38:37.978] Server  LOG     ✓ Compiled in 440ms
-[00:38:47.147] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:39:11.399] Server  LOG     ✓ Compiled in 325ms
-[00:41:21.199] Server  LOG     ✓ Compiled in 476ms
-[00:41:23.115] Server  LOG     ✓ Compiled in 308ms
-[00:41:25.705] Server  LOG     ✓ Compiled in 377ms
-[00:41:27.638] Server  LOG     ✓ Compiled in 275ms
-[00:41:46.369] Server  LOG     ✓ Compiled in 373ms
-[00:41:53.177] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:46:05.453] Server  LOG     ✓ Compiled in 432ms
-[00:47:14.956] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:50:07.977] Server  LOG     ✓ Compiled in 378ms
-[00:50:25.817] Server  LOG     ✓ Compiled in 332ms
-[00:51:05.995] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:52:25.143] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:52:37.332] Server  LOG     ✓ Compiled in 707ms
-[00:52:52.459] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:52:54.603] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+[00:00:01.320] Server  LOG     ✓ Ready in 950ms
+[00:00:42.880] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:51.975] Server  LOG     ✓ Compiled in 851ms
+[00:01:04.841] Server  LOG     ✓ Compiled in 734ms
+[00:01:07.415] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:01:27.940] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[00:03:45.041] Server  LOG     ✓ Compiled in 284ms
+[00:03:45.984] Server  LOG     ✓ Compiled in 17ms
+[00:03:46.727] Browser ERROR   ./OneDrive - UTS/Personal_code/thong-portfolio/src/app/layout.tsx:9:1
+Parsing ecmascript source code failed
+   7 |   subsets: ["latin"],
+   8 | });
+>  9 | }>) {
+     | ^
+  10 |   return (
+  11 |     <html lang="en" suppressHydrationWarning>
+  12 |       <head>
 
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
+Expression expected
+[00:03:46.728] Browser ERROR   ./OneDrive - UTS/Personal_code/thong-portfolio/src/app/layout.tsx:9:1
+Parsing ecmascript source code failed
+   7 |   subsets: ["latin"],
+   8 | });
+>  9 | }>) {
+     | ^
+  10 |   return (
+  11 |     <html lang="en" suppressHydrationWarning>
+  12 |       <head>
 
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+Expression expected
+[00:03:53.916] Server  ERROR   ⨯ ./OneDrive - UTS/Personal_code/thong-portfolio/src/app/layout.tsx:9:1
+Parsing ecmascript source code failed
+   7 |   subsets: ["latin"],
+   8 | });
+>  9 | }>) {
+     | ^
+  10 |   return (
+  11 |     <html lang="en" suppressHydrationWarning>
+  12 |       <head>
 
-%s%s https://react.dev/link/hydration-mismatch 
+Expression expected
 
-  ...
-    <SegmentViewNode type="page" pagePath="/OneDrive ...">
-      <SegmentTrieNode>
-      <ClientPageRoot Component={function Home} serverProvidedParams={{...}}>
-        <Home params={Promise} searchParams={Promise}>
-          <main className="relative o...">
-            <GridBackground>
-            <Navigation>
-            <HeroSection>
-            <AboutSection>
-            <SkillsSection>
-            <ProjectsSection>
-            <BlogSection>
-            <ContactSection>
-              <motion.section ref={{current:null}} id="contact" className="min-h-scre..." variants={{hidden:{...}, ...}} ...>
-                <section id="contact" className="min-h-scre..." style={{opacity:0, ...}} ...>
-                  <div className="max-w-7xl ...">
-                    <motion.div>
-                    <div className="grid grid-...">
-                      <motion.div initial={{opacity:0,x:-30}} whileInView={{opacity:1,x:0}} viewport={{once:true}} ...>
-                        <div style={{opacity:0, ...}} ref={function useMotionRef.useCallback}>
-                          <form onSubmit={function handleSubmit} className="space-y-6">
-                            <div>
-                            <div>
-                              <label>
-                              <input
-                                type="email"
-                                id="email"
-                                name="email"
-                                value=""
-                                onChange={function handleChange}
-                                required={true}
-+                               className="w-full px-4 py-3 rounded-xl border border-border bg-card/80 backdrop-blur-s..."
--                               className="w-full px-4 py-3 rounded-xl border border-border bg-card focus:outline-none..."
-                                placeholder="LuuTran@gmail.com"
-                              >
-                            <div>
-                              <label>
-                              <textarea
-                                id="message"
-                                name="message"
-                                value=""
-                                onChange={function handleChange}
-                                required={true}
-                                rows={5}
-+                               className="w-full px-4 py-3 rounded-xl border border-border bg-card/80 backdrop-blur-s..."
--                               className="w-full px-4 py-3 rounded-xl border border-border bg-card focus:outline-none..."
-                                placeholder="Tell me about your project, or just say hi!"
-                              >
-                            ...
-                      ...
-            ...
 
-[00:54:24.520] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:54:51.020] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:55:54.021] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:56:49.094] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:57:08.606] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[00:03:54.033] Browser ERROR   ./OneDrive - UTS/Personal_code/thong-portfolio/src/app/layout.tsx:9:1
+Parsing ecmascript source code failed
+   7 |   subsets: ["latin"],
+   8 | });
+>  9 | }>) {
+     | ^
+  10 |   return (
+  11 |     <html lang="en" suppressHydrationWarning>
+  12 |       <head>
+
+Expression expected
+[00:03:55.134] Server  LOG     ✓ Compiled in 1163ms
+[00:03:55.242] Browser ERROR   ./OneDrive - UTS/Personal_code/thong-portfolio/src/app/layout.tsx:9:1
+Parsing ecmascript source code failed
+   7 |   subsets: ["latin"],
+   8 | });
+>  9 | }>) {
+     | ^
+  10 |   return (
+  11 |     <html lang="en" suppressHydrationWarning>
+  12 |       <head>
+
+Expression expected
+[00:03:55.935] Browser ERROR   uncaughtError: Error: ./OneDrive - UTS/Personal_code/thong-portfolio/src/app/layout.tsx:9:1
+Parsing ecmascript source code failed
+   7 |   subsets: ["latin"],
+   8 | });
+>  9 | }>) {
+     | ^
+  10 |   return (
+  11 |     <html lang="en" suppressHydrationWarning>
+  12 |       <head>
+
+Expression expected
+
+
+[00:03:57.022] Browser ERROR   ./OneDrive - UTS/Personal_code/thong-portfolio/src/app/layout.tsx:9:1
+Parsing ecmascript source code failed
+   7 |   subsets: ["latin"],
+   8 | });
+>  9 | }>) {
+     | ^
+  10 |   return (
+  11 |     <html lang="en" suppressHydrationWarning>
+  12 |       <head>
+
+Expression expected
+[00:03:57.022] Browser ERROR   ./OneDrive - UTS/Personal_code/thong-portfolio/src/app/layout.tsx:9:1
+Parsing ecmascript source code failed
+   7 |   subsets: ["latin"],
+   8 | });
+>  9 | }>) {
+     | ^
+  10 |   return (
+  11 |     <html lang="en" suppressHydrationWarning>
+  12 |       <head>
+
+Expression expected
+[00:03:57.022] Browser ERROR   ./OneDrive - UTS/Personal_code/thong-portfolio/src/app/layout.tsx:9:1
+Parsing ecmascript source code failed
+   7 |   subsets: ["latin"],
+   8 | });
+>  9 | }>) {
+     | ^
+  10 |   return (
+  11 |     <html lang="en" suppressHydrationWarning>
+  12 |       <head>
+
+Expression expected
+[00:04:05.520] Server  LOG     ✓ Compiled in 967ms
+[00:04:06.051] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:04:34.834] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior
+[00:05:09.468] Server  LOG     ✓ Compiled in 63.2s
+[00:05:26.617] Server  LOG     ✓ Compiled in 17.1s
+[00:05:26.690] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:05:33.014] Browser WARN    Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior

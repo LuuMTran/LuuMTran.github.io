@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Luu Minh Thong Tran",
-  description: "Portfolio of Luu Minh Thong Tran - AI/ML Engineer",
+  title: "Luu Minh Thong Tran - AI/ML Engineer Portfolio",
+  description: "Portfolio of Luu Minh Thong Tran - AI/ML Engineer specializing in Machine Learning, Deep Learning, and Data Science. Based in Sydney, Australia.",
 };
 
 export default function RootLayout({

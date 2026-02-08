@@ -1,1 +1,11 @@
-{"version":4,"routes":{"/blog/in-depth-svm-visualizations":{}},"dynamicRoutes":{"/blog/[slug]":{"dataRoute":null,"dataRouteRegex":null,"fallback":null,"fallbackRevalidate":false,"fallbackSourceRoute":"/blog/[slug]","routeRegex":"^\\/blog\\/([^/]+?)(?:\\/)?$","allowHeader":[]}},"notFoundRoutes":[],"preview":{"previewModeId":"80096bf567e8386c5f55fbda3975de9a","previewModeSigningKey":"f4f5999478217f15577451e708c1a3cf503e4c3ed0fc067b9390e0bacc504f40","previewModeEncryptionKey":"a98aee1ee105690e1a8d7285134b0d92569b3885e6e1ed4a01fc307cc283ca6c"}}
+{
+  "version": 4,
+  "routes": {},
+  "dynamicRoutes": {},
+  "notFoundRoutes": [],
+  "preview": {
+    "previewModeId": "526deafb75142574bccff37919eb4f39",
+    "previewModeSigningKey": "d642ab04d447b3c747a4338a02d659e4bf799de000effa1acb401a6575277f70",
+    "previewModeEncryptionKey": "0bf5809cd5c07ad562265e1b76c344408c1b362457c1128a1aafc5fa29a517e2"
+  }
+}

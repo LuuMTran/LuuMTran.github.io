@@ -558,12 +558,10 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive__$2d$__UTS$2f$Perso
 var __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive__$2d$__UTS$2f$Personal_code$2f$thong$2d$portfolio$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$x$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__X$3e$__ = __turbopack_context__.i("[project]/OneDrive - UTS/Personal_code/thong-portfolio/node_modules/lucide-react/dist/esm/icons/x.js [app-client] (ecmascript) <export default as X>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive__$2d$__UTS$2f$Personal_code$2f$thong$2d$portfolio$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$book$2d$open$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__BookOpen$3e$__ = __turbopack_context__.i("[project]/OneDrive - UTS/Personal_code/thong-portfolio/node_modules/lucide-react/dist/esm/icons/book-open.js [app-client] (ecmascript) <export default as BookOpen>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive__$2d$__UTS$2f$Personal_code$2f$thong$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/OneDrive - UTS/Personal_code/thong-portfolio/node_modules/next/dist/client/app-dir/link.js [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive__$2d$__UTS$2f$Personal_code$2f$thong$2d$portfolio$2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/OneDrive - UTS/Personal_code/thong-portfolio/node_modules/next/image.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive__$2d$__UTS$2f$Personal_code$2f$thong$2d$portfolio$2f$src$2f$components$2f$ThemeToggle$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/OneDrive - UTS/Personal_code/thong-portfolio/src/components/ThemeToggle.tsx [app-client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature();
 "use client";
-;
 ;
 ;
 ;
@@ -640,21 +638,24 @@ function Navigation() {
                         onClick: (e)=>handleNavClick(e, "#hero"),
                         className: "flex items-center gap-2 mr-4",
                         children: [
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive__$2d$__UTS$2f$Personal_code$2f$thong$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                className: "w-8 h-8 relative",
-                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive__$2d$__UTS$2f$Personal_code$2f$thong$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$OneDrive__$2d$__UTS$2f$Personal_code$2f$thong$2d$portfolio$2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                    src: "/logo.svg",
-                                    alt: "Luu Tran Logo",
-                                    fill: true,
-                                    className: "object-contain"
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive__$2d$__UTS$2f$Personal_code$2f$thong$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                                xmlns: "http://www.w3.org/2000/svg",
+                                width: "48",
+                                height: "36",
+                                viewBox: "0 0 323 229",
+                                className: "text-primary",
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive__$2d$__UTS$2f$Personal_code$2f$thong$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                    d: "M 1 131 C -0.83 135.83 4.67 137.67 7 136 C 9.33 134.33 11.83 125.5 15 121 C 18.17 116.5 21.67 112 26 109 C 30.33 106 34.83 103.67 41 103 C 47.17 102.33 55 103.5 63 105 C 71 106.5 81.33 111.17 89 112 C 96.67 112.83 105.17 109.83 109 110 C 112.83 110.17 111.17 107.33 112 113 C 112.83 118.67 113.17 137.83 114 144 C 114.83 150.17 115.17 148 117 150 C 118.83 152 121.67 154.33 125 156 C 128.33 157.67 133.5 159.5 137 160 C 140.5 160.5 142.33 163.17 146 159 C 149.67 154.83 155.83 136.33 159 135 C 162.17 133.67 163.17 147.5 165 151 C 166.83 154.5 166.5 154.33 170 156 C 173.5 157.67 182.33 160.83 186 161 C 189.67 161.17 189.5 161.33 192 157 C 194.5 152.67 198 140.17 201 135 C 204 129.83 205.17 127.5 210 126 C 214.83 124.5 220.67 124.5 230 126 C 239.33 127.5 257.33 133.67 266 135 C 274.67 136.33 277.5 135 282 134 C 286.5 133 289.5 131.33 293 129 C 296.5 126.67 299.67 124.5 303 120 C 306.33 115.5 312.17 105.83 313 102 C 313.83 98.17 310.17 95.33 308 97 C 305.83 98.67 303 107.67 300 112 C 297 116.33 294.5 120 290 123 C 285.5 126 279.33 129.17 273 130 C 266.67 130.83 259.83 129.5 252 128 C 244.17 126.5 234.17 121.83 226 121 C 217.83 120.17 210.5 117.17 203 123 C 195.5 128.83 185.33 151.17 181 156 C 176.67 160.83 177.83 154.17 177 152 C 176.17 149.83 175.33 153.83 176 143 C 176.67 132.17 179.17 97.33 181 87 C 182.83 76.67 183.17 82.67 187 81 C 190.83 79.33 206.83 80.67 204 77 C 201.17 73.33 176.67 58.67 170 59 C 163.33 59.33 167.5 74.33 164 79 C 160.5 83.67 149.83 85.17 149 87 C 148.17 88.83 156.83 89 159 90 C 161.17 91 163.67 85.67 162 93 C 160.33 100.33 153.5 123.67 149 134 C 144.5 144.33 138 152.33 135 155 C 132 157.67 131.83 152.67 131 150 C 130.17 147.33 130 145.67 130 139 C 130 132.33 129.17 122.17 131 110 C 132.83 97.83 142 74.67 141 66 C 140 57.33 129 55.67 125 58 C 121 60.33 118.83 72.83 117 80 C 115.17 87.17 115.5 96.67 114 101 C 112.5 105.33 111.67 104.83 108 106 C 104.33 107.17 100.5 109.17 92 108 C 83.5 106.83 66.83 100.5 57 99 C 47.17 97.5 39.5 97.67 33 99 C 26.5 100.33 23.33 101.67 18 107 C 12.67 112.33 2.83 126.17 1 131 Z",
+                                    fill: "currentColor",
+                                    fillRule: "nonzero"
                                 }, void 0, false, {
                                     fileName: "[project]/OneDrive - UTS/Personal_code/thong-portfolio/src/components/Navigation.tsx",
-                                    lineNumber: 60,
+                                    lineNumber: 64,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/OneDrive - UTS/Personal_code/thong-portfolio/src/components/Navigation.tsx",
-                                lineNumber: 59,
+                                lineNumber: 57,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive__$2d$__UTS$2f$Personal_code$2f$thong$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -662,20 +663,20 @@ function Navigation() {
                                 children: "Luu Tran"
                             }, void 0, false, {
                                 fileName: "[project]/OneDrive - UTS/Personal_code/thong-portfolio/src/components/Navigation.tsx",
-                                lineNumber: 67,
+                                lineNumber: 66,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/OneDrive - UTS/Personal_code/thong-portfolio/src/components/Navigation.tsx",
-                        lineNumber: 54,
+                        lineNumber: 52,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive__$2d$__UTS$2f$Personal_code$2f$thong$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "w-px h-6 bg-border"
                     }, void 0, false, {
                         fileName: "[project]/OneDrive - UTS/Personal_code/thong-portfolio/src/components/Navigation.tsx",
-                        lineNumber: 71,
+                        lineNumber: 70,
                         columnNumber: 9
                     }, this),
                     navLinks.map((link)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive__$2d$__UTS$2f$Personal_code$2f$thong$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -685,7 +686,7 @@ function Navigation() {
                             children: link.label
                         }, link.href, false, {
                             fileName: "[project]/OneDrive - UTS/Personal_code/thong-portfolio/src/components/Navigation.tsx",
-                            lineNumber: 75,
+                            lineNumber: 74,
                             columnNumber: 11
                         }, this)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive__$2d$__UTS$2f$Personal_code$2f$thong$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$OneDrive__$2d$__UTS$2f$Personal_code$2f$thong$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -696,39 +697,39 @@ function Navigation() {
                                 className: "w-4 h-4"
                             }, void 0, false, {
                                 fileName: "[project]/OneDrive - UTS/Personal_code/thong-portfolio/src/components/Navigation.tsx",
-                                lineNumber: 90,
+                                lineNumber: 89,
                                 columnNumber: 11
                             }, this),
                             "Blog"
                         ]
                     }, void 0, true, {
                         fileName: "[project]/OneDrive - UTS/Personal_code/thong-portfolio/src/components/Navigation.tsx",
-                        lineNumber: 86,
+                        lineNumber: 85,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive__$2d$__UTS$2f$Personal_code$2f$thong$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "w-px h-6 bg-border"
                     }, void 0, false, {
                         fileName: "[project]/OneDrive - UTS/Personal_code/thong-portfolio/src/components/Navigation.tsx",
-                        lineNumber: 95,
+                        lineNumber: 94,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive__$2d$__UTS$2f$Personal_code$2f$thong$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "ml-2",
                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive__$2d$__UTS$2f$Personal_code$2f$thong$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$OneDrive__$2d$__UTS$2f$Personal_code$2f$thong$2d$portfolio$2f$src$2f$components$2f$ThemeToggle$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["ThemeToggle"], {}, void 0, false, {
                             fileName: "[project]/OneDrive - UTS/Personal_code/thong-portfolio/src/components/Navigation.tsx",
-                            lineNumber: 99,
+                            lineNumber: 98,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/OneDrive - UTS/Personal_code/thong-portfolio/src/components/Navigation.tsx",
-                        lineNumber: 98,
+                        lineNumber: 97,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/OneDrive - UTS/Personal_code/thong-portfolio/src/components/Navigation.tsx",
-                lineNumber: 43,
+                lineNumber: 42,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive__$2d$__UTS$2f$Personal_code$2f$thong$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -736,7 +737,7 @@ function Navigation() {
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive__$2d$__UTS$2f$Personal_code$2f$thong$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$OneDrive__$2d$__UTS$2f$Personal_code$2f$thong$2d$portfolio$2f$src$2f$components$2f$ThemeToggle$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["ThemeToggle"], {}, void 0, false, {
                         fileName: "[project]/OneDrive - UTS/Personal_code/thong-portfolio/src/components/Navigation.tsx",
-                        lineNumber: 105,
+                        lineNumber: 104,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive__$2d$__UTS$2f$Personal_code$2f$thong$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$OneDrive__$2d$__UTS$2f$Personal_code$2f$thong$2d$portfolio$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].button, {
@@ -749,24 +750,24 @@ function Navigation() {
                             className: "w-5 h-5"
                         }, void 0, false, {
                             fileName: "[project]/OneDrive - UTS/Personal_code/thong-portfolio/src/components/Navigation.tsx",
-                            lineNumber: 111,
+                            lineNumber: 110,
                             columnNumber: 31
                         }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive__$2d$__UTS$2f$Personal_code$2f$thong$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$OneDrive__$2d$__UTS$2f$Personal_code$2f$thong$2d$portfolio$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$menu$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Menu$3e$__["Menu"], {
                             className: "w-5 h-5"
                         }, void 0, false, {
                             fileName: "[project]/OneDrive - UTS/Personal_code/thong-portfolio/src/components/Navigation.tsx",
-                            lineNumber: 111,
+                            lineNumber: 110,
                             columnNumber: 59
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/OneDrive - UTS/Personal_code/thong-portfolio/src/components/Navigation.tsx",
-                        lineNumber: 106,
+                        lineNumber: 105,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/OneDrive - UTS/Personal_code/thong-portfolio/src/components/Navigation.tsx",
-                lineNumber: 104,
+                lineNumber: 103,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive__$2d$__UTS$2f$Personal_code$2f$thong$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$OneDrive__$2d$__UTS$2f$Personal_code$2f$thong$2d$portfolio$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["AnimatePresence"], {
@@ -803,7 +804,7 @@ function Navigation() {
                                 children: link.label
                             }, link.href, false, {
                                 fileName: "[project]/OneDrive - UTS/Personal_code/thong-portfolio/src/components/Navigation.tsx",
-                                lineNumber: 126,
+                                lineNumber: 125,
                                 columnNumber: 15
                             }, this)),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive__$2d$__UTS$2f$Personal_code$2f$thong$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$OneDrive__$2d$__UTS$2f$Personal_code$2f$thong$2d$portfolio$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -827,30 +828,30 @@ function Navigation() {
                                         className: "w-6 h-6"
                                     }, void 0, false, {
                                         fileName: "[project]/OneDrive - UTS/Personal_code/thong-portfolio/src/components/Navigation.tsx",
-                                        lineNumber: 148,
+                                        lineNumber: 147,
                                         columnNumber: 17
                                     }, this),
                                     "Blog"
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/OneDrive - UTS/Personal_code/thong-portfolio/src/components/Navigation.tsx",
-                                lineNumber: 143,
+                                lineNumber: 142,
                                 columnNumber: 15
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/OneDrive - UTS/Personal_code/thong-portfolio/src/components/Navigation.tsx",
-                            lineNumber: 138,
+                            lineNumber: 137,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/OneDrive - UTS/Personal_code/thong-portfolio/src/components/Navigation.tsx",
-                    lineNumber: 118,
+                    lineNumber: 117,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/OneDrive - UTS/Personal_code/thong-portfolio/src/components/Navigation.tsx",
-                lineNumber: 116,
+                lineNumber: 115,
                 columnNumber: 7
             }, this)
         ]
@@ -3346,7 +3347,6 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive__$2d$__UTS$2f$Perso
 var __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive__$2d$__UTS$2f$Personal_code$2f$thong$2d$portfolio$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$mail$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Mail$3e$__ = __turbopack_context__.i("[project]/OneDrive - UTS/Personal_code/thong-portfolio/node_modules/lucide-react/dist/esm/icons/mail.js [app-client] (ecmascript) <export default as Mail>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive__$2d$__UTS$2f$Personal_code$2f$thong$2d$portfolio$2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$check$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Check$3e$__ = __turbopack_context__.i("[project]/OneDrive - UTS/Personal_code/thong-portfolio/node_modules/lucide-react/dist/esm/icons/check.js [app-client] (ecmascript) <export default as Check>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive__$2d$__UTS$2f$Personal_code$2f$thong$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/OneDrive - UTS/Personal_code/thong-portfolio/node_modules/next/dist/client/app-dir/link.js [app-client] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive__$2d$__UTS$2f$Personal_code$2f$thong$2d$portfolio$2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/OneDrive - UTS/Personal_code/thong-portfolio/node_modules/next/image.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive__$2d$__UTS$2f$Personal_code$2f$thong$2d$portfolio$2f$node_modules$2f$react$2d$markdown$2f$lib$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__Markdown__as__default$3e$__ = __turbopack_context__.i("[project]/OneDrive - UTS/Personal_code/thong-portfolio/node_modules/react-markdown/lib/index.js [app-client] (ecmascript) <export Markdown as default>");
 var __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive__$2d$__UTS$2f$Personal_code$2f$thong$2d$portfolio$2f$node_modules$2f$remark$2d$math$2f$lib$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/OneDrive - UTS/Personal_code/thong-portfolio/node_modules/remark-math/lib/index.js [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive__$2d$__UTS$2f$Personal_code$2f$thong$2d$portfolio$2f$node_modules$2f$rehype$2d$katex$2f$lib$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/OneDrive - UTS/Personal_code/thong-portfolio/node_modules/rehype-katex/lib/index.js [app-client] (ecmascript)");
@@ -3356,7 +3356,6 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive__$2d$__UTS$2f$Perso
 ;
 var _s = __turbopack_context__.k.signature();
 "use client";
-;
 ;
 ;
 ;
@@ -3407,12 +3406,12 @@ function BlogPostContent({ post }) {
                 crossOrigin: "anonymous"
             }, void 0, false, {
                 fileName: "[project]/OneDrive - UTS/Personal_code/thong-portfolio/src/components/BlogPostContent.tsx",
-                lineNumber: 57,
+                lineNumber: 56,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive__$2d$__UTS$2f$Personal_code$2f$thong$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$OneDrive__$2d$__UTS$2f$Personal_code$2f$thong$2d$portfolio$2f$src$2f$components$2f$GridBackground$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["GridBackground"], {}, void 0, false, {
                 fileName: "[project]/OneDrive - UTS/Personal_code/thong-portfolio/src/components/BlogPostContent.tsx",
-                lineNumber: 65,
+                lineNumber: 64,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive__$2d$__UTS$2f$Personal_code$2f$thong$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("header", {
@@ -3428,7 +3427,7 @@ function BlogPostContent({ post }) {
                                     className: "w-4 h-4"
                                 }, void 0, false, {
                                     fileName: "[project]/OneDrive - UTS/Personal_code/thong-portfolio/src/components/BlogPostContent.tsx",
-                                    lineNumber: 74,
+                                    lineNumber: 73,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive__$2d$__UTS$2f$Personal_code$2f$thong$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3436,33 +3435,36 @@ function BlogPostContent({ post }) {
                                     children: "Back to Blog"
                                 }, void 0, false, {
                                     fileName: "[project]/OneDrive - UTS/Personal_code/thong-portfolio/src/components/BlogPostContent.tsx",
-                                    lineNumber: 75,
+                                    lineNumber: 74,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/OneDrive - UTS/Personal_code/thong-portfolio/src/components/BlogPostContent.tsx",
-                            lineNumber: 70,
+                            lineNumber: 69,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive__$2d$__UTS$2f$Personal_code$2f$thong$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "flex items-center gap-2",
                             children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive__$2d$__UTS$2f$Personal_code$2f$thong$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "w-8 h-8 relative",
-                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive__$2d$__UTS$2f$Personal_code$2f$thong$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$OneDrive__$2d$__UTS$2f$Personal_code$2f$thong$2d$portfolio$2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-                                        src: "/logo.svg",
-                                        alt: "Luu Tran Logo",
-                                        fill: true,
-                                        className: "object-contain"
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive__$2d$__UTS$2f$Personal_code$2f$thong$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                                    xmlns: "http://www.w3.org/2000/svg",
+                                    width: "48",
+                                    height: "36",
+                                    viewBox: "0 0 323 229",
+                                    className: "text-primary",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive__$2d$__UTS$2f$Personal_code$2f$thong$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                        d: "M 1 131 C -0.83 135.83 4.67 137.67 7 136 C 9.33 134.33 11.83 125.5 15 121 C 18.17 116.5 21.67 112 26 109 C 30.33 106 34.83 103.67 41 103 C 47.17 102.33 55 103.5 63 105 C 71 106.5 81.33 111.17 89 112 C 96.67 112.83 105.17 109.83 109 110 C 112.83 110.17 111.17 107.33 112 113 C 112.83 118.67 113.17 137.83 114 144 C 114.83 150.17 115.17 148 117 150 C 118.83 152 121.67 154.33 125 156 C 128.33 157.67 133.5 159.5 137 160 C 140.5 160.5 142.33 163.17 146 159 C 149.67 154.83 155.83 136.33 159 135 C 162.17 133.67 163.17 147.5 165 151 C 166.83 154.5 166.5 154.33 170 156 C 173.5 157.67 182.33 160.83 186 161 C 189.67 161.17 189.5 161.33 192 157 C 194.5 152.67 198 140.17 201 135 C 204 129.83 205.17 127.5 210 126 C 214.83 124.5 220.67 124.5 230 126 C 239.33 127.5 257.33 133.67 266 135 C 274.67 136.33 277.5 135 282 134 C 286.5 133 289.5 131.33 293 129 C 296.5 126.67 299.67 124.5 303 120 C 306.33 115.5 312.17 105.83 313 102 C 313.83 98.17 310.17 95.33 308 97 C 305.83 98.67 303 107.67 300 112 C 297 116.33 294.5 120 290 123 C 285.5 126 279.33 129.17 273 130 C 266.67 130.83 259.83 129.5 252 128 C 244.17 126.5 234.17 121.83 226 121 C 217.83 120.17 210.5 117.17 203 123 C 195.5 128.83 185.33 151.17 181 156 C 176.67 160.83 177.83 154.17 177 152 C 176.17 149.83 175.33 153.83 176 143 C 176.67 132.17 179.17 97.33 181 87 C 182.83 76.67 183.17 82.67 187 81 C 190.83 79.33 206.83 80.67 204 77 C 201.17 73.33 176.67 58.67 170 59 C 163.33 59.33 167.5 74.33 164 79 C 160.5 83.67 149.83 85.17 149 87 C 148.17 88.83 156.83 89 159 90 C 161.17 91 163.67 85.67 162 93 C 160.33 100.33 153.5 123.67 149 134 C 144.5 144.33 138 152.33 135 155 C 132 157.67 131.83 152.67 131 150 C 130.17 147.33 130 145.67 130 139 C 130 132.33 129.17 122.17 131 110 C 132.83 97.83 142 74.67 141 66 C 140 57.33 129 55.67 125 58 C 121 60.33 118.83 72.83 117 80 C 115.17 87.17 115.5 96.67 114 101 C 112.5 105.33 111.67 104.83 108 106 C 104.33 107.17 100.5 109.17 92 108 C 83.5 106.83 66.83 100.5 57 99 C 47.17 97.5 39.5 97.67 33 99 C 26.5 100.33 23.33 101.67 18 107 C 12.67 112.33 2.83 126.17 1 131 Z",
+                                        fill: "currentColor",
+                                        fillRule: "nonzero"
                                     }, void 0, false, {
                                         fileName: "[project]/OneDrive - UTS/Personal_code/thong-portfolio/src/components/BlogPostContent.tsx",
-                                        lineNumber: 79,
+                                        lineNumber: 84,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/OneDrive - UTS/Personal_code/thong-portfolio/src/components/BlogPostContent.tsx",
-                                    lineNumber: 78,
+                                    lineNumber: 77,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive__$2d$__UTS$2f$Personal_code$2f$thong$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3476,18 +3478,18 @@ function BlogPostContent({ post }) {
                             ]
                         }, void 0, true, {
                             fileName: "[project]/OneDrive - UTS/Personal_code/thong-portfolio/src/components/BlogPostContent.tsx",
-                            lineNumber: 77,
+                            lineNumber: 76,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/OneDrive - UTS/Personal_code/thong-portfolio/src/components/BlogPostContent.tsx",
-                    lineNumber: 69,
+                    lineNumber: 68,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/OneDrive - UTS/Personal_code/thong-portfolio/src/components/BlogPostContent.tsx",
-                lineNumber: 68,
+                lineNumber: 67,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive__$2d$__UTS$2f$Personal_code$2f$thong$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("article", {
@@ -3867,7 +3869,7 @@ function BlogPostContent({ post }) {
         ]
     }, void 0, true, {
         fileName: "[project]/OneDrive - UTS/Personal_code/thong-portfolio/src/components/BlogPostContent.tsx",
-        lineNumber: 55,
+        lineNumber: 54,
         columnNumber: 5
     }, this);
 }
