@@ -32,8 +32,8 @@ export function HeroSection() {
   };
 
   const lineVariants = {
-    hidden: { 
-      opacity: 0, 
+    hidden: {
+      opacity: 0,
       y: 30,
     },
     visible: {
@@ -62,7 +62,7 @@ export function HeroSection() {
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
     >
-      <div className="text-center max-w-5xl mx-auto">
+      <div className="text-center max-w-5xl mx-auto relative z-10">
         {/* Main Content Container */}
         <motion.div
           className="space-y-6"
@@ -70,18 +70,64 @@ export function HeroSection() {
           initial="hidden"
           animate="visible"
         >
-          {/* Line 1: Name - Responsive sizing */}
+          {/* Line 1: Greeting */}
           <motion.div variants={lineVariants}>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight leading-tight break-words">
-              <span className="bg-gradient-to-r from-primary to-emerald-600 bg-clip-text text-transparent">
-                {name}
-              </span>
-            </h1>
+            <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-6">
+              Hi there, I'm
+            </p>
           </motion.div>
 
-          {/* Line 2: Title */}
+          {/* Line 2: Name - Large Bold with Glow Effect */}
+          <div className="relative py-8">
+            {/* Floating dots scattered around name */}
+            {[
+              { left: '-8%', top: '20%' },
+              { left: '5%', top: '-40%' },
+              { left: '15%', top: '110%' },
+              { left: '25%', top: '-30%' },
+              { left: '40%', top: '120%' },
+              { left: '55%', top: '-50%' },
+              { left: '70%', top: '115%' },
+              { left: '85%', top: '-35%' },
+              { left: '95%', top: '105%' },
+              { left: '102%', top: '30%' },
+              { left: '-5%', top: '80%' },
+              { left: '105%', top: '70%' },
+            ].map((pos, i) => (
+              <div
+                key={i}
+                className="absolute w-2 h-2 rounded-full bg-[#708dcd] floating-dot opacity-50"
+                style={{
+                  left: pos.left,
+                  top: pos.top,
+                  animationDelay: `${i * 0.4}s`,
+                  animationDuration: `${4 + (i % 3)}s`,
+                }}
+              />
+            ))}
+
+            {/* Glow effect - outside animation */}
+            <div
+              className="absolute inset-0 flex items-center justify-center pointer-events-none"
+              aria-hidden="true"
+            >
+              <div
+                className="w-[120%] h-28 blur-2xl opacity-70"
+                style={{
+                  background: 'linear-gradient(90deg, transparent 0%, rgba(112, 141, 205, 0.7) 15%, rgba(112, 141, 205, 0.7) 85%, transparent 100%)',
+                }}
+              />
+            </div>
+            <motion.div variants={lineVariants}>
+              <h1 className="relative text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black tracking-tight leading-none text-slate-700 dark:text-slate-300">
+                {name}
+              </h1>
+            </motion.div>
+          </div>
+
+          {/* Line 3: Title */}
           <motion.div variants={lineVariants}>
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-medium text-muted-foreground">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-medium text-muted-foreground mt-4">
               {title}
             </h2>
           </motion.div>
@@ -95,7 +141,7 @@ export function HeroSection() {
           </motion.p>
 
           {/* CTA Buttons */}
-          <motion.div 
+          <motion.div
             className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8"
             variants={lineVariants}
           >
@@ -108,7 +154,7 @@ export function HeroSection() {
               <Mail className="w-5 h-5" />
               Get in Touch
             </motion.button>
-            
+
             <motion.button
               onClick={() => scrollToSection("#projects")}
               className="px-8 py-4 rounded-full font-semibold flex items-center gap-2 border-2 border-border text-muted-foreground hover:border-primary hover:text-primary transition-all bg-card"
@@ -121,29 +167,29 @@ export function HeroSection() {
           </motion.div>
 
           {/* Social Links */}
-          <motion.div 
+          <motion.div
             className="flex items-center justify-center gap-4 mt-6"
             variants={lineVariants}
           >
-            <a 
-              href="https://github.com/LuuMTran" 
-              target="_blank" 
+            <a
+              href="https://github.com/LuuMTran"
+              target="_blank"
               rel="noopener noreferrer"
               className="p-3 rounded-full border border-border hover:bg-muted transition-colors"
               aria-label="GitHub"
             >
               <Github className="w-5 h-5 text-muted-foreground" />
             </a>
-            <a 
-              href="https://www.linkedin.com/in/luu-minh-thong-tran-31971b238/" 
-              target="_blank" 
+            <a
+              href="https://www.linkedin.com/in/luu-minh-thong-tran-31971b238/"
+              target="_blank"
               rel="noopener noreferrer"
               className="p-3 rounded-full border border-border hover:bg-primary-light hover:border-primary transition-colors"
               aria-label="LinkedIn"
             >
               <Linkedin className="w-5 h-5 text-muted-foreground" />
             </a>
-            <a 
+            <a
               href="mailto:minhthong7375@gmail.com"
               className="p-3 rounded-full border border-border hover:bg-primary-light hover:border-primary transition-colors"
               aria-label="Email"
@@ -153,7 +199,7 @@ export function HeroSection() {
           </motion.div>
 
           {/* Stats Row */}
-          <motion.div 
+          <motion.div
             className="flex flex-wrap items-center justify-center gap-8 md:gap-12 mt-12 pt-8 border-t border-border"
             variants={lineVariants}
           >

@@ -26,7 +26,7 @@ export function BlogSection() {
     <motion.section
       ref={sectionRef}
       id="blog"
-      className="min-h-screen py-24 px-4 md:px-8 lg:px-16 flex items-center bg-background"
+      className="min-h-screen py-24 px-4 md:px-8 lg:px-16 flex items-center"
       variants={sectionVariants}
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
@@ -49,7 +49,7 @@ export function BlogSection() {
         {/* Featured Blog Post - Smaller */}
         {latestPost && (
           <motion.article
-            className="group relative overflow-hidden rounded-xl border border-border bg-background hover:border-primary/50 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 max-w-2xl mx-auto"
+            className="group relative overflow-hidden rounded-xl border border-border bg-card/80 backdrop-blur-sm hover:border-primary/50 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 max-w-2xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -103,15 +103,15 @@ export function BlogSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          <div className="rounded-xl border border-border bg-background p-6">
+          <div className="rounded-xl border border-border bg-card/80 backdrop-blur-sm p-6">
             <h3 className="text-lg font-bold text-foreground mb-3">Notes</h3>
             <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-              This section is where I'll share quick thoughts, learning notes, and insights from my journey in AI/ML. 
+              This section is where I'll share quick thoughts, learning notes, and insights from my journey in AI/ML.
               More notes will be added as my journey continues...
             </p>
             <Link
               href="/blog"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-blue-600 text-white text-sm font-medium hover:bg-blue-700 transition-colors"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-[#708dcd] text-white text-sm font-medium hover:bg-[#5a75b3] transition-colors"
             >
               Go to Blog
               <ArrowRight className="w-4 h-4" />

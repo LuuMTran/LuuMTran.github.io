@@ -56,7 +56,7 @@ export function ProjectsSection() {
     <motion.section
       ref={sectionRef}
       id="projects"
-      className="min-h-screen py-24 px-4 md:px-8 lg:px-16 flex items-center bg-background"
+      className="min-h-screen py-24 px-4 md:px-8 lg:px-16 flex items-center"
       variants={sectionVariants}
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
@@ -94,7 +94,7 @@ export function ProjectsSection() {
 
               {/* Project Content */}
               <div className="p-6">
-                <a 
+                <a
                   href={project.type === "pdf" ? project.githubUrl : project.githubUrl}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -159,16 +159,16 @@ export function ProjectsSection() {
         </div>
 
         {/* View All Projects CTA */}
-        <motion.div 
+        <motion.div
           className="mt-12 text-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.6 }}
         >
-          <a 
-            href="https://github.com/LuuMTran" 
-            target="_blank" 
+          <a
+            href="https://github.com/LuuMTran"
+            target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-full border-2 border-border text-muted-foreground font-semibold hover:border-primary hover:text-primary transition-all"
           >

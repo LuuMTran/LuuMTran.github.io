@@ -9,25 +9,25 @@
   --foreground: #0f172a;
   --border: #e2e8f0;
   --border-dark: #cbd5e1;
-  
+
   /* Primary Blue */
-  --primary: #2563eb;
+  --primary: #708dcd;
   --primary-foreground: #ffffff;
-  --primary-light: #dbeafe;
-  --primary-dark: #1d4ed8;
-  
+  --primary-light: #e8edf7;
+  --primary-dark: #5a75b3;
+
   /* Secondary Green */
   --secondary: #10b981;
   --secondary-foreground: #ffffff;
   --secondary-light: #d1fae5;
   --secondary-dark: #059669;
-  
+
   /* Accent */
   --accent: #f1f5f9;
   --accent-foreground: #0f172a;
   --muted: #f1f5f9;
   --muted-foreground: #64748b;
-  
+
   /* Card backgrounds */
   --card: #ffffff;
   --card-foreground: #0f172a;
@@ -39,22 +39,22 @@
   --foreground: #f8fafc;
   --border: #334155;
   --border-dark: #475569;
-  
+
   --primary: #60a5fa;
   --primary-foreground: #0f172a;
   --primary-light: #1e3a8a;
   --primary-dark: #3b82f6;
-  
+
   --secondary: #34d399;
   --secondary-foreground: #0f172a;
   --secondary-light: #064e3b;
   --secondary-dark: #10b981;
-  
+
   --accent: #1e293b;
   --accent-foreground: #f8fafc;
   --muted: #334155;
   --muted-foreground: #94a3b8;
-  
+
   --card: #1e293b;
   --card-foreground: #f8fafc;
 }
@@ -96,13 +96,14 @@ body {
   0% {
     background-position: 0 0;
   }
+
   100% {
     background-position: 80px 80px;
   }
 }
 
 .animated-grid {
-  background-image: 
+  background-image:
     linear-gradient(to right, var(--border) 1px, transparent 1px),
     linear-gradient(to bottom, var(--border) 1px, transparent 1px);
   background-size: 40px 40px;
@@ -112,6 +113,35 @@ body {
 
 .dark .animated-grid {
   opacity: 0.2;
+}
+
+/* Floating dot animation - smooth flowing motion */
+@keyframes floatDot {
+  0% {
+    transform: translate(0px, 0px);
+  }
+
+  25% {
+    transform: translate(15px, -20px);
+  }
+
+  50% {
+    transform: translate(5px, -35px);
+  }
+
+  75% {
+    transform: translate(-10px, -15px);
+  }
+
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+.floating-dot {
+  animation-name: floatDot;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
 }
 
 /* Social button hover effect */
@@ -153,7 +183,7 @@ body {
 
 .card-hover:hover {
   transform: translateY(-4px);
-  box-shadow: 0 20px 40px -15px rgba(37, 99, 235, 0.15);
+  box-shadow: 0 20px 40px -15px rgba(112, 141, 205, 0.15);
   border-color: var(--primary);
 }
 
@@ -170,7 +200,7 @@ body {
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 30px -10px rgba(37, 99, 235, 0.4);
+  box-shadow: 0 10px 30px -10px rgba(112, 141, 205, 0.4);
 }
 
 /* Secondary button */

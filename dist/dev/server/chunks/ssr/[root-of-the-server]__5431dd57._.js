@@ -468,19 +468,89 @@ __turbopack_context__.s([
     ()=>GridBackground
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive__$2d$__UTS$2f$Personal_code$2f$thong$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/OneDrive - UTS/Personal_code/thong-portfolio/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive__$2d$__UTS$2f$Personal_code$2f$thong$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/OneDrive - UTS/Personal_code/thong-portfolio/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
 "use client";
 ;
+;
 function GridBackground() {
+    const [mousePosition, setMousePosition] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive__$2d$__UTS$2f$Personal_code$2f$thong$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])({
+        x: 0,
+        y: 0
+    });
+    const [isMounted, setIsMounted] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive__$2d$__UTS$2f$Personal_code$2f$thong$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useState"])(false);
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive__$2d$__UTS$2f$Personal_code$2f$thong$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useEffect"])(()=>{
+        setIsMounted(true);
+        const handleMouseMove = (e)=>{
+            setMousePosition({
+                x: e.clientX,
+                y: e.clientY
+            });
+        };
+        window.addEventListener("mousemove", handleMouseMove);
+        return ()=>{
+            window.removeEventListener("mousemove", handleMouseMove);
+        };
+    }, []);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive__$2d$__UTS$2f$Personal_code$2f$thong$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "fixed inset-0 w-full h-full overflow-hidden -z-10 animated-grid",
-        style: {
-            backgroundImage: `linear-gradient(to right, var(--border) 1px, transparent 1px),
-          linear-gradient(to bottom, var(--border) 1px, transparent 1px)`,
-            backgroundSize: '40px 40px'
-        }
-    }, void 0, false, {
+        className: "fixed inset-0 w-full h-full overflow-hidden z-0 pointer-events-none",
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive__$2d$__UTS$2f$Personal_code$2f$thong$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "absolute inset-0",
+                style: {
+                    backgroundImage: `
+            linear-gradient(to right, rgba(112, 141, 205, 0.2) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(112, 141, 205, 0.2) 1px, transparent 1px)
+          `,
+                    backgroundSize: "50px 50px"
+                }
+            }, void 0, false, {
+                fileName: "[project]/OneDrive - UTS/Personal_code/thong-portfolio/src/components/GridBackground.tsx",
+                lineNumber: 34,
+                columnNumber: 7
+            }, this),
+            isMounted && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive__$2d$__UTS$2f$Personal_code$2f$thong$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$OneDrive__$2d$__UTS$2f$Personal_code$2f$thong$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["Fragment"], {
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive__$2d$__UTS$2f$Personal_code$2f$thong$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "fixed pointer-events-none",
+                        style: {
+                            left: mousePosition.x - 200,
+                            top: mousePosition.y - 200,
+                            width: 400,
+                            height: 400,
+                            background: `radial-gradient(circle at center, rgba(112, 141, 205, 0.1) 0%, transparent 60%)`
+                        }
+                    }, void 0, false, {
+                        fileName: "[project]/OneDrive - UTS/Personal_code/thong-portfolio/src/components/GridBackground.tsx",
+                        lineNumber: 49,
+                        columnNumber: 11
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$OneDrive__$2d$__UTS$2f$Personal_code$2f$thong$2d$portfolio$2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "fixed pointer-events-none",
+                        style: {
+                            left: mousePosition.x - 150,
+                            top: mousePosition.y - 150,
+                            width: 300,
+                            height: 300,
+                            backgroundImage: `
+                linear-gradient(to right, rgba(112, 141, 205, 0.3) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(112, 141, 205, 0.3) 1px, transparent 1px)
+              `,
+                            backgroundSize: "50px 50px",
+                            backgroundPosition: `${-mousePosition.x % 50}px ${-mousePosition.y % 50}px`,
+                            mask: "radial-gradient(circle at center, black 0%, transparent 60%)",
+                            WebkitMask: "radial-gradient(circle at center, black 0%, transparent 60%)"
+                        }
+                    }, void 0, false, {
+                        fileName: "[project]/OneDrive - UTS/Personal_code/thong-portfolio/src/components/GridBackground.tsx",
+                        lineNumber: 61,
+                        columnNumber: 11
+                    }, this)
+                ]
+            }, void 0, true)
+        ]
+    }, void 0, true, {
         fileName: "[project]/OneDrive - UTS/Personal_code/thong-portfolio/src/components/GridBackground.tsx",
-        lineNumber: 5,
+        lineNumber: 32,
         columnNumber: 5
     }, this);
 }

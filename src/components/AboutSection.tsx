@@ -77,7 +77,7 @@ export function AboutSection() {
           >
             {/* Profile Picture - LinkedIn Style */}
             <div className="flex flex-col items-center lg:items-start">
-              <div className="relative w-48 h-48 rounded-full overflow-hidden border-4 border-card shadow-xl bg-gradient-to-br from-blue-500 to-emerald-500">
+              <div className="relative w-48 h-48 rounded-full overflow-hidden border-4 border-card shadow-xl bg-gradient-to-br from-[#708dcd] to-emerald-500">
                 <Image
                   src="/images/profile.jpg"
                   alt="Luu Minh Thong Tran"
@@ -88,20 +88,20 @@ export function AboutSection() {
               </div>
             </div>
 
-            {/* Bio */}
-            <div>
+            {/* Bio - White Card */}
+            <div className="p-6 rounded-2xl bg-card/80 backdrop-blur-sm border border-border shadow-sm">
               <p className="text-primary font-medium mb-2">Hello!</p>
               <h3 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">I'm Luu</h3>
-              
+
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  Hey everyone! I'm Luu, a student studying Artificial Intelligence at UTS. 
-                  Currently, I'm focusing on developing Python programming skills, Machine Learning, 
+                  Hey everyone! I'm Luu, a student studying Artificial Intelligence at UTS.
+                  Currently, I'm focusing on developing Python programming skills, Machine Learning,
                   Deep Learning, and Data Science.
                 </p>
                 <p>
-                  I hope to have the opportunity to learn, develop myself, and contribute to real 
-                  projects in the AI/ML field. If you have any internship opportunities, projects, 
+                  I hope to have the opportunity to learn, develop myself, and contribute to real
+                  projects in the AI/ML field. If you have any internship opportunities, projects,
                   or simply want to connect and share, don't hesitate to contact me! ^^
                 </p>
               </div>
@@ -163,27 +163,30 @@ export function AboutSection() {
                 >
                   {/* Timeline dot */}
                   <div className="absolute left-0 top-0 -translate-x-1/2 w-4 h-4 rounded-full bg-primary border-2 border-card shadow" />
-                  
-                  <span className="text-sm text-muted-foreground font-medium">{item.period}</span>
-                  <h4 className="font-bold text-foreground mt-1">{item.title}</h4>
-                  <p className="text-sm text-muted-foreground">{item.organization}</p>
-                  <p className="text-sm text-muted-foreground mt-2">{item.description}</p>
+
+                  {/* White Card for timeline content */}
+                  <div className="p-4 rounded-xl bg-card border border-border shadow-sm">
+                    <span className="text-sm text-muted-foreground font-medium">{item.period}</span>
+                    <h4 className="font-bold text-foreground mt-1">{item.title}</h4>
+                    <p className="text-sm text-muted-foreground">{item.organization}</p>
+                    <p className="text-sm text-muted-foreground mt-2">{item.description}</p>
+                  </div>
                 </motion.div>
               ))}
             </div>
 
-            {/* Currently Looking For */}
-            <motion.div 
-              className="mt-8 p-6 rounded-2xl bg-primary-light border border-border"
+            {/* Currently Looking For - White Card */}
+            <motion.div
+              className="mt-8 p-6 rounded-2xl bg-card/80 backdrop-blur-sm border border-border shadow-sm"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: 0.3 }}
             >
-              <h4 className="font-bold mb-2 text-primary-dark">Currently Looking For</h4>
-              <p className="text-sm text-primary">
-                I'm actively seeking internship opportunities in AI/ML engineering where I can 
-                apply my skills, learn from experienced professionals, and contribute to impactful projects. 
+              <h4 className="font-bold mb-2 text-foreground">Currently Looking For</h4>
+              <p className="text-sm text-muted-foreground">
+                I'm actively seeking internship opportunities in AI/ML engineering where I can
+                apply my skills, learn from experienced professionals, and contribute to impactful projects.
                 If you're hiring, I'd love to connect!
               </p>
             </motion.div>

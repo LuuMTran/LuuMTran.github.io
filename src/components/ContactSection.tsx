@@ -49,7 +49,7 @@ export function ContactSection() {
     <motion.section
       ref={sectionRef}
       id="contact"
-      className="min-h-screen py-24 px-4 md:px-8 lg:px-16 flex items-center bg-background"
+      className="min-h-screen py-24 px-4 md:px-8 lg:px-16 flex items-center"
       variants={sectionVariants}
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
@@ -90,7 +90,7 @@ export function ContactSection() {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-xl border border-border bg-card focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all placeholder:text-muted-foreground/60"
+                  className="w-full px-4 py-3 rounded-xl border border-border bg-card/80 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all placeholder:text-muted-foreground/60"
                   placeholder="Luu Tran"
                 />
               </div>
@@ -106,7 +106,7 @@ export function ContactSection() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-xl border border-border bg-card focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all placeholder:text-muted-foreground/60"
+                  className="w-full px-4 py-3 rounded-xl border border-border bg-card/80 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all placeholder:text-muted-foreground/60"
                   placeholder="LuuTran@gmail.com"
                 />
               </div>
@@ -122,7 +122,7 @@ export function ContactSection() {
                   onChange={handleChange}
                   required
                   rows={5}
-                  className="w-full px-4 py-3 rounded-xl border border-border bg-card focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all resize-none placeholder:text-muted-foreground/60"
+                  className="w-full px-4 py-3 rounded-xl border border-border bg-card/80 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all resize-none placeholder:text-muted-foreground/60"
                   placeholder="Tell me about your project, or just say hi!"
                 />
               </div>
@@ -148,7 +148,7 @@ export function ContactSection() {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             {/* Direct Contact */}
-            <div className="p-6 rounded-2xl bg-card border border-border">
+            <div className="p-6 rounded-2xl bg-card/80 backdrop-blur-sm border border-border">
               <h3 className="font-bold mb-4 text-foreground">Prefer to reach out directly?</h3>
               <div className="space-y-3">
                 <a
@@ -170,7 +170,7 @@ export function ContactSection() {
             </div>
 
             {/* Social Links */}
-            <div className="p-6 rounded-2xl bg-card border border-border">
+            <div className="p-6 rounded-2xl bg-card/80 backdrop-blur-sm border border-border">
               <h3 className="font-bold mb-4 text-foreground">Find me online</h3>
               <div className="flex gap-3">
                 <a
@@ -186,7 +186,7 @@ export function ContactSection() {
                   href="https://www.linkedin.com/in/luu-minh-thong-tran-31971b238/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 rounded-full border border-border hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-all"
+                  className="p-3 rounded-full border border-border hover:bg-[#708dcd] hover:text-white hover:border-[#708dcd] transition-all"
                   aria-label="LinkedIn"
                 >
                   <Linkedin className="w-5 h-5" />
@@ -195,7 +195,7 @@ export function ContactSection() {
             </div>
 
             {/* Fun note */}
-            <div className="p-4 rounded-xl bg-primary-light border border-border">
+            <div className="p-4 rounded-xl bg-card/80 backdrop-blur-sm border border-border">
               <p className="text-sm text-muted-foreground">
                 <strong className="text-primary">Pro tip:</strong> I usually respond within 24 hours.
                 If you don't hear back, check your spam folder or try LinkedIn!

@@ -84,7 +84,7 @@ export function SkillsSection() {
     <motion.section
       ref={sectionRef}
       id="skills"
-      className="min-h-screen py-24 px-4 md:px-8 lg:px-16 flex items-center bg-background"
+      className="min-h-screen py-24 px-4 md:px-8 lg:px-16 flex items-center"
       variants={sectionVariants}
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
