@@ -26,7 +26,7 @@ export function BlogSection() {
     <motion.section
       ref={sectionRef}
       id="blog"
-      className="min-h-screen py-24 px-4 md:px-8 lg:px-16 flex items-center"
+      className="py-16 px-4 md:px-8 lg:px-16 flex items-center"
       variants={sectionVariants}
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
@@ -34,10 +34,10 @@ export function BlogSection() {
       <div className="max-w-7xl mx-auto w-full">
         {/* Header */}
         <motion.div
-          className="mb-12 text-center"
+          className="mb-10 text-center"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">Latest from the Blog</h2>
@@ -52,7 +52,7 @@ export function BlogSection() {
             className="group relative overflow-hidden rounded-xl border border-border bg-card/80 backdrop-blur-sm hover:border-primary/50 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 max-w-2xl mx-auto"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
             transition={{ duration: 0.4 }}
           >
             <div className="p-6">
@@ -100,7 +100,7 @@ export function BlogSection() {
           className="mt-12 max-w-2xl mx-auto"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
           <div className="rounded-xl border border-border bg-card/80 backdrop-blur-sm p-6">

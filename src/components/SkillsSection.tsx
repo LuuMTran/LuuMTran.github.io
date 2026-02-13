@@ -84,7 +84,7 @@ export function SkillsSection() {
     <motion.section
       ref={sectionRef}
       id="skills"
-      className="min-h-screen py-24 px-4 md:px-8 lg:px-16 flex items-center"
+      className="py-16 px-4 md:px-8 lg:px-16 flex items-center"
       variants={sectionVariants}
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
@@ -92,10 +92,10 @@ export function SkillsSection() {
       <div className="max-w-7xl mx-auto w-full">
         {/* Header - NO SPARKLES */}
         <motion.div
-          className="mb-16 text-center"
+          className="mb-10 text-center"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">Skills & Tools</h2>
@@ -112,7 +112,7 @@ export function SkillsSection() {
               className="group relative flex flex-col items-center justify-center p-6 rounded-2xl border border-border bg-card card-hover transition-all duration-300"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
               transition={{ duration: 0.4, delay: index * 0.05 }}
             >
               {/* Icon */}
@@ -135,7 +135,7 @@ export function SkillsSection() {
           className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
           transition={{ duration: 0.6, delay: 0.3 }}
         >
           <div className="p-6 rounded-2xl border border-border bg-card card-hover transition-all duration-300">

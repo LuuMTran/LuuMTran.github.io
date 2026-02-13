@@ -49,7 +49,7 @@ export function ContactSection() {
     <motion.section
       ref={sectionRef}
       id="contact"
-      className="min-h-screen py-24 px-4 md:px-8 lg:px-16 flex items-center"
+      className="min-h-screen py-20 px-4 md:px-8 lg:px-16 flex items-center"
       variants={sectionVariants}
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
@@ -57,10 +57,10 @@ export function ContactSection() {
       <div className="max-w-7xl mx-auto w-full">
         {/* Header */}
         <motion.div
-          className="mb-16 text-center"
+          className="mb-10 text-center"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">Let's Chat</h2>
@@ -75,7 +75,7 @@ export function ContactSection() {
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
             transition={{ duration: 0.6 }}
           >
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -144,7 +144,7 @@ export function ContactSection() {
             className="space-y-8"
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             {/* Direct Contact */}

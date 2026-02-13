@@ -1,12 +1,62 @@
 "use client";
 
 import { useRef } from "react";
-import { motion, useInView } from "framer-motion";
-import { Mail, FolderOpen, Github, Linkedin } from "lucide-react";
+import { motion, useInView, useScroll, useTransform } from "framer-motion";
+import {
+  Mail, FolderOpen, Github, Linkedin,
+  // Math/Calculus icons
+  Sigma, Pi, Infinity as InfinityIcon, Calculator,
+  // Statistics icons
+  BarChart3, LineChart, TrendingUp, PieChart,
+  // ML/AI icons
+  Brain, Cpu, Network, Binary, Bot, Workflow
+} from "lucide-react";
+
+// Background floating icons configuration - organic drift animation parameters
+// Each icon has unique timing to create natural, non-synchronized movement
+const floatingIcons = [
+  // Left side - spread vertically along edge
+  { Icon: Sigma, position: "top-[12%] left-[3%]", size: 26, delay: 0, 
+    floatDuration: 12, floatRange: 25, xRange: 18, rotationRange: 6 },
+  { Icon: Pi, position: "top-[28%] left-[5%]", size: 22, delay: 1.2, 
+    floatDuration: 14, floatRange: 22, xRange: 14, rotationRange: 5 },
+  { Icon: Brain, position: "top-[45%] left-[2%]", size: 24, delay: 0.8, 
+    floatDuration: 11, floatRange: 28, xRange: 20, rotationRange: 7 },
+  { Icon: LineChart, position: "bottom-[35%] left-[4%]", size: 22, delay: 2.1, 
+    floatDuration: 13, floatRange: 20, xRange: 16, rotationRange: 5 },
+  { Icon: Calculator, position: "bottom-[20%] left-[3%]", size: 20, delay: 3.2, 
+    floatDuration: 15, floatRange: 24, xRange: 18, rotationRange: 6 },
+
+  // Right side - spread vertically along edge
+  { Icon: Network, position: "top-[15%] right-[3%]", size: 24, delay: 0.5, 
+    floatDuration: 13, floatRange: 22, xRange: 16, rotationRange: 6 },
+  { Icon: Cpu, position: "top-[32%] right-[4%]", size: 22, delay: 1.5, 
+    floatDuration: 11, floatRange: 26, xRange: 20, rotationRange: 7 },
+  { Icon: BarChart3, position: "top-[50%] right-[2%]", size: 26, delay: 0.3, 
+    floatDuration: 14, floatRange: 20, xRange: 14, rotationRange: 5 },
+  { Icon: Bot, position: "bottom-[30%] right-[5%]", size: 22, delay: 2.5, 
+    floatDuration: 12, floatRange: 28, xRange: 22, rotationRange: 8 },
+  { Icon: Workflow, position: "bottom-[15%] right-[3%]", size: 24, delay: 1.8, 
+    floatDuration: 10, floatRange: 24, xRange: 18, rotationRange: 6 },
+
+  // Far corners - subtle accents
+  { Icon: InfinityIcon, position: "top-[8%] left-[8%]", size: 18, delay: 2.0, 
+    floatDuration: 16, floatRange: 18, xRange: 12, rotationRange: 4 },
+  { Icon: Binary, position: "bottom-[10%] left-[7%]", size: 18, delay: 3.5, 
+    floatDuration: 14, floatRange: 20, xRange: 15, rotationRange: 5 },
+  { Icon: TrendingUp, position: "top-[10%] right-[9%]", size: 20, delay: 1.0, 
+    floatDuration: 12, floatRange: 22, xRange: 16, rotationRange: 6 },
+  { Icon: PieChart, position: "bottom-[8%] right-[8%]", size: 18, delay: 2.8, 
+    floatDuration: 15, floatRange: 18, xRange: 14, rotationRange: 4 },
+];
 
 export function HeroSection() {
   const sectionRef = useRef<HTMLElement | null>(null);
   const isInView = useInView(sectionRef, { amount: 0.2, once: false });
+
+  // Scroll-based fade for floating icons - fade starts later for better visibility
+  const { scrollY } = useScroll();
+  const iconsOpacity = useTransform(scrollY, [0, 500], [0.7, 0]);
 
   const name = "LUU MINH THONG TRAN";
   const title = "AI/ML Engineer";
@@ -62,6 +112,56 @@ export function HeroSection() {
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
     >
+      {/* Floating Background Icons - organic drift animation, fade out on scroll */}
+      {floatingIcons.map(({ Icon, position, size, delay, floatDuration, floatRange, xRange, rotationRange }, index) => (
+        <motion.div
+          key={index}
+          className={`absolute ${position} pointer-events-none hidden md:block`}
+          style={{ opacity: iconsOpacity }}
+          initial={{ opacity: 0, scale: 0.8, y: 0, rotate: 0 }}
+          animate={{
+            opacity: 0.55,
+            scale: [1, 1.04, 0.97, 1.02, 1],
+            y: [0, -floatRange, floatRange * 0.4, -floatRange * 0.6, 0],
+            x: [0, xRange, -xRange * 0.5, xRange * 0.7, 0],
+            rotate: [0, rotationRange, -rotationRange * 0.6, rotationRange * 0.4, 0],
+          }}
+          transition={{
+            opacity: { duration: 1.2, delay: delay + 0.3 },
+            scale: { 
+              duration: floatDuration * 1.4, 
+              repeat: Infinity, 
+              ease: "easeInOut",
+              delay: delay 
+            },
+            y: {
+              duration: floatDuration,
+              repeat: Infinity,
+              ease: "linear",
+              delay: delay
+            },
+            x: {
+              duration: floatDuration * 1.15,
+              repeat: Infinity,
+              ease: "linear",
+              delay: delay + 0.3
+            },
+            rotate: {
+              duration: floatDuration * 0.85,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: delay + 0.2
+            },
+          }}
+        >
+          <Icon
+            size={size}
+            className="text-primary/60 drop-shadow-[0_0_8px_rgba(112,141,205,0.4)]"
+            strokeWidth={1.5}
+          />
+        </motion.div>
+      ))}
+
       <div className="text-center max-w-5xl mx-auto relative z-10">
         {/* Main Content Container */}
         <motion.div

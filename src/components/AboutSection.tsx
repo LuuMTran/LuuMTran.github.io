@@ -49,7 +49,7 @@ export function AboutSection() {
     <motion.section
       ref={sectionRef}
       id="about"
-      className="min-h-screen py-24 px-4 md:px-8 lg:px-16 flex items-center"
+      className="py-16 px-4 md:px-8 lg:px-16 flex items-center"
       variants={sectionVariants}
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
@@ -57,10 +57,10 @@ export function AboutSection() {
       <div className="max-w-7xl mx-auto w-full">
         {/* Header */}
         <motion.div
-          className="mb-12 text-center"
+          className="mb-10 text-center"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">About Me</h2>
@@ -71,7 +71,7 @@ export function AboutSection() {
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
             transition={{ duration: 0.6 }}
             className="space-y-6"
           >
@@ -147,7 +147,7 @@ export function AboutSection() {
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
             transition={{ duration: 0.6 }}
           >
             <h3 className="text-2xl font-bold mb-8 text-foreground">My Journey</h3>
@@ -158,7 +158,7 @@ export function AboutSection() {
                   className="relative pl-8 pb-6 border-l-2 border-border last:pb-0"
                   initial={{ opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: false }}
                   transition={{ duration: 0.4, delay: index * 0.1 }}
                 >
                   {/* Timeline dot */}
@@ -180,7 +180,7 @@ export function AboutSection() {
               className="mt-8 p-6 rounded-2xl bg-card/80 backdrop-blur-sm border border-border shadow-sm"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
               transition={{ duration: 0.4, delay: 0.3 }}
             >
               <h4 className="font-bold mb-2 text-foreground">Currently Looking For</h4>

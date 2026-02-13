@@ -1,0 +1,5 @@
+1:"$Sreact.fragment"
+2:I[99760,["/_next/static/chunks/d5f7520d963047ce.js","/_next/static/chunks/41f4bd048becbe7c.js"],"ViewportBoundary"]
+3:I[99760,["/_next/static/chunks/d5f7520d963047ce.js","/_next/static/chunks/41f4bd048becbe7c.js"],"MetadataBoundary"]
+4:"$Sreact.suspense"
+0:{"buildId":"ITIz09Iva8J6aMNFCA8Gx","rsc":["$","$1","h",{"children":[null,["$","$L2",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","div",null,{"hidden":true,"children":["$","$L3",null,{"children":["$","$4",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Luu Minh Thong Tran - AI/ML Engineer Portfolio"}],["$","meta","1",{"name":"description","content":"Portfolio of Luu Minh Thong Tran - AI/ML Engineer specializing in Machine Learning, Deep Learning, and Data Science. Based in Sydney, Australia."}]]}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],"loading":null,"isPartial":false}

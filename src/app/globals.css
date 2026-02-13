@@ -144,6 +144,23 @@ body {
   animation-iteration-count: infinite;
 }
 
+/* Floating icon animation - gentle bob */
+@keyframes floatIcon {
+
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-12px) rotate(3deg);
+  }
+}
+
+.floating-icon {
+  animation: floatIcon 4s ease-in-out infinite;
+}
+
 /* Social button hover effect */
 .social-btn {
   transition: all 0.3s ease;

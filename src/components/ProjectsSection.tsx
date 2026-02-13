@@ -56,7 +56,7 @@ export function ProjectsSection() {
     <motion.section
       ref={sectionRef}
       id="projects"
-      className="min-h-screen py-24 px-4 md:px-8 lg:px-16 flex items-center"
+      className="py-16 px-4 md:px-8 lg:px-16 flex items-center"
       variants={sectionVariants}
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
@@ -64,10 +64,10 @@ export function ProjectsSection() {
       <div className="max-w-7xl mx-auto w-full">
         {/* Header - NO SPARKLES */}
         <motion.div
-          className="mb-16 text-center"
+          className="mb-10 text-center"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">Things I've Built</h2>
@@ -84,7 +84,7 @@ export function ProjectsSection() {
               className="group relative overflow-hidden rounded-2xl border border-border bg-card hover:border-primary/50 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
               transition={{ duration: 0.5, delay: index * 0.15 }}
             >
               {/* Project Number Badge */}
@@ -163,7 +163,7 @@ export function ProjectsSection() {
           className="mt-12 text-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
           transition={{ duration: 0.5, delay: 0.6 }}
         >
           <a
