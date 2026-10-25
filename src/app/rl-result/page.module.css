@@ -36,9 +36,8 @@
   text-align: center;
 }
 
-.kicker,
-.sectionHeading > p {
-  color: #2f80ed;
+.kicker {
+  color: var(--soft-ink);
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.12em;
@@ -54,10 +53,18 @@
   line-height: 1.06;
 }
 
-.author {
-  color: #2f80ed;
+.authors {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px 22px;
+  color: var(--ink);
   font-size: 20px;
   font-weight: 550;
+}
+
+.primaryAuthor {
+  color: #2f80ed;
 }
 
 .summary {
@@ -137,25 +144,6 @@
   line-height: 1.12;
 }
 
-.sectionHeading span {
-  color: var(--soft-ink);
-  font-size: 16px;
-  line-height: 1.6;
-}
-
-.mediaGrid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 22px;
-}
-
-.mediaCard {
-  overflow: hidden;
-  border: 1px solid var(--rule);
-  border-radius: 6px;
-  background: #ffffff;
-}
-
 .placeholder {
   aspect-ratio: 16 / 9;
   display: flex;
@@ -175,6 +163,9 @@
   color: #777c83;
   font-size: 14px;
   font-weight: 650;
+  overflow: hidden;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
 }
 
 .playIcon {
@@ -186,21 +177,6 @@
   background: rgba(255, 255, 255, 0.92);
   color: #35383c;
   box-shadow: 0 8px 24px rgba(20, 25, 32, 0.1);
-}
-
-.cardCaption {
-  padding: 18px 20px 20px;
-}
-
-.cardCaption h3 {
-  font-size: 18px;
-  font-weight: 650;
-}
-
-.cardCaption p {
-  margin-top: 3px;
-  color: var(--soft-ink);
-  font-size: 14px;
 }
 
 .footer {
@@ -225,10 +201,6 @@
 
   .hero h1 {
     font-size: clamp(38px, 12vw, 54px);
-  }
-
-  .mediaGrid {
-    grid-template-columns: 1fr;
   }
 
   .resultGroup {

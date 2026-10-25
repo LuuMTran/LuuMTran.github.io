@@ -11,20 +11,12 @@ export const metadata: Metadata = {
 
 const resultGroups = [
   {
-    eyebrow: "Baseline",
     title: "After imitation learning, before PPO",
-    description:
-      "The initial policies learned from recorded human driving demonstrations.",
   },
   {
-    eyebrow: "Final policy",
     title: "After PPO",
-    description:
-      "The policies after reinforcement learning with human-scored rewards.",
   },
 ];
-
-const parkingTasks = ["Direct parking", "Reverse parking"];
 
 export default function ReinforcementLearningResults() {
   return (
@@ -39,7 +31,11 @@ export default function ReinforcementLearningResults() {
       <header className={styles.hero}>
         <p className={styles.kicker}>JetRacer autonomous parking</p>
         <h1>Improving Parking Behaviour with Human-Scored PPO</h1>
-        <p className={styles.author}>Luu Minh Thong Tran</p>
+        <p className={styles.authors}>
+          <span className={styles.primaryAuthor}>Luu Minh Thong Tran</span>
+          <span>Felix Colin Lianto</span>
+          <span>Darrel Phung</span>
+        </p>
         <p className={styles.summary}>
           A visual comparison of autonomous direct and reverse parking after
           imitation learning and after policy refinement with PPO.
@@ -65,26 +61,14 @@ export default function ReinforcementLearningResults() {
         {resultGroups.map((group) => (
           <div className={styles.resultGroup} key={group.title}>
             <div className={styles.sectionHeading}>
-              <p>{group.eyebrow}</p>
               <h2>{group.title}</h2>
-              <span>{group.description}</span>
             </div>
 
-            <div className={styles.mediaGrid}>
-              {parkingTasks.map((task) => (
-                <article className={styles.mediaCard} key={task}>
-                  <div className={styles.placeholder}>
-                    <div className={styles.playIcon} aria-hidden="true">
-                      <Play size={24} fill="currentColor" />
-                    </div>
-                    <span>Video coming soon</span>
-                  </div>
-                  <div className={styles.cardCaption}>
-                    <h3>{task}</h3>
-                    <p>Autonomous policy rollout</p>
-                  </div>
-                </article>
-              ))}
+            <div className={styles.placeholder}>
+              <div className={styles.playIcon} aria-hidden="true">
+                <Play size={24} fill="currentColor" />
+              </div>
+              <span>Video coming soon</span>
             </div>
           </div>
         ))}
