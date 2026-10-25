@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowLeft, Github, Play } from "lucide-react";
+import { ArrowLeft } from "lucide-react";
 import styles from "./page.module.css";
 
 export const metadata: Metadata = {
@@ -12,9 +12,17 @@ export const metadata: Metadata = {
 const resultGroups = [
   {
     title: "After imitation learning, before PPO",
+    videos: Array.from({ length: 8 }, (_, index) => ({
+      src: `/videos/rl-result/before/before-${String(index + 1).padStart(2, "0")}.mp4`,
+      poster: `/videos/rl-result/before/before-${String(index + 1).padStart(2, "0")}.jpg`,
+    })),
   },
   {
     title: "After PPO",
+    videos: Array.from({ length: 7 }, (_, index) => ({
+      src: `/videos/rl-result/after/after-${String(index + 1).padStart(2, "0")}.mp4`,
+      poster: `/videos/rl-result/after/after-${String(index + 1).padStart(2, "0")}.jpg`,
+    })),
   },
 ];
 
@@ -29,27 +37,12 @@ export default function ReinforcementLearningResults() {
       </nav>
 
       <header className={styles.hero}>
-        <p className={styles.kicker}>JetRacer autonomous parking</p>
         <h1>Improving Parking Behaviour with Human-Scored PPO</h1>
         <p className={styles.authors}>
-          <span className={styles.primaryAuthor}>Luu Minh Thong Tran</span>
+          <span>Luu Minh Thong Tran</span>
           <span>Felix Colin Lianto</span>
           <span>Darrel Phung</span>
         </p>
-        <div className={styles.actions}>
-          <a
-            href="https://github.com/LuuMTran/jetracer-autoparking"
-            target="_blank"
-            rel="noreferrer"
-            className={styles.primaryAction}
-          >
-            <Github size={18} aria-hidden="true" />
-            Project code
-          </a>
-          <a href="#results" className={styles.secondaryAction}>
-            View results
-          </a>
-        </div>
       </header>
 
       <section id="results" className={styles.results}>
@@ -59,20 +52,45 @@ export default function ReinforcementLearningResults() {
               <h2>{group.title}</h2>
             </div>
 
-            <div className={styles.placeholder}>
-              <div className={styles.playIcon} aria-hidden="true">
-                <Play size={24} fill="currentColor" />
-              </div>
-              <span>Video coming soon</span>
+            <div className={styles.mediaGrid}>
+              {group.videos.map((video, index) => (
+                <video
+                  className={styles.video}
+                  controls
+                  muted
+                  playsInline
+                  preload="metadata"
+                  poster={video.poster}
+                  aria-label={`${group.title} rollout ${index + 1}`}
+                  key={video.src}
+                >
+                  <source src={video.src} type="video/mp4" />
+                </video>
+              ))}
             </div>
           </div>
         ))}
-      </section>
 
-      <footer className={styles.footer}>
-        <span>JetRacer autonomous parking project</span>
-        <span>2026</span>
-      </footer>
+        <div className={styles.resultGroup}>
+          <div className={styles.sectionHeading}>
+            <h2>Complete run</h2>
+          </div>
+          <video
+            className={`${styles.video} ${styles.completeVideo}`}
+            controls
+            muted
+            playsInline
+            preload="metadata"
+            poster="/videos/rl-result/complete/complete-run.jpg"
+            aria-label="Complete autonomous parking run"
+          >
+            <source
+              src="/videos/rl-result/complete/complete-run.mp4"
+              type="video/mp4"
+            />
+          </video>
+        </div>
+      </section>
     </main>
   );
 }
