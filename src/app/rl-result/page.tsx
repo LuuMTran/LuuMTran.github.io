@@ -36,11 +36,6 @@ export default function ReinforcementLearningResults() {
           <span>Felix Colin Lianto</span>
           <span>Darrel Phung</span>
         </p>
-        <p className={styles.summary}>
-          A visual comparison of autonomous direct and reverse parking after
-          imitation learning and after policy refinement with PPO.
-        </p>
-
         <div className={styles.actions}>
           <a
             href="https://github.com/LuuMTran/jetracer-autoparking"
